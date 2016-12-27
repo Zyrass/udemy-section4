@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>0 - Jquery ?</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">        
         <link rel="stylesheet" type="text/css" href="css/stylePre.css">
@@ -153,8 +153,9 @@
         </fieldset>
 
         <h3>Syntaxe de JQUERY</h3>
+        <h4>Version classique</h4>
         <fieldset>
-            <legend>Syntaxe de JQUERY</legend>
+            <legend>Syntaxe de JQUERY CLASSIQUE</legend>
             <pre>
                 $(document).ready(function(){
                 
@@ -164,9 +165,20 @@
             </pre>
             <p>
                 <span class="commentaire">document ------------ [Quand notre code dans le body est prêt]</span><br />
-                <span class="commentaire">.ready ---------------- [On charge le document. A savoir que .ready est un évènement]<br />
+                <span class="commentaire">.ready ---------------- [On charge le document. A savoir que .ready est un évènement]</span><br />
                 <span class="commentaire">(function(){ }); ----- [Exécute notre code ici]</span>
             </p>
+        <h4>Version raccourçis</h4>
+        <fieldset>
+            <legend>Syntaxe de JQUERY RACCOUCIS</legend>
+            <pre>
+                $(function(){
+                
+                    <span class="commentaire">// votre code ici...</span>
+                
+                });
+            </pre>
+            <p>On exécute un code jquery de la même manière avec cette syntaxe</p>
         </fieldset>
 
         <h3>INFORMATION IMPORTANTE DE JQUERY avec BOOTSTRAP (le framework)</h3>
@@ -174,3 +186,29 @@
             <legend>INFORMATION IMPORTANTE DE JQUERY avec BOOTSTRAP (le framework)</legend>
             <p>Si nous devons utiliser le framework bootstrap, il faut savoir qu il doit être chargé TOUJOURS EN PREMIER.</p>
         </fieldset>
+
+
+        <footer>
+            <p>Conception : Alain GUILLON</p>
+            <hr>
+            <p>Page créer afin d'obtenir dans quelques temps mon diplôme à la 3wa</p>
+            <h6>Lien directe</h6>
+            <p>Home</p>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+            <p>Menu</p>
+            <ul>
+                <a href="0-jquery-c-quoi.html" class="active"><li>0 - Qu'es ce que jQuery</li></a>
+                <a href="1-selectors.html"><li>1 - Les selecteurs</li></a>
+                <a href="2-event.html"><li>2 - Les évènements</li></a>
+                <a href="3-effects.html"><li>3 - Les effets</li></a>
+                <a href="4-animations.html"><li>4 - Les animations</li></a>
+                <a href="5-jquery-html.html"><li>5 - jQuery et HTML</li></a>
+                <a href="6-jquery-css.html"><li>6 - jQuery et CSS</li></a>
+                <a href="7-jquery-arborescence.html"><li>7 - L'arborescence avec Jquery</li></a>
+                <a href="8-decouverte-ajax.html"><li>8 - Découverte d'Ajax</li></a>
+            </ul>
+        </footer>
+    </body>
+</html>

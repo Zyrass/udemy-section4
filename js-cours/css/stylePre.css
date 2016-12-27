@@ -15,6 +15,10 @@ pre.oneLine {
     line-height: 20px;
 }
 
+p:first-letter {
+    font-size: 1.5em;
+}
+
 span.parentheseOpenOne, pre span.parentheseCloseOne {
     color: orange;
 }
@@ -40,4 +44,36 @@ span.baliseHTML {
 span.commentaire {
     font-style: italic;
     color: #444;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #eee;
+    padding: 25px;    
+}
+footer p {
+    text-align: center;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer ul li {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    background-color: #ddd;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    border: 2px solid #999;
+}
+
+footer ul li:hover {
+    border: 2px solid #444;
+}
+
+footer ul a.active li {
+    border: 2px solid #000;
 }
