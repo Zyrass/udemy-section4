@@ -25,7 +25,7 @@
         <p>Un évènement, est très souvent associé à un clic de souris, également on peut l'utiliser pour stylisé du html avec du CSS. Mais aussi, nous pouvons <br />
         caché, affiché des élements, affiché un contenu selon des critères prédéfinis etc...</p>
 
-        <h3>Exemple d'un évènement click permettant de cacher un texte</h3>
+        <h3>Evènement click qui par exemple, nous permet de cacher un texte</h3>
         <fieldset>
             <legend>Exemple d'un évènement click permettant de cacher un texte</legend>
             <p>Pour notre exemple, je vais créer 2 bouttons permettant de cacher mais également d'afficher un paragraphe.<br />
@@ -41,10 +41,10 @@
 
             <h4>code HTML</h4>
             <pre>
-            &lt;p class="cacherMoi">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatibus non quo! Saepe incidunt itaque,<br />
+            &lt;p class="cacherMoi"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatibus non quo! Saepe incidunt itaque,<br />
             velit placeat rerum pariatur reiciendis? Facere ea quidem temporibus quam dolor inventore sequi<br />
             reprehenderit officiis illum praesentium blanditiis quo amet tempore esse error, incidunt molestias ratione,<br />
-            ullam! Minus libero necessitatibus perspiciatis ea possimus ad nobis.&lt;/p>
+            ullam! Minus libero necessitatibus perspiciatis ea possimus ad nobis.&lt;/p&gt;
             </pre>
 
             <h4>code jquery</h4>
@@ -60,6 +60,54 @@
                 });
             </pre>
 
+        </fieldset>
+
+        <h3>Evènement mouseenter() & mouseout()</h3>
+        <fieldset>
+            <legend>Exemple d'un évènement ".mouseenter()" & ".mouseout()" permettant d'afficher 2 images</legend>
+            <p>Ci-dessous une image d'un logo de final fantasy 15. Si on entre avec la souris dans la div contenant la classe "autreImage" avec la souris, <br />
+            L'image par défaut changera pour afficher une autre image</p>
+
+            <div class="autreImage">
+                <figure>
+                    <figcaption>Mon logo FF 15</figcaption>
+                    <img src="http://image.jeuxvideo.com/medias-md/146359/1463589413-1698-card.png" alt="logo FF15" width="650" height="417" />
+                </figure>
+            </div>
+
+            <h4>Le code html</h4>
+            <pre>
+                &lt;div class="autreImage"&gt;
+                    &lt;figure&gt;
+                        &lt;figcaption&gt;Mon logo FF 15&lt;/figcaption&gt;
+                        &lt;img src="http://image.jeuxvideo.com/medias-md/146359/1463589413-1698-card.png" alt="logo FF15" width="650" height="417" /&gt;
+                    &lt;/figure&gt;
+                &lt;/div&gt;
+            </pre>
+            <h4>Le code Jquery utilisé</h4>
+            <pre>
+            $(document).ready(function(){
+                // Code précédent ...
+
+                // Exemple du ".mousseenter()" et du ".mouseout()"
+                $("div.autreImage").mouseenter(function(){
+                    $('div.autreImage img')
+                        .removeAttr("src")
+                        .attr("alt", "teste")
+                        .attr("src", "http://www.fsmwarden.com/developpez_4/jmduchesne_Individus(IdRel)Equipes_ressources.png");
+                    $('div.autreImage figcaption').text("Autre image");
+                });
+
+                $("div.autreImage img").mouseout(function(){
+                    $('div.autreImage img')
+                        .removeAttr("src")
+                        .attr("alt", "Mon Logo FF 15")
+                        .attr("src", "http://image.jeuxvideo.com/medias-md/146359/1463589413-1698-card.png");
+                    $('div.autreImage figcaption').text("Mon logo FF15");
+                });
+            }); // Fin jquery
+            </pre>
+            
         </fieldset>
 
         <footer>
@@ -90,7 +138,8 @@
         <script>
             
             $(document).ready(function(){
-                // Exemple du click
+
+                // Exemple du .click()
                 $("#cachez").click(function() {
                     $('p.cacherMoi').hide('slow');
                 });
@@ -98,7 +147,26 @@
                 $("#affichez").click(function() {
                     $('p.cacherMoi').show('slow');
                 });
-            });
+
+                // Exemple du ".mousseenter()" et du ".mouseout()"
+                $("div.autreImage").mouseenter(function(){
+                    $('div.autreImage img')
+                        .removeAttr("src")
+                        .attr("alt", "teste")
+                        .attr("src", "http://www.fsmwarden.com/developpez_4/jmduchesne_Individus(IdRel)Equipes_ressources.png");
+                    $('div.autreImage figcaption').text("Autre image");
+                });
+
+                $("div.autreImage img").mouseout(function(){
+                    $('div.autreImage img')
+                        .removeAttr("src")
+                        .attr("alt", "Mon Logo FF 15")
+                        .attr("src", "http://image.jeuxvideo.com/medias-md/146359/1463589413-1698-card.png");
+                    $('div.autreImage figcaption').text("Mon logo FF15");
+                });
+
+
+            }); // Fin jquery
         </script>
     </body>
 </html>

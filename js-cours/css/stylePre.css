@@ -24,6 +24,15 @@ p.cacherMoi {
     letter-spacing : 3px; 
 }
 
+div.autreImage {
+    width: 100%;
+    background-color: #eee;
+}
+div.autreImage figure figcaption {
+    text-align: center;
+    padding: 20px;
+}
+
 i.fa {
     font-size: 2em;
 }
