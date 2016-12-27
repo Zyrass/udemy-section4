@@ -24,6 +24,10 @@ p.cacherMoi {
     letter-spacing : 3px; 
 }
 
+i.fa {
+    font-size: 2em;
+}
+
 span.parentheseOpenOne, pre span.parentheseCloseOne {
     color: orange;
 }
