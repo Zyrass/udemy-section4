@@ -19,6 +19,11 @@ p:first-letter {
     font-size: 1.5em;
 }
 
+p.cacherMoi {
+    word-spacing: 1px;
+    letter-spacing : 3px; 
+}
+
 span.parentheseOpenOne, pre span.parentheseCloseOne {
     color: orange;
 }
