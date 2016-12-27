@@ -1,0 +1,43 @@
+body {
+    width: 900px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+pre { 
+    background-color: #ddd; 
+}
+pre.oneLine {
+    height: 20px;
+    line-height: 20px;
+}
+
+span.parentheseOpenOne, pre span.parentheseCloseOne {
+    color: orange;
+}
+span.parentheseOpenTwo, pre span.parentheseCloseTwo {
+    color: darkorange;
+}
+span.parentheseOpenThree, pre span.parentheseCloseThree {
+    color: purple;
+}
+span.guillemets {
+    color: green;
+}
+span.evenements {
+    color: purple;
+}
+span.functions {
+    color: darkorchid;
+    font-style: italic;
+}
+span.baliseHTML {
+    color: blue;
+}
+span.commentaire {
+    font-style: italic;
+    color: #444;
+}

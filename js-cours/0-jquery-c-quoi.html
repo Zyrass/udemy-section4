@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <link rel="stylesheet" type="text/css" href="css/stylePre.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h1>Cours JQUERY</h1>
+        <h2>0 - Préambule</h2>
+        <hr>
+
+
+        <h3>SLOGAN JQUERY</h3>
+        <fieldset>
+            <legend>Slogan de jQuery</legend>
+            <p>TEXT OFFICIEL : Write less, do more.</p>
+            <p>TRADUCTION FR : Écrit moins, fait plus.</p>
+        </fieldset>
+
+        <h3>Pourquoi JQuery</h3>
+        <fieldset>
+            <legend>Pourquoi Jquery</legend>
+            <p>Jquery permet de manipuler les éléments HTML, CSS ou bien, ajouter des animations.. etc...  <br />
+            Nous pouvons aussi gérer la gestion des évènements (le clic, sur un hover etc...). Ainsi on y gagne un temps considérable. <br />
+            Il faut savoir aussi que quand on code on a souvent des problèmes de compatibilité avec nos navigateurs. En gros un code spécifique <br />
+            ne sera pas interprété de la même manière sur firefox, chrome ou bien safari etc..<br />
+            (Souvenez-vous : -webkit- pour chrome ; o- pour opera; ms- pour microsoft etc.. ; )
+            </p>
+        </fieldset>
+
+        <h3>OU ECRIRE DU CODE JQUERY (a placer dans un fichier script personnel)</h3>
+        <fieldset>
+            <legend>OU ECRIRE DU CODE JQUERY (a placer dans un fichier script personnel)</legend>
+            <p>Exemple :</p>
+            <pre>
+                <span class="commentaire">1 |-> On charge en 1ER jquery</span>
+                &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js" >&lt;/script>
+                <hr>
+                <span class="commentaire">2 |-> On charge ici notre script Jquery</span>
+                &lt;script src="myScript.js" >&lt;/script> 
+            </pre>
+        </fieldset>
+
+        <h3>2 versions régulièrement disponible</h3>
+        <fieldset>
+            <legend>2 versions régulièrement disponible</legend>
+            <h5>version Minifié (minified)</h5>
+            <p>Vous trouverez régulièrement des versions minified à disposition du grand public. Elle est compressé, dépourvu des commentaires, des espaces et saut de ligne. <br />
+            Ainsi il se trouve que le fichier est clairement plis légé et donc plus rapide que sa version non compréssé. Elle est tout le temps utilisé pour la production</p>
+            <h5>version Non-Compressé</h5>
+            <p>Cette version est uniquement utilisé pour le développement. Cette version comprends les espaces, saut de ligne, commentaires etc... En sommes elle est plus simple à relire</p>
+        </fieldset>
+
+        <h3>UTILISER JQUERY DE PLUSIEURS FACONS</h3>
+        <fieldset>
+            <legend>UTILISER JQUERY DE PLUSIEURS FACONS</legend>
+            <h4>1 - HTML DIRECTEMENT</h4>
+            <p>A la fin de notre code (avant la balise de fermeture du body) afin qu on laisse le DOM se charger, ouvrons notre balise script soit :<br />
+            <pre class="oneLine">
+                &lt;script> &lt;/script>
+            </pre>
+            Enfin entre ces balises, nous devrons écrire le code jquery avant bien entendu vous aurez ajouté votre script JQUERY</p>
+            <p>Exemple d'un script jquery</p>
+            <pre>
+                        code HTML ici...
+
+                        &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js">&lt;/script>
+                        &lt;script>
+                            $(document).ready(function(){
+                        
+                                <span class="commentaire">// votre code ici...</span>
+                        
+                            });
+                        &lt;/script>
+                    &lt;/body>
+                &lt;/html>
+                
+            </pre>
+            <hr>
+            <h4>2 - FICHIER EXTERNE</h4>
+            <p>Même chose en fin du code html (pour rappel, avant &lt;/body>), il faut ouvrir une balise script, sauf que là <br/>
+            on y ajoute un attribut src (source) et on ajoute notre fichier qui aura comme extension le .js. <br />
+            Attention de ne pas oublié le fichier jquery qui pour rappel doit être placé en 1er.</p>
+ 
+            <p>Exemple :</p>
+            <h5>fichier html :</h5>
+            <pre>
+                        code HTML ici...
+
+                        &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js">&lt;/script>
+                        &lt;script src="myScript.js">&lt;/script>
+                    &lt;/body>
+                &lt;/html>
+            </pre>
+            <h5>myScript.js :</h5>
+            <pre>
+                $(document).ready(function(){
+                        
+                    <span class="commentaire">// votre code ici...</span>
+                        
+                });
+            </pre>
+                <hr>
+                <h4>3 - CDN (Content Délivery Network)</h4>
+                <p>Un CDN est un regroupement de plusieurs version d'un framework hébergé sur un serveur distant. <br />
+                l'avantage d'un fichier CDN c'est qu'il n'est aucunement nécéssaire d'avoir ces fichiers en local. <br />
+                l'inconvéniant et oui il y en a un, c'est qu'il faut être connecté sur internet constament pour que notre code fonctionne...<br />
+                une coupure et c'est le drame.</p>
+    
+                <p>Exemple :</p>
+                <h5>fichier Jquery 3.X : Minified</h5>
+                    <pre class="oneLine">
+                        &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+                    </pre>
+                <h5>fichier Jquery 3.X : Non-Minified</h5>
+                    <pre class="oneLine">
+                        &lt;script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+                    </pre>
+                <h5>fichier Jquery 2.X : Minified</h5>
+                    <pre class="oneLine">
+                        &lt;script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+                    </pre>
+                <h5>fichier Jquery 2.X : Non-Minified</h5>
+                    <pre class="oneLine">
+                        &lt;script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+                    </pre>
+                <h5>fichier Jquery 1.X : Minified</h5>
+                    <pre class="oneLine">
+                        &lt;script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+                    </pre>
+                <h5>fichier Jquery 1.X : Non-Minified</h5>
+                    <pre class="oneLine">
+                        &lt;script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                    </pre>
+            <pre>
+                $(document).ready(function(){
+                        
+                    <span class="commentaire">// votre code ici...</span>
+                        
+                });
+            </pre>
+        </fieldset>
+
+        <h3>Syntaxe de JQUERY</h3>
+        <fieldset>
+            <legend>Syntaxe de JQUERY</legend>
+            <pre>
+                $(document).ready(function(){
+                
+                    <span class="commentaire">// votre code ici...</span>
+                
+                });
+            </pre>
+            <p>
+                <span class="commentaire">document ------------ [Quand notre code dans le body est prêt]</span><br />
+                <span class="commentaire">.ready ---------------- [On charge le document. A savoir que .ready est un évènement]<br />
+                <span class="commentaire">(function(){ }); ----- [Exécute notre code ici]</span>
+            </p>
+        </fieldset>
+
+        <h3>INFORMATION IMPORTANTE DE JQUERY avec BOOTSTRAP (le framework)</h3>
+        <fieldset>
+            <legend>INFORMATION IMPORTANTE DE JQUERY avec BOOTSTRAP (le framework)</legend>
+            <p>Si nous devons utiliser le framework bootstrap, il faut savoir qu il doit être chargé TOUJOURS EN PREMIER.</p>
+        </fieldset>

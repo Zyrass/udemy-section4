@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Selector</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/stylePre.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h1>Cours JQUERY</h1>
+        <h2>1 - Les selecteurs "Selectors"</h2>
+        <hr>
+        <h3>Selectionner un élément avec le $</h3>
+        <fieldset>
+            <legend>Selectionner un élément avec le $</legend>
+        <p>$ permet de désigner un élément. <br />
+        On ouvre obligatoirement des parenthèses et des guillemets simple ( <span class="guillemets">' '</span> ) ou double ( <span class="guillemets">" "</span> ) soit : </p>
+            <pre>
+                $ <span class="parentheseOpenOne">(</span> <span class="guillemets">"</span> <span class="baliseHTML">element_html</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
+            </pre>
+        <p>Exemple : { Selection d'une balise h5 }</p>
+            <pre>
+                $<span class="parentheseOpenOne">(</span><span class="guillemets">"</span><span class="baliseHTML">h5</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
+            </pre>
+        </fieldset>
+
+        <hr>
+        <h3>Selectionner une classe</h3>
+        <fieldset>
+            <legend>Selectionner une classe</legend>
+        <p>$ permet toujours de désigner un élément. <br />
+        Donc comme auparavant, on ouvre obligatoirement des parenthèses et des guillemets simple ( <span class="guillemets">' '</span> ) ou double ( <span class="guillemets">" "</span> ). En revanche, comme en CSS pour sélectionner une classe, <br />
+        on doit y ajouter un POINT suivit du mot qu'on aura définit soit : </p>
+            <pre>
+                $ <span class="parentheseOpenOne">(</span> <span class="guillemets">"</span> <span class="baliseHTML">.motX</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
+            </pre>
+        <p>Exemple : { Selection d'une classe avec comme mot "essai" }</p>
+            <pre>
+                $<span class="parentheseOpenOne">(</span><span class="guillemets">"</span><span class="baliseHTML">.essai</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
+            </pre>
+        </fieldset>
+
+        <hr>
+        <h3>Selectionner un identifiant</h3>
+        <fieldset>
+            <legend>Selectionner un identifiant</legend>
+        <p>C'est exactement comme pour une classe mais avec le selecteur # (aussi appelé sharp)<br /></p>
+            <pre>
+                $ <span class="parentheseOpenOne">(</span> <span class="guillemets">"</span> <span class="baliseHTML">#motY</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
+            </pre>
+        <p>Exemple : { Selection d'un identifiant (ID) avec comme mot "teste" }</p>
+            <pre>
+                $<span class="parentheseOpenOne">(</span><span class="guillemets">"</span><span class="baliseHTML">#teste</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
+            </pre>
+        </fieldset>
+
+        <hr>
+        <h3>Selectionner un element avec les pseudos selecteur</h3>
+        <fieldset>
+            <legend>Selectionner un element avec les pseudos selecteur</legend>
+        <p>en CSS, nous pouvons utiliser les pseudos selecteur comme par exemple :<br />
+            <ul>
+                <li>:nth-child(x)</li>
+                <li>:first-child</li>
+                <li>:last-child</li>
+                <li>etc...</li>
+            </ul>
+        En jQuery c'est la même chose</p>
+            <pre>
+                $ <span class="parentheseOpenOne">(</span> <span class="guillemets">"</span> <span class="baliseHTML">p:nth-child(odd)</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
+            </pre>
+        <p>Exemple : { Selection du 3ème paragraphe }</p>
+            <pre>
+                $<span class="parentheseOpenOne">(</span><span class="guillemets">"</span><span class="baliseHTML">p:nth-child(3)</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
+            </pre>
+        </fieldset>
+
+        <script src="../jquery/jquery-3.1.1.min.js"></script>       
+        <script>
+
+        </script>
+    </body>
+</html>
