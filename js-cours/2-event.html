@@ -87,8 +87,6 @@
             <h4>Le code Jquery utilisé</h4>
             <pre>
             $(document).ready(function(){
-                // Code précédent ...
-
                 // Exemple du ".mousseenter()" et du ".mouseout()"
                 $("div.autreImage").mouseenter(function(){
                     $('div.autreImage img')
@@ -106,9 +104,59 @@
                     $('div.autreImage figcaption').text("Mon logo FF15");
                 });
             }); // Fin jquery
-            </pre>
-            
+            </pre>            
         </fieldset>
+
+        <h3>Autre évènement ".mouseenter()" mais avec ".mouseleave()"</h3>
+        <fieldset>
+            <legend>Autre évènement ".mouseenter()" mais avec ".mouseleave()"</legend>
+            <p>Ici je vais créer 2 block de la même taille. Une fois qu'on entre dans le block bleu, le block rouge grandit. <br />
+            Quand nous quittons le block bleu, le block rouge redevient normal.</p>
+
+            <div class="container">
+                <div class="blue">Bleu</div>
+                <div class="red">Rouge</div>
+            </div>
+
+            <h4>Code HTML</h4>
+            <pre>
+                &lt;div class="container"&gt;
+                    &lt;div class="blue"&gt;Bleu&lt;/div&gt;
+                    &lt;div class="red"&gt;Rouge&lt;/div&gt;
+                &lt;/div&gt;
+            </pre>
+
+            <h4>Code Jquery</h4>
+            <pre>
+                $(document).ready(function(){
+
+                    // Exemple du ".mouseenter()" et du ".mouseleave()"
+                    $("div.container div.red")
+                        .text("Yeah je fais 60% au lieu de 30%")
+                        .css("width", "60%");
+                    });
+
+                    $("div.container div.blue").mouseleave(function(){
+                        $("div.container div.red")
+                            .text("Rouge")
+                            .css("width", "30%");
+                    });
+
+                    $("div.container div.red").mouseenter(function(){
+                        $("div.container div.blue")
+                            .text("Yeah je fais 60% au lieu de 30%")
+                            .css("width", "60%");
+                    });
+
+                    $("div.container div.red").mouseleave(function(){
+                        $("div.container div.blue ")
+                            .text("Bleu")
+                            .css("width", "30%");
+                    });
+                }); // Fin jquery
+            </pre>
+        </fieldset>
+
 
         <footer>
             <p>Conception : Alain GUILLON</p>
@@ -148,7 +196,7 @@
                     $('p.cacherMoi').show('slow');
                 });
 
-                // Exemple du ".mousseenter()" et du ".mouseout()"
+                // Exemple du ".mouseenter()" et du ".mouseout()"
                 $("div.autreImage").mouseenter(function(){
                     $('div.autreImage img')
                         .removeAttr("src")
@@ -165,7 +213,31 @@
                     $('div.autreImage figcaption').text("Mon logo FF15");
                 });
 
+                // Exemple du ".mouseenter()" et du ".mouseleave()"
+                $("div.container div.blue").mouseenter(function(){
+                    $("div.container div.red")
+                        .text("Yeah je fais 60% au lieu de 30%")
+                        .css("width", "60%");
 
+                });
+
+                $("div.container div.blue").mouseleave(function(){
+                    $("div.container div.red")
+                        .text("Rouge")
+                        .css("width", "30%");
+                });
+
+                $("div.container div.red").mouseenter(function(){
+                    $("div.container div.blue")
+                        .text("Yeah je fais 60% au lieu de 30%")
+                        .css("width", "60%");
+                });
+
+                $("div.container div.red").mouseleave(function(){
+                    $("div.container div.blue ")
+                        .text("Bleu")
+                        .css("width", "30%");
+                });
             }); // Fin jquery
         </script>
     </body>
