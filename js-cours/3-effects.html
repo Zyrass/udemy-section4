@@ -64,7 +64,7 @@
             <p>Nous pouvons cachez un élément avec le ".fadeOut()" et le ré afficher avec ".fadeIn()" <br />
             Il faut savoir qu'on peut utiliser des attributs comme "slow", "fast" ou bien un nombre en millisecondes (1000) pour 1 sec</p>
             <p>Exemple :</p>
-            <div class="fadeInShow">
+            <div class="fadeInShow"></div>
                 <button type="button" id="clickFadeOut">Cachez le paragraphe</button>
                 <p>Ce text peut être cacher via le bouton ci-dessus en fondu</p>
             </div>
@@ -100,12 +100,14 @@
             <legend>Conception d'un callBack</legend>
             <p>un callBack permet de spécifier des effets une fois qu'un certain effet spécifique c'est terminé.</p>
             <p>Exemple : <br />
-            4 paragraphes déjà utilisé précédemment. Quand je clic sur le paragraphe 1 en cascade je cache le p2 p3 p4.</p>
+            4 paragraphes déjà utilisé précédemment. Quand je clic sur le paragraphe 1 en cascade je cache le p2 p3 p4.<br />
+            J'ajoute également un bouton permettant en cascade de réafficher les éléments qui ont été caché en fondu</p>
             <div id="onTest">
                 <p class="p1">Je suis une paragraphe avec pour numéro le 1</p>
                 <p class="p2">Je suis une paragraphe avec pour numéro le 2</p>
                 <p class="p3">Je suis une paragraphe avec pour numéro le 3</p>
                 <p class="p4">Je suis une paragraphe avec pour numéro le 4</p>
+                <button type="button" id="callBack">Réinitialisation l'exemple d'un callBack</button>
             </div>
             <h4>code html</h4>
             <pre>
@@ -115,6 +117,7 @@
                     &lt;p class="p3"&gt;Je suis une paragraphe avec pour numéro le 3&lt;/p&gt;
                     &lt;p class="p4"&gt;Je suis une paragraphe avec pour numéro le 4&lt;/p&gt;
                 &lt;/div&gt;
+                &lt;button type="button" id="callBack"&gt;Réinitialisation l'exemple d'un callBack&lt;/button&gt;
             </pre>
             <h4>code jquery</h4>
             <pre>
@@ -126,6 +129,101 @@
                                 $("div#onTest p.p4").hide(2000);
                             });
                         });
+                    });
+                        
+                    $("#callBack").click(function(){
+                        $("div#onTest p.p2").fadeIn(2000, function(){
+                            $("div#onTest p.p3").fadeIn(2000, function(){
+                                $("div#onTest p.p4").fadeIn(2000);
+                            });
+                        });
+                    });
+                });
+            </pre>
+        </fieldset>
+
+        <h3>Effet .toggle()</h3>
+        <fieldset>
+            <legend>Effet .toggle()</legend>
+            <p>L'avantage de toggle, c'est que si on ne sais pas si par exemple un menu est ouvert, on peut le fermé ou l'ouvrir quelque soit ça position.</p>
+            <p>Exemple avec un menu simple</p>
+            <div>
+                <nav>
+                    <button type="button" id="myToggle">Menu .toggle</button>
+                    <ul class="testToggle">
+                        <li>menu 1</li>
+                        <li>menu 2</li>
+                        <li>menu 3</li>
+                        <li>menu 4</li>
+                        <li>menu 5</li>
+                    </ul>
+                </nav>
+            </div>
+            <h4>code HTML</h4>
+            <pre>
+                &lt;div&gt;
+                    &lt;nav&gt;
+                        &lt;button type="button" id="myToggle"&gt;Menu .toggle&lt;/button&gt;
+                        &lt;ul class="testToggle"&gt;
+                            &lt;li&gt;menu 1&lt;/li&gt;
+                            &lt;li&gt;menu 2&lt;/li&gt;
+                            &lt;li&gt;menu 3&lt;/li&gt;
+                            &lt;li&gt;menu 4&lt;/li&gt;
+                            &lt;li&gt;menu 5&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                &lt;/div&gt;
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                $(document).ready(function(){
+                    // Exemple d'un .toggle()
+                    $("#myToggle").click(function(){
+                        $("ul.testToggle").toggle('slow');
+                    });
+                });
+            </pre>
+        </fieldset>
+
+        <h3>Effet .fadeToggle()</h3>
+        <fieldset>
+            <legend>Effet .fadeToggle()</legend>
+            <p>.fadeToggle est exactement le même effet que .toggle à contrario que ce dernier permet une apparition ou disparition en fondu.</p>
+            <p>Exemple du même menu précédemment créer</p>
+            <div>
+                <nav>
+                    <button type="button" id="myFadeToggle">Menu .fadeToggle</button>
+                    <ul class="testFadeToggle">
+                        <li>menu 1</li>
+                        <li>menu 2</li>
+                        <li>menu 3</li>
+                        <li>menu 4</li>
+                        <li>menu 5</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <h4>Code html</h4>
+            <pre>
+                &lt;div&gt;
+                    &lt;nav&gt;
+                        &lt;button type="button" id="myToggle"&gt;Menu .fadeToggle&lt;/button&gt;
+                        &lt;ul class="testFadeToggle"&gt;
+                            &lt;li&gt;menu 1&lt;/li&gt;
+                            &lt;li&gt;menu 2&lt;/li&gt;
+                            &lt;li&gt;menu 3&lt;/li&gt;
+                            &lt;li&gt;menu 4&lt;/li&gt;
+                            &lt;li&gt;menu 5&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                &lt;/div&gt;
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                $(document).ready(function(){
+                    // Exemple d'un .fadeToggle()
+                    $("#myFadeToggle").click(function(){
+                        $("ul.testFadeToggle").fadeToggle();
                     });
                 });
             </pre>
@@ -193,6 +291,24 @@
                             $("div#onTest p.p4").hide(2000);
                         });
                     });
+                });
+
+                $("#callBack").click(function(){
+                    $("div#onTest p.p2").fadeIn(2000, function(){
+                        $("div#onTest p.p3").fadeIn(2000, function(){
+                            $("div#onTest p.p4").fadeIn(2000);
+                        });
+                    });
+                });
+
+                // Exemple d'un .toggle()
+                $("#myToggle").click(function(){
+                    $("ul.testToggle").toggle('slow');
+                });
+
+                // Exemple d'un .fadeToggle()
+                $("#myFadeToggle").click(function(){
+                    $("ul.testFadeToggle").fadeToggle();
                 });
             }); // Fin jquery
         </script>
