@@ -229,6 +229,51 @@
             </pre>
         </fieldset>
 
+        <h3>Effet .fadeTo(arg1, arg2)</h3>
+        <fieldset>
+            <legend>Effet .fadeTo(arg1, arg2)</legend>
+            <p>Parfois vous voudrez créer un effet pour spécifier une certaine opacité. Avec .fadeTo c'est possible !</p>
+            <h4>syntaxe du fadeTo</h4>
+            <pre>
+                $("h1").fadeTo( arg1, arg2);
+
+                arg1 correspond au délais en milliseconde.
+                arg2 correspond lui à l'opacité qui pour rappel va de 0 à 1.
+            </pre>
+            <p>Exemple d'un paragraphe qui une fois cliqué dessus devient partiellement transparent. Au bout de 5sec il retrouve sa forme d'origine</p>
+            <div class="testFadeTo">
+                <p>Ceci est un paragraphe qui devient vert avec une opacité de 1 si on sort avec la souris. Mais quand on clic dessus il devient rouge<br />
+                avec une opacité de 0.5</p>
+            </div>
+            <h4>code html</h4>
+                <pre>
+                    &lt;div class="testFadeTo"&gt;
+                        &lt;p&gt;Ceci est un paragraphe qui devient vert avec une opacité de 1 si on sort avec la souris.<br />
+                        Mais quand on clic dessus il devient rouge avec une opacité de 0.5&lt;/p&gt;
+                    &lt;/div&gt;
+                </pre>
+            <h4>code jquery</h4>
+                <pre>
+                    $(document).ready(function() {
+                        // Exemple d'un .fadeTo sous forme d'objet
+                        $(".testFadeTo").on({
+                            click: function(){
+                                $(".testFadeTo p")
+                                    .fadeTo(1000, .5)
+                                    .css("background-color", "#800000")
+                                    .css("color", "#fff");
+                            },
+                            mouseleave: function(){
+                                $(".testFadeTo p")
+                                    .fadeTo(1000, 1)
+                                    .css("background-color", "#008000")
+                                    .css("color", "#fff");
+                            }
+                        });
+                    });
+                </pre>
+        </fieldset>
+
         <footer>
             <p>Conception : Alain GUILLON</p>
             <hr>
@@ -309,6 +354,22 @@
                 // Exemple d'un .fadeToggle()
                 $("#myFadeToggle").click(function(){
                     $("ul.testFadeToggle").fadeToggle();
+                });
+
+                // Exemple d'un .fadeTo() sous forme d'objet
+                $(".testFadeTo").on({
+                    click: function(){
+                        $(".testFadeTo p")
+                            .fadeTo(1000, .5)
+                            .css("background-color", "#800000")
+                            .css("color", "#fff");
+                    },
+                    mouseleave: function(){
+                        $(".testFadeTo p")
+                            .fadeTo(1000, 1)
+                            .css("background-color", "#008000")
+                            .css("color", "#fff");
+                    }
                 });
             }); // Fin jquery
         </script>
