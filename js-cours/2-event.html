@@ -59,7 +59,6 @@
                     });
                 });
             </pre>
-
         </fieldset>
 
         <h3>Evènement mouseenter() & mouseout()</h3>
@@ -131,9 +130,10 @@
                 $(document).ready(function(){
 
                     // Exemple du ".mouseenter()" et du ".mouseleave()"
-                    $("div.container div.red")
-                        .text("Yeah je fais 60% au lieu de 30%")
-                        .css("width", "60%");
+                    $("div.container div.blue").mouseleave(function(){
+                        $("div.container div.red")
+                            .text("Yeah je fais 60% au lieu de 30%")
+                            .css("width", "60%");
                     });
 
                     $("div.container div.blue").mouseleave(function(){
@@ -157,7 +157,142 @@
             </pre>
         </fieldset>
 
+        <h3>Evènement ".hover()"</h3>
+        <fieldset>
+            <legend>Evènement ".hover()"</legend>
+            <p>Lorsque je vais passé sur mon lien, un texte apparaîtra indiquant que je survole le lien</p>
+            <p>/!\ La particularité de la fonction ".hover()" c'est qu'elle peut prendre 2 fonctions</p>
+            <p>Exemple :</p>
+            <pre>
+                $("h1").hover(function(){
 
+                    // code d'entrée de l'élément
+
+                }, function(){
+
+                    // code de sortie de l'élément
+
+                });
+            </pre>
+
+            <div class="hoverTest">
+                <a href="#">Lien qui ne redirige vers rien du tout. Par contre survolez-moi et admirez le texte qui apparaît</a>
+                <p>Je suis un text magique ihihihih</p>
+            </div>
+            <h4>Code HTML</h4>
+            <pre>
+                &lt;div class="hoverTest"&gt;
+                    &lt;a href="#"&gt;Lien qui ne redirige vers rien du tout. Par contre survolez-moi et admirez le texte qui apparaît&lt;/a&gt;
+                    &lt;p&gt;Je suis un text magique ihihihih&lt;/p&gt;
+                &lt;/div&gt;
+            </pre>
+            <h4>Code Jquery</h4>
+            <pre>
+                $(document).ready(function(){
+                    // Exemple du ".hover()"
+                    $("div.hoverTest a").hover(function(){
+                        $("div.hoverTest p").addClass("display", "block").show("slow");
+                    }, funtion(){
+                        $("div.hoverTest p").removeClass("display").hide("slow");
+                    });
+                }); // Fin jquery
+            </pre>
+        </fieldset>
+
+        <h3>Evènement ".on()"</h3>
+        <fieldset>
+            <legend>Evènement ".on()"</legend>
+            <p>L'évènement ".on()" permet de spécifié des attributs comme par exemple le click mais aussi bien la conception d'objet</p>
+            <p>Exemple d'un click. Si je clic sur le paragraphe 3, je cache le paragraphe 1 et 4. Si je clic sur le paragraphe 2 je les réaffiche</p>
+            <div id="onTest">
+                <p class="p1">Je suis une paragraphe avec pour numéro le 1</p>
+                <p class="p2">Je suis une paragraphe avec pour numéro le 2</p>
+                <p class="p3">Je suis une paragraphe avec pour numéro le 3</p>
+                <p class="p4">Je suis une paragraphe avec pour numéro le 4</p>
+            </div>
+            <h4>code HTML</h4>
+            <pre>
+                &lt;div&gt;
+                    &lt;p class="p1"&gt;Je suis une paragraphe avec pour numéro le 1&lt;/p&gt;
+                    &lt;p class="p2"&gt;Je suis une paragraphe avec pour numéro le 2&lt;/p&gt;
+                    &lt;p class="p3"&gt;Je suis une paragraphe avec pour numéro le 3&lt;/p&gt;
+                    &lt;p class="p4"&gt;Je suis une paragraphe avec pour numéro le 4&lt;/p&gt;
+                &lt;/div&gt;
+            </pre>
+
+            <h4>code Jquery</h4>
+            <pre>
+                $(document).ready(function(){
+
+                    $("div#onTest p.p3").on("click", function(){
+                        $("div#onTest p.p1").hide("slow");
+                        $("div#onTest p.p4").hide("slow");
+                    });
+
+                    $("div#onTest p.p2").on("click", function(){
+                        $("div#onTest p.p1").show("slow");
+                        $("div#onTest p.p4").show("slow");
+                    });
+
+                });
+            </pre>
+        </fieldset>
+
+        <h3>Conception d'objet avec le ".on({})"</h3>
+        <fieldset>
+            <legend>Conception d'objet avec le ".on({})"</legend>
+            <p>Comme je l'ai déjà dit nous pouvons créer des objets avec l'évènement .on()</p>
+            <h4>la syntaxe :</h4>
+            <pre>
+                $("h1").on({
+                    mouseenter : function(){
+                        code de mouseenter ici...
+                    },
+                    mouseout : function(){
+                        code de mouseout ici...
+                    },
+                    click : function(){
+                        code de click ici...
+                    }
+                })
+            </pre>
+            <h4>Exemple :</h4>
+            <p>Si j'entre sur le bloc 1, le bloc 2 devient bleu. Par contre si je clic sur le bloc 1, le bloc 3 devient bleu. <br />
+            J'ajoute un bouton pour réinitialisé l'évènement</p>
+            <div id="onObjet">
+                <div class="p1">1</div>
+                <div class="p2">2</div>
+                <div class="p3">3</div>
+            </div>
+            <h4>Code html</h4>
+            <pre>
+                &lt;div id="onObjet"&gt;
+                    &lt;div class="p1"&gt;1&lt;/div&gt;
+                    &lt;div class="p2"&gt;2&lt;/div&gt;
+                    &lt;div class="p3"&gt;3&lt;/div&gt;
+                &lt;/div&gt;
+            </pre>
+
+            <h4>code jquery</h4>
+            <pre>
+                $(document).ready(function(){
+
+                    // Exemple de l'objet avec .on({})
+                    $("div#onObjet div.p2").on({
+                        mouseenter: function(){
+                            $("div#onObjet div.p1").css("background-color", "#0080ff");
+                        }, 
+                        click: function(){
+                            $("div#onObjet div.p3").css("background-color", "#800000");
+                        },
+                        mouseleave: function(){
+                            $("div#onObjet div.p1").css("background-color", "#fff");
+                            $("div#onObjet div.p3").css("background-color", "#fff");
+                        }
+                    });
+                });
+            </pre>
+        </fieldset>
         <footer>
             <p>Conception : Alain GUILLON</p>
             <hr>
@@ -237,6 +372,38 @@
                     $("div.container div.blue ")
                         .text("Bleu")
                         .css("width", "30%");
+                });
+
+                // Exemple du ".hover()"
+                $("div.hoverTest a").hover(function(){
+                    $("div.hoverTest p").addClass("display", "block").show("slow");
+                }, function(){
+                    $("div.hoverTest p").removeClass("display").hide("slow");
+                });
+
+                // Exemple du ".on()"
+                $("div#onTest p.p3").on("click", function(){
+                    $("div#onTest p.p1").hide("slow");
+                    $("div#onTest p.p4").hide("slow");
+                });
+
+                $("div#onTest p.p2").on("click", function(){
+                    $("div#onTest p.p1").show("slow");
+                    $("div#onTest p.p4").show("slow");
+                });
+
+                // Exemple de l'objet avec .on({})
+                $("div#onObjet div.p2").on({
+                    mouseenter: function(){
+                        $("div#onObjet div.p1").css("background-color", "#0080ff");
+                    }, 
+                    click: function(){
+                        $("div#onObjet div.p3").css("background-color", "#800000");
+                    },
+                    mouseleave: function(){
+                        $("div#onObjet div.p1").css("background-color", "#fff");
+                        $("div#onObjet div.p3").css("background-color", "#fff");
+                    }
                 });
             }); // Fin jquery
         </script>
