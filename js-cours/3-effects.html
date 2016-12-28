@@ -21,6 +21,116 @@
         <h2>3 - Les effets dans JQuery</h2>
         <hr>
 
+        <h3>Cachez un element et le réafficher</h3>
+        <fieldset>
+            <legend>Cachez un element avec ".hide()" et le réafficher avec ".show()"</legend>
+            <p>Nous pouvons cachez un élément avec le ".hide()" et le ré afficher avec ".show()" <br />
+            Il faut savoir qu'on peut utiliser des attributs comme "slow", "fast" ou bien un nombre en millisecondes (1000) pour 1 sec</p>
+            <p>Exemple :</p>
+            <div class="hideShow">
+                <button type="button" id="clickHide">Cachez le paragraphe</button>
+                <p>Ce text peut être cacher via le bouton ci-dessus</p>
+            </div>
+            <h4>Code html</h4>
+            <pre>
+                &lt;div class="hideShow"&gt;
+                    &lt;button type="button" id="clickHide"&gt;Cachez le paragraphe&lt;/button&gt;
+                    &lt;p&gt;Ce text peut être cacher via le bouton ci-dessus&lt;/p&gt;
+                &lt;/div&gt;
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                $(document).ready(function(){
+                    // Exemple hide & show
+                    var ask = 0;
+                    $("#clickHide").click(function(){
+                        if (ask == 0) {
+                            $("div.hideShow p").hide("slow");
+                            $("#clickHide").text("Affiché à nouveau le paragraphe");
+                            ask = 1;
+                        } else {
+                            $("div.hideShow p").show("slow");
+                            $("#clickHide").text("Cacher de nouveau le paragraphe");
+                            ask = 0;
+                        }
+                    });
+                }); // Fin jquery
+            </pre>
+        </fieldset>
+
+        <h3>Cachez à nouveau un element et le réafficher de nouveau</h3>
+        <fieldset>
+            <legend>Cachez un element avec ".fadeOut()" et le réafficher avec ".fadeIn()"</legend>
+            <p>Nous pouvons cachez un élément avec le ".fadeOut()" et le ré afficher avec ".fadeIn()" <br />
+            Il faut savoir qu'on peut utiliser des attributs comme "slow", "fast" ou bien un nombre en millisecondes (1000) pour 1 sec</p>
+            <p>Exemple :</p>
+            <div class="fadeInShow">
+                <button type="button" id="clickFadeOut">Cachez le paragraphe</button>
+                <p>Ce text peut être cacher via le bouton ci-dessus en fondu</p>
+            </div>
+            <h4>Code html</h4>
+            <pre>
+                &lt;div class="fadeInShow"&gt;
+                    &lt;button type="button" id="clickFadeOut"&gt;Cachez le paragraphe&lt;/button&gt;
+                    &lt;p&gt;Ce text peut être cacher via le bouton ci-dessus en fondu&lt;/p&gt;
+                &lt;/div&gt;
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                $(document).ready(function(){
+                    // Exemple fadeOut & fadeIn
+                    var askTwo = 0;
+                    $("#clickFadeOut").click(function(){
+                        if (askTwo == 0) {
+                            $("div.fadeInShow p").fadeOut("slow");
+                            $("#clickFadeOut").text("Affiché à nouveau le paragraphe");
+                            askTwo = 1;
+                        } else {
+                            $("div.fadeInShow p").fadeIn("slow");
+                            $("#clickFadeOut").text("Cacher de nouveau le paragraphe");
+                            askTwo = 0;
+                        }
+                    });
+                }); // Fin jquery
+            </pre>
+        </fieldset>
+
+        <h3>Conception d'un callBack</h3>
+        <fieldset>
+            <legend>Conception d'un callBack</legend>
+            <p>un callBack permet de spécifier des effets une fois qu'un certain effet spécifique c'est terminé.</p>
+            <p>Exemple : <br />
+            4 paragraphes déjà utilisé précédemment. Quand je clic sur le paragraphe 1 en cascade je cache le p2 p3 p4.</p>
+            <div id="onTest">
+                <p class="p1">Je suis une paragraphe avec pour numéro le 1</p>
+                <p class="p2">Je suis une paragraphe avec pour numéro le 2</p>
+                <p class="p3">Je suis une paragraphe avec pour numéro le 3</p>
+                <p class="p4">Je suis une paragraphe avec pour numéro le 4</p>
+            </div>
+            <h4>code html</h4>
+            <pre>
+                &lt;div&gt;
+                    &lt;p class="p1"&gt;Je suis une paragraphe avec pour numéro le 1&lt;/p&gt;
+                    &lt;p class="p2"&gt;Je suis une paragraphe avec pour numéro le 2&lt;/p&gt;
+                    &lt;p class="p3"&gt;Je suis une paragraphe avec pour numéro le 3&lt;/p&gt;
+                    &lt;p class="p4"&gt;Je suis une paragraphe avec pour numéro le 4&lt;/p&gt;
+                &lt;/div&gt;
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                $(document).ready(function(){
+                    // Exemple d'un callBack
+                    $("div#onTest p.p1").click(function(){
+                        $("div#onTest p.p2").hide(2000, function(){
+                            $("div#onTest p.p3").hide(2000, function(){
+                                $("div#onTest p.p4").hide(2000);
+                            });
+                        });
+                    });
+                });
+            </pre>
+        </fieldset>
+
         <footer>
             <p>Conception : Alain GUILLON</p>
             <hr>
@@ -44,5 +154,47 @@
             </ul>
         </footer>
 
+        <!-- JQuery -->
+        <script src="../jquery/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                // Exemple hide & show
+                var ask = 0;
+                $("#clickHide").click(function(){
+                    if (ask == 0) {
+                        $("div.hideShow p").hide("slow");
+                        $("#clickHide").text("Affiché à nouveau le paragraphe");
+                        ask = 1;
+                    } else {
+                        $("div.hideShow p").show("slow");
+                        $("#clickHide").text("Cacher de nouveau le paragraphe");
+                        ask = 0;
+                    }
+                });
+
+                // Exemple fadeOut & fadeIn
+                var askTwo = 0;
+                $("#clickFadeOut").click(function(){
+                    if (askTwo == 0) {
+                        $("div.fadeInShow p").fadeOut("slow");
+                        $("#clickFadeOut").text("Affiché à nouveau le paragraphe");
+                        askTwo = 1;
+                    } else {
+                        $("div.fadeInShow p").fadeIn("slow");
+                        $("#clickFadeOut").text("Cacher de nouveau le paragraphe");
+                        askTwo = 0;
+                    }
+                });
+
+                // Exemple d'un callBack
+                $("div#onTest p.p1").click(function(){
+                    $("div#onTest p.p2").hide(2000, function(){
+                        $("div#onTest p.p3").hide(2000, function(){
+                            $("div#onTest p.p4").hide(2000);
+                        });
+                    });
+                });
+            }); // Fin jquery
+        </script>
     </body>
 </html>
