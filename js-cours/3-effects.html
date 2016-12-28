@@ -274,6 +274,65 @@
                 </pre>
         </fieldset>
 
+        <h3>Effet .slideUp() & .slideDown()</h3>
+        <fieldset>
+            <legend>Effet .slideUp() & .slideDown()</legend>
+            <p>Cette effet permet de créer un effet bien sympa. Vous allez directement pensez à l'ouverture et la fermetre des menus.</p>
+            <h4>syntaxe</h4>
+            <pre>
+                $("selector").slideDown(arg1);
+                $("selector").slideUp(arg1);
+
+                arg1 Correspond au délais pour les deux effets.
+            </pre>
+            <p>Exemple d'un menu</p>
+            <div>
+                <nav>
+                    <button type="button" id="openMenu">.slideDown(1000)</button>
+                    <ul class="testSlide">
+                        <li>menu 1</li>
+                        <li>menu 2</li>
+                        <li>menu 3</li>
+                        <li>menu 4</li>
+                        <li>menu 5</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <h4>Code html</h4>
+            <pre>
+                &lt;div&gt;
+                    &lt;nav&gt;
+                        &lt;button type="button" id="openMenu"&gt;.slideDown(1000)&lt;/button&gt;
+                        &lt;ul class="testSlide"&gt;
+                            &lt;li&gt;menu 1&lt;/li&gt;
+                            &lt;li&gt;menu 2&lt;/li&gt;
+                            &lt;li&gt;menu 3&lt;/li&gt;
+                            &lt;li&gt;menu 4&lt;/li&gt;
+                            &lt;li&gt;menu 5&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                &lt;/div&gt;
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                // Exemple d'un slideUp() & d'un slideDown()
+                var open = 0;
+                $("#openMenu").click(function(){
+                    if ( open == 0 ) {
+                        $("ul.testSlide").slideUp(1000);                        
+                        $("#openMenu").text(".slideUp(1000)");
+                        open = 1;
+                    } else {
+                        $("ul.testSlide").slideDown(1000);
+                        $("#openMenu").text(".slideDown(1000)");                        
+                        open = 0;
+                    }    
+                });
+            </pre>
+
+        </fieldset>
+
         <footer>
             <p>Conception : Alain GUILLON</p>
             <hr>
@@ -371,6 +430,21 @@
                             .css("color", "#fff");
                     }
                 });
+
+                // Exemple d'un slideUp() & d'un slideDown()
+                var open = 0;
+                $("#openMenu").click(function(){
+                    if ( open == 0 ) {
+                        $("ul.testSlide").slideUp(1000);                        
+                        $("#openMenu").text(".slideUp(1000)");
+                        open = 1;
+                    } else {
+                        $("ul.testSlide").slideDown(1000);
+                        $("#openMenu").text(".slideDown(1000)");                        
+                        open = 0;
+                    }    
+                });
+
             }); // Fin jquery
         </script>
     </body>

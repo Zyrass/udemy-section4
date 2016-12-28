@@ -8,13 +8,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 pre { 
-    background-color: #ddd;
-    padding-bottom: 10px;
-    padding-top: 20px;
+    background-color: #000;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    color: #fff;
+    border: 2px solid darkgoldenrod;
+    box-shadow: 0 0 30px black;
 }
 pre.oneLine {
-    height: 20px;
-    line-height: 20px;
+    height: 10px;
+    line-height: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 p:first-letter {
@@ -82,10 +87,23 @@ div#onObjet div.p1, div#onObjet div.p2, div#onObjet div.p3 {
     font-size: 3em;
 }
 
+div.formAnimate {
+    width: 100px;
+    height: 100px;
+    background-color: #008000;
+    margin: 25px auto;
+}
+
+div#divAnimate {
+    width: 50px;
+    height: 50px;
+    background-color: #0000ff;
+    margin: 25px auto;
+}
+
 i.fa {
     font-size: 2em;
 }
-
 span.parentheseOpenOne, pre span.parentheseCloseOne {
     color: orange;
 }
@@ -93,24 +111,27 @@ span.parentheseOpenTwo, pre span.parentheseCloseTwo {
     color: darkorange;
 }
 span.parentheseOpenThree, pre span.parentheseCloseThree {
-    color: purple;
+    color: coral;
 }
 span.guillemets {
-    color: green;
+    color: lightgreen;
 }
-span.evenements {
+span.evenement, span.attribut {
     color: purple;
 }
-span.functions {
+span.function {
     color: darkorchid;
     font-style: italic;
 }
 span.baliseHTML {
-    color: blue;
+    color: lightblue;
 }
 span.commentaire {
     font-style: italic;
-    color: #444;
+    color: #999;
+}
+span.accolade {
+    color: #ff0000;
 }
 
 footer {
