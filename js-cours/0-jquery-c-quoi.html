@@ -54,7 +54,7 @@
             Ci-dessous un exemple d'utilisation de jquery</p>
             <pre>
                 <span class="commentaire">// On charge en 1ER jquery ( - ici la version 3.1.1 minifié - )</span>
-                <span class="baliseHTML">&lt;script <span class="attribut">src=</span><span class="guillemets">"https://code.jquery.com/jquery-3.1.1.min.js"</span> >&lt;/script&gt;</span>
+                <span class="baliseHTML">&lt;script <span class="attribut">src=</span><span class="guillemets">"https://code.jquery.com/jquery-3.1.1.min.js"</span>&gt; &lt;/script&gt;</span>
                 <span class="commentaire">// Ensuite, on charge notre script perso sur Jquery dans un fichier externe</span>
                 <span class="baliseHTML">&lt;script <span class="attribut">src=</span><span class="guillemets">"myScript.js"</span>&gt;&lt;/script&gt;</span>
             </pre>
@@ -89,7 +89,7 @@
             <pre>
                         code HTML ici...
 
-                        <span class="baliseHTML">&lt;script <span class="attribut">src=</span><span class="guillemets">"https://code.jquery.com/jquery-3.1.1.min.js"</span>&lt;/script></span>
+                        <span class="baliseHTML">&lt;script <span class="attribut">src=</span><span class="guillemets">"https://code.jquery.com/jquery-3.1.1.min.js"</span>&lt;/script&gt;</span>
                         <span class="baliseHTML">&lt;script&gt;</span>
                             <span class="parentheseOpenOne">$(</span>document<span class="parentheseOpenOne">)</span><span class="evenement">.ready</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>                     
 
@@ -103,7 +103,7 @@
             </pre>
             <hr>
             <h4>2 - FICHIER EXTERNE</h4>
-            <p>Même chose que précédemment, pour rappel, avant &lt;/body>, il faut ouvrir une balise script, sauf que là<br/>
+            <p>Même chose que précédemment, pour rappel, avant &lt;/body&gt;, il faut ouvrir une balise script, sauf que là<br/>
             on y ajoute un attribut src (source) et on y ajoute notre fichier qui aura comme extension : .js. <br /><br />
             Attention, je me répète mais surtout ne pas oublié le fichier jquery qui pour rappel doit être placé avant tout script perso.</p>
  
@@ -192,6 +192,7 @@
                      * ----------------------------------------------------------------------------------- */
                 </span>
             </pre>
+        </fieldset>
         <h4>Version raccourçis</h4>
         <fieldset>
             <legend>Syntaxe de JQUERY RACCOUCIS</legend>
