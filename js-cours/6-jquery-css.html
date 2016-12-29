@@ -24,11 +24,48 @@
         <h3>function ".addClass()"</h3>
         <fieldset>
             <legend>function ".addClass()"</legend>
+            <p>La fonction ".addClass()" permet comme son nom l'indique d'ajouter une nouvelle classe à un élément spécifique.</p>
+            <h4>La syntaxe - Ajout d'une classe</h4>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(<span class="guillemets">"h1"</span>)</span><span class="evenement">.addClass</span><span class="parentheseOpenThree">(<span class="guillemets">"nomDeLaClass1"</span>)</span>;
+            </pre>
+            <p>Avec cette fonction, il faut savoir qu'il est tout à fait possible d'ajouter une deuxième classe très simplement.</p>
+            <h4>La syntaxe - Ajout d'une seconde classe</h4>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(<span class="guillemets">"h1"</span>)</span><span class="evenement">.addClass</span><span class="parentheseOpenThree">(</span><span class="guillemets">"nomDeLaClass1 nomDeLaClass2"</span><span class="parentheseOpenThree">)</span>;
+            </pre>
+            <p>A noter qu'il n'y a pas de virgule entre les classes. C'est volontaire vu qu'en CSS, quand nous voulons ajouter une autre classe sur un même élément, on saisi strictement la même chose soit un mot un espace une autre mot etc...</p>
         </fieldset>
 
-        <h3>function ".removeClass"</h3>
+        <h3>function ".removeClass()"</h3>
         <fieldset>
             <legend>function ".removeClass()"</legend>
+            <p>Cette fonction permet de supprimer une classe d'un élément.<br />
+            A savoir que quand cette classe est supprimée, l'attribut "class"" reste en HTML.</p>
+            <h4>L'attribut class reste ?</h4>
+            <p>En effet, à l'oeil nu ça ne se voit pas. Par contre si vous ouvrez votre inspecteur de code, vous découvrirez l'attribut class vide. Et oui, la fonction ".removeClass()" supprime le contenu mais pas l'attribut class. Mais la syntaxe du code HTML après la suppression sera bien plus parlante. Dans l'exemple ci-dessous, il faut imaginer une balise HTML h1 comprenant une seule classe.</p>
+            <h4>Résultat obtenu suite à la suppression de la seule classe</h4>
+            <pre class="oneLine">
+                <span class="baliseHTML">&lt;h1 <span class="attribut">class</span>&gt;</span>My title<span class="baliseHTML">&lt;/h1&gt;</span>
+            </pre>
+            <p>Reprenons l'exemple précédemment créé avec la fonction ".addClass()". Pour rappel :</p>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(<span class="guillemets">"h1"</span>)</span><span class="evenement">.addClass</span><span class="parentheseOpenThree">(</span><span class="guillemets">"nomDeLaClass1 nomDeLaClass2"</span><span class="parentheseOpenThree">)</span>;
+            </pre>
+            <h4>La syntaxe jquery - ".removeClass()"</h4>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(<span class="guillemets">"h1"</span>)</span><span class="evenement">.removeClass</span><span class="parentheseOpenThree">(<span class="guillemets">"nomDeLaClass1"</span>)</span>;
+            </pre>
+            <p>Avec le code saisi ci-dessus, nous cherchons à supprimer la class portant le nom : "nomDeLaClass1". Rappelez-vous, nous avions deux classes indiqués au départ. Maintenant, il ne restera que la seconde classe, soit :</p>
+            <h4>Code html avant la suppression de la première classe</h4>
+            <pre class="oneLine">
+                <span class="baliseHTML">&lt;h1 <span class="attribut">class=</span><span class="guillemets">"nomDeLaClass1 nomDeLaClass2"</span>&gt;</span>My title<span class="baliseHTML">&lt;/h1&gt;</span>
+            </pre>
+            <p>A noter qu'il n'y a pas de virgule entre les classes. C'est volontaire vu qu'en CSS, quand nous voulons ajouter une autre classe sur un même élément, on saisi strictement la même chose soit un mot un espace un autre mot etc...</p>
+            <h4>Code html apprès la suppression de la première classe</h4>
+            <pre class="oneLine">
+                <span class="baliseHTML">&lt;h1 <span class="attribut">class=</span><span class="guillemets">"nomDeLaClass2"</span>&gt;</span>My title<span class="baliseHTML">&lt;/h1&gt;</span>
+            </pre>
         </fieldset>
 
         <h3>function ".toggleClass()"</h3>
