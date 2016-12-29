@@ -22,87 +22,97 @@
         <hr>
 
         <h3>A quoi sa sert ?</h3>
-        <p>Un évènement, est très souvent associé à un clic de souris, également on peut l'utiliser pour stylisé du html avec du CSS. Mais aussi, nous pouvons <br />
-        caché, affiché des élements, affiché un contenu selon des critères prédéfinis etc...</p>
-
-        <h3>Evènement click qui par exemple, nous permet de cacher un texte</h3>
         <fieldset>
-            <legend>Exemple d'un évènement click permettant de cacher un texte</legend>
-            <p>Pour notre exemple, je vais créer 2 bouttons permettant de cacher mais également d'afficher un paragraphe.<br />
-            Au départ le paragraphe est visible.
-            </p>
+            <legend>A quoi sa sert ?</legend>
+            <p>Un évènement, est très souvent associé à un clic de souris, également on peut l'utiliser pour stylisé du HTML avec du CSS, modifié du CSS à la volée. Mais aussi, nous pouvons
+            caché, affiché des élements, affiché un contenu selon des critères prédéfinis et j'en passe... la liste est très très longue...</p>
+        </fieldset>
+        
+        <h3>Evènement .click()</h3>
+        <fieldset>
+            <legend>Evènement .click()</legend>
+            <p>Nul besoin d'expliqué à quoi sert l'évènement .click(), vous vous en doutez bien. Passons donc directement à un exemple.</p>
+            <p>Pour notre exemple, je vais créer 2 bouttons permettant de cacher mais également d'afficher un paragraphe qui contient un Lorem Ipsum.<br />
+            Au départ le paragraphe est visible.</p>
 
-            <p class="cacherMoi">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatibus non quo! Saepe incidunt itaque,<br />
-            velit placeat rerum pariatur reiciendis? Facere ea quidem temporibus quam dolor inventore sequi<br />
-            reprehenderit officiis illum praesentium blanditiis quo amet tempore esse error, incidunt molestias ratione,<br />
+            <p class="cacherMoi">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+            Est voluptatibus non quo! Saepe incidunt itaque,<br />
+            velit placeat rerum pariatur reiciendis?<br />
+            Facere ea quidem temporibus quam dolor inventore sequi<br />
+            reprehenderit officiis illum praesentium blanditiis <br />
+            quo amet tempore esse error, incidunt molestias ratione,<br />
             ullam! Minus libero necessitatibus perspiciatis ea possimus ad nobis.</p>
 
             <button type="button" id="cachez">Cachez le texte maintenant</button> <button type="button" id="affichez">Affichez le texte maintenant</button>
 
             <h4>code HTML</h4>
             <pre>
-            &lt;p class="cacherMoi"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatibus non quo! Saepe incidunt itaque,<br />
-            velit placeat rerum pariatur reiciendis? Facere ea quidem temporibus quam dolor inventore sequi<br />
-            reprehenderit officiis illum praesentium blanditiis quo amet tempore esse error, incidunt molestias ratione,<br />
-            ullam! Minus libero necessitatibus perspiciatis ea possimus ad nobis.&lt;/p&gt;
+            <span class="baliseHTML">&lt;p <span class="attribut">class=</span><span class="guillemets">"cacherMoi"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="baliseHTML">&lt;br /&gt;</span>
+            Est voluptatibus non quo! Saepe incidunt itaque,<span class="baliseHTML">&lt;br /&gt;</span>
+            velit placeat rerum pariatur reiciendis?<span class="baliseHTML">&lt;br /&gt;</span>
+            Facere ea quidem temporibus quam dolor inventore sequi<span class="baliseHTML">&lt;br /&gt;</span>
+            reprehenderit officiis illum praesentium blanditiis <span class="baliseHTML">&lt;br /&gt;</span>
+            quo amet tempore esse error, incidunt molestias ratione,<span class="baliseHTML">&lt;br /&gt;</span>
+            ullam! Minus libero necessitatibus perspiciatis ea possimus ad nobis.<span class="baliseHTML">&lt;/p&gt;</span>
             </pre>
 
             <h4>code jquery</h4>
             <pre>
-                $(document).ready(function(){
-                    $("#cachez").click(function() {
-                        $('p q.cacherMoi').hide('slow');
-                    });
+                <span class="baliseHTML">&lt;script&gt;</span>  
+                    <span class="parentheseOpenOne">$(</span>document<span class="parentheseOpenOne">)</span><span class="evenement">.ready</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"#cachez"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                            <span class="parentheseOpenOne">$(<span class="guillemets">"p q.cacherMoi"</span>)</span><span class="evenement">.hide</span><span class="parentheseOpenTwo">(<span class="guillemets">'slow'</span>)</span>;
+                        <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
 
-                    $("#affichez").click(function() {
-                        $('p q.cacherMoi').show('slow');
-                    });
-                });
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"#affichez"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                            <span class="parentheseOpenOne">$(<span class="guillemets">"p q.cacherMoi"</span>)</span><span class="evenement">.show</span><span class="parentheseOpenTwo">(<span class="guillemets">'slow'</span>)</span>;
+                        <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="baliseHTML">&lt;/script&gt;</span>
             </pre>
         </fieldset>
 
-        <h3>Evènement mouseenter() & mouseout()</h3>
+        <h3>Evènement .mouseenter() & .mouseout()</h3>
         <fieldset>
-            <legend>Exemple d'un évènement ".mouseenter()" & ".mouseout()" permettant d'afficher 2 images</legend>
-            <p>Ci-dessous une image d'un logo de final fantasy 15. Si on entre avec la souris dans la div contenant la classe "autreImage" avec la souris, <br />
-            L'image par défaut changera pour afficher une autre image</p>
+            <legend>Evènement .mouseenter() & .mouseout()</legend>
+            <p>Ci-dessous une image d'un paysage idilique. Si on entre avec la souris dans la div contenant la classe "autreImage" avec la souris, l'image par défaut changera pour afficher un soleil ombragé magnifique.</p>
 
             <div class="autreImage">
                 <figure>
-                    <figcaption>Mon logo FF 15</figcaption>
-                    <img src="http://image.jeuxvideo.com/medias-md/146359/1463589413-1698-card.png" alt="logo FF15" width="650" height="417" />
+                    <figcaption>Paysage idilique 1</figcaption>
+                    <img src="images/Nature-Paysages(558).jpg" alt="Paysage idilique 1" width="650" height="417" />
                 </figure>
             </div>
 
             <h4>Le code html</h4>
             <pre>
-                &lt;div class="autreImage"&gt;
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"autreImage"</span>&gt;
                     &lt;figure&gt;
-                        &lt;figcaption&gt;Mon logo FF 15&lt;/figcaption&gt;
-                        &lt;img src="http://image.jeuxvideo.com/medias-md/146359/1463589413-1698-card.png" alt="logo FF15" width="650" height="417" /&gt;
+                        &lt;figcaption&gt;</span>Paysage idilique 1<span class="baliseHTML">&lt;/figcaption&gt;</span>
+                        <span class="baliseHTML">&lt;img <span class="attribut">src=</span><span class="guillemets">"images/Nature-Paysages(558).jpg"</span><span class="attribut"> alt=</span><span class="guillemets">"Paysage idilique 1"</span> <span class="attribut">width=</span><span class="guillemets">"650"</span> <span class="attribut">height=</span><span class="guillemets">"417"</span> /&gt;
                     &lt;/figure&gt;
-                &lt;/div&gt;
+                &lt;/div&gt;</span>
             </pre>
             <h4>Le code Jquery utilisé</h4>
             <pre>
-            $(document).ready(function(){
-                // Exemple du ".mousseenter()" et du ".mouseout()"
-                $("div.autreImage").mouseenter(function(){
-                    $('div.autreImage img')
-                        .removeAttr("src")
-                        .attr("alt", "teste")
-                        .attr("src", "http://www.fsmwarden.com/developpez_4/jmduchesne_Individus(IdRel)Equipes_ressources.png");
-                    $('div.autreImage figcaption').text("Autre image");
-                });
+            <span class="parentheseOpenOne">$(</span>document<span class="parentheseOpenOne">)</span><span class="evenement">.ready</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span> 
+                <span class="commentaire">// Exemple du ".mousseenter()" et du ".mouseout()"</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"div.autreImage"</span>)</span><span class="evenement">.mouseenter</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">'div.autreImage img'</span>)</span>
+                        <span class="evenement">.removeAttr</span><span class="parentheseOpenThree">(<span class="guillemets">"src"</span>)</span>
+                        <span class="evenement">.attr</span><span class="parentheseOpenThree">(</span><span class="guillemets">"alt"</span>, <span class="guillemets">"Soleil ombragé"</span><span class="parentheseOpenThree">)</span>
+                        <span class="evenement">.attr</span><span class="parentheseOpenThree">(</span><span class="guillemets">"src"</span>, <span class="guillemets">"images/Nature-Paysages(559).jpg"</span><span class="parentheseOpenThree">)</span>;
+                    <span class="parentheseOpenOne">$(<span class="guillemets">'div.autreImage figcaption'</span>)</span><span class="evenement">.text</span><span class="parentheseOpenThree">(</span><span class="guillemets">"Soleil ombragé"</span><span class="parentheseOpenThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
 
-                $("div.autreImage img").mouseout(function(){
-                    $('div.autreImage img')
-                        .removeAttr("src")
-                        .attr("alt", "Mon Logo FF 15")
-                        .attr("src", "http://image.jeuxvideo.com/medias-md/146359/1463589413-1698-card.png");
-                    $('div.autreImage figcaption').text("Mon logo FF15");
-                });
-            }); // Fin jquery
+                <span class="parentheseOpenOne">$(<span class="guillemets">"div.autreImage img"</span>)</span><span class="evenement">.mouseout</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">'div.autreImage img'</span>)</span>
+                        <span class="evenement">.removeAttr</span><span class="parentheseOpenThree">(<span class="guillemets">"src"</span>)</span>
+                        <span class="evenement">.attr</span><span class="parentheseOpenThree">(</span><span class="guillemets">"alt"</span>, <span class="guillemets">"Paysage idilique 1"</span><span class="parentheseOpenThree">)</span>
+                        <span class="evenement">.attr</span><span class="parentheseOpenThree">(</span><span class="guillemets">"src"</span>, <span class="guillemets">"images/Nature-Paysages(558).jpg"</span><span class="parentheseOpenThree">)</span>;
+                    <span class="parentheseOpenOne">$(<span class="guillemets">'div.autreImage figcaption'</span>)</span><span class="evenement">.text</span><span class="parentheseOpenThree">(<span class="guillemets">"Paysage idilique 1"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>; <span class="commentaire">// Fin jquery</span>
             </pre>            
         </fieldset>
 
@@ -110,7 +120,7 @@
         <fieldset>
             <legend>Autre évènement ".mouseenter()" mais avec ".mouseleave()"</legend>
             <p>Ici je vais créer 2 block de la même taille. Une fois qu'on entre dans le block bleu, le block rouge grandit. <br />
-            Quand nous quittons le block bleu, le block rouge redevient normal.</p>
+            Quand nous sortons du block bleu, le block rouge redevient normal. Également je fais l'inverse afin de mieux comprendre le fonctionnement. J'y ajoute également un petit text afin de voir que ça fonctionne bien.</p>
 
             <div class="container">
                 <div class="blue">Bleu</div>
@@ -119,41 +129,42 @@
 
             <h4>Code HTML</h4>
             <pre>
-                &lt;div class="container"&gt;
-                    &lt;div class="blue"&gt;Bleu&lt;/div&gt;
-                    &lt;div class="red"&gt;Rouge&lt;/div&gt;
-                &lt;/div&gt;
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"container"</span>&gt;
+                    &lt;div <span class="attribut">class=</span><span class="guillemets">"blue"</span>&gt;</span>Bleu<span class="baliseHTML">&lt;/div&gt;
+                    &lt;div <span class="attribut">class=</span><span class="guillemets">"red"</span>&gt;</span>Rouge<span class="baliseHTML">&lt;/div&gt;
+                &lt;/div&gt;</span>
             </pre>
 
             <h4>Code Jquery</h4>
             <pre>
-                $(document).ready(function(){
+                <span class="parentheseOpenOne">$(</span>document<span class="parentheseOpenOne">)</span><span class="evenement">.ready</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
 
-                    // Exemple du ".mouseenter()" et du ".mouseleave()"
-                    $("div.container div.blue").mouseleave(function(){
-                        $("div.container div.red")
-                            .text("Yeah je fais 60% au lieu de 30%")
-                            .css("width", "60%");
-                    });
+                    <span class="commentaire">// Exemple du ".mouseenter()" et du ".mouseleave()"</span>               
+                    <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.container div.blue"</span><span class="parentheseOpenOne">)</span><span class="evenement">.mouseleave</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.container div.red"</span><span class="parentheseOpenOne">)</span>
+                            <span class="evenement">.text</span><span class="parentheseOpenThree">(</span><span class="guillemets">"Yeah je fais 60% au lieu de 30%"</span><span class="parentheseOpenThree">)</span>
+                            <span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="guillemets">"width"</span>, <span class="guillemets">"60%"</span><span class="parentheseOpenThree">)</span>;
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
 
-                    $("div.container div.blue").mouseleave(function(){
-                        $("div.container div.red")
-                            .text("Rouge")
-                            .css("width", "30%");
-                    });
+                    <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.container div.blue"</span><span class="parentheseOpenOne">)</span><span class="evenement">.mouseleave</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.container div.red"</span><span class="parentheseOpenOne">)</span>
+                            <span class="evenement">.text</span><span class="parentheseOpenThree">(</span><span class="guillemets">"Rouge"</span><span class="parentheseOpenThree">)</span>
+                            <span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="guillemets">"width"</span>, <span class="guillemets">"30%"</span><span class="parentheseOpenThree">)</span>;
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
 
-                    $("div.container div.red").mouseenter(function(){
-                        $("div.container div.blue")
-                            .text("Yeah je fais 60% au lieu de 30%")
-                            .css("width", "60%");
-                    });
+                    <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.container div.red"</span><span class="parentheseOpenOne">)</span><span class="evenement">.mouseenter</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.container div.blue"</span><span class="parentheseOpenOne">)</span>
+                            <span class="evenement">.text</span><span class="parentheseOpenThree">(</span><span class="guillemets">"Yeah je fais 60% au lieu de 30%"</span><span class="parentheseOpenThree">)</span>
+                            <span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="guillemets">"width"</span>, <span class="guillemets">"60%"</span><span class="parentheseOpenThree">)</span>;
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
 
-                    $("div.container div.red").mouseleave(function(){
-                        $("div.container div.blue ")
-                            .text("Bleu")
-                            .css("width", "30%");
-                    });
-                }); // Fin jquery
+                    <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.container div.red"</span><span class="parentheseOpenOne">)</span><span class="evenement">.mouseleave</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.container div.blue "</span><span class="parentheseOpenOne">)</span>
+                            <span class="evenement">.text</span><span class="parentheseOpenThree">(</span><span class="guillemets">"Bleu"</span><span class="parentheseOpenThree">)</span>
+                            <span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="guillemets">"width"</span>, <span class="guillemets">"30%"</span><span class="parentheseOpenThree">)</span>;
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>; <span class="commentaire">// Fin jquery</span>    
+                            
             </pre>
         </fieldset>
 
@@ -164,38 +175,36 @@
             <p>/!\ La particularité de la fonction ".hover()" c'est qu'elle peut prendre 2 fonctions</p>
             <p>Exemple :</p>
             <pre>
-                $("h1").hover(function(){
-
-                    // code d'entrée de l'élément
-
-                }, function(){
-
-                    // code de sortie de l'élément
-
-                });
+                <span class="parentheseOpenOne">$(</span><span class="guillemets">"h1"</span><span class="parentheseOpenOne">)</span><span class="evenement">.hover</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="commentaire">// code d'entrée de l'élément</span>
+                <span class="accolade">}</span>, <span class="function">function()</span><span class="accolade">{</span>
+                    <span class="commentaire">// code de sortie de l'élément</span>
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
 
             <div class="hoverTest">
-                <a href="#">Lien qui ne redirige vers rien du tout. Par contre survolez-moi et admirez le texte qui apparaît</a>
+                <q>Lien qui ne redirige vers rien du tout. Survolez-le alors un texte apparaît.</q>
+                <a href="#">Survolez ce lien..</a>
                 <p>Je suis un text magique ihihihih</p>
             </div>
             <h4>Code HTML</h4>
             <pre>
-                &lt;div class="hoverTest"&gt;
-                    &lt;a href="#"&gt;Lien qui ne redirige vers rien du tout. Par contre survolez-moi et admirez le texte qui apparaît&lt;/a&gt;
-                    &lt;p&gt;Je suis un text magique ihihihih&lt;/p&gt;
-                &lt;/div&gt;
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"hoverTest"</span>&gt;</span>
+                    <span class="baliseHTML">&lt;q&gt;</span>Lien qui ne redirige vers rien du tout. Survolez-le alors un texte apparaît.<span class="baliseHTML">&lt;/q&gt;</span>
+                    <span class="baliseHTML">&lt;a <span class="attribut">href=</span><span class="guillemets">"#"</span>&gt;</span>Survolez ce lien..<span class="baliseHTML">&lt;/a&gt;</span>
+                    <span class="baliseHTML">&lt;p&gt;</span>Je suis un text magique ihihihih<span class="baliseHTML">&lt;/p&gt;
+                &lt;/div&gt;</span>
             </pre>
             <h4>Code Jquery</h4>
             <pre>
-                $(document).ready(function(){
-                    // Exemple du ".hover()"
-                    $("div.hoverTest a").hover(function(){
-                        $("div.hoverTest p").addClass("display", "block").show("slow");
-                    }, funtion(){
-                        $("div.hoverTest p").removeClass("display").hide("slow");
-                    });
-                }); // Fin jquery
+                <span class="parentheseOpenOne">$(</span>document<span class="parentheseOpenOne">)</span><span class="evenement">.ready</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="commentaire">// Exemple du ".hover()"</span>
+                    <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.hoverTest a"</span><span class="parentheseOpenOne">)</span><span class="evenement">.hover</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.hoverTest p"</span><span class="parentheseOpenOne">)</span><span class="evenement">.addClass</span><span class="parentheseOpenThree">(</span><span class="guillemets">"display"</span>, <span class="guillemets">"block"</span><span class="parentheseOpenThree">)</span><span class="evenement">.show</span><span class="parentheseOpenThree">(</span><span class="guillemets">"slow"</span><span class="parentheseOpenThree">)</span>;
+                    <span class="accolade">}</span>, <span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(</span><span class="guillemets">"div.hoverTest p"</span><span class="parentheseOpenOne">)</span><span class="evenement">.removeClass</span><span class="parentheseOpenThree">(</span><span class="guillemets">"display"</span><span class="parentheseOpenThree">)</span><span class="evenement">.hide</span><span class="parentheseOpenThree">(</span><span class="guillemets">"slow"</span><span class="parentheseOpenThree">)</span>;
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>; <span class="commentaire">// Fin jquery</span>
             </pre>
         </fieldset>
 
@@ -212,29 +221,29 @@
             </div>
             <h4>code HTML</h4>
             <pre>
-                &lt;div&gt;
-                    &lt;p class="p1"&gt;Je suis une paragraphe avec pour numéro le 1&lt;/p&gt;
-                    &lt;p class="p2"&gt;Je suis une paragraphe avec pour numéro le 2&lt;/p&gt;
-                    &lt;p class="p3"&gt;Je suis une paragraphe avec pour numéro le 3&lt;/p&gt;
-                    &lt;p class="p4"&gt;Je suis une paragraphe avec pour numéro le 4&lt;/p&gt;
-                &lt;/div&gt;
+                <span class="baliseHTML">&lt;div <span class="attribut">id=</span><span class="guillemets">"onTest"</span>&gt;</span>
+                    <span class="baliseHTML">&lt;p <span class="attribut">class=</span><span class="guillemets">"p1"</span>&gt;</span>Je suis une paragraphe avec pour numéro le 1<span class="baliseHTML">&lt;/p&gt;</span>
+                    <span class="baliseHTML">&lt;p <span class="attribut">class=</span><span class="guillemets">"p2"</span>&gt;</span>Je suis une paragraphe avec pour numéro le 2<span class="baliseHTML">&lt;/p&gt;</span>
+                    <span class="baliseHTML">&lt;p <span class="attribut">class=</span><span class="guillemets">"p3"</span>&gt;</span>Je suis une paragraphe avec pour numéro le 3<span class="baliseHTML">&lt;/p&gt;</span>
+                    <span class="baliseHTML">&lt;p <span class="attribut">class=</span><span class="guillemets">"p4"</span>&gt;</span>Je suis une paragraphe avec pour numéro le 4<span class="baliseHTML">&lt;/p&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
             </pre>
 
             <h4>code Jquery</h4>
             <pre>
-                $(document).ready(function(){
+                <span class="parentheseOpenOne">$(</span>document<span class="parentheseOpenOne">)</span><span class="evenement">.ready</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
 
-                    $("div#onTest p.p3").on("click", function(){
-                        $("div#onTest p.p1").hide("slow");
-                        $("div#onTest p.p4").hide("slow");
-                    });
+                    <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onTest p.p3"</span><span class="parentheseOpenOne">)</span><span class="evenement">.on</span>(<span class="guillemets">"click"</span>, <span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onTest p.p1"</span><span class="parentheseOpenOne">)</span><span class="evenement">.hide</span><span class="parentheseOpenThree">(</span><span class="guillemets">"slow"</span><span class="parentheseOpenThree">)</span>;
+                        <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onTest p.p4"</span><span class="parentheseOpenOne">)</span><span class="evenement">.hide</span><span class="parentheseOpenThree">(</span><span class="guillemets">"slow"</span><span class="parentheseOpenThree">)</span>;
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
 
-                    $("div#onTest p.p2").on("click", function(){
-                        $("div#onTest p.p1").show("slow");
-                        $("div#onTest p.p4").show("slow");
-                    });
+                    <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onTest p.p2"</span><span class="parentheseOpenOne">)</span><span class="evenement">.on</span>(<span class="guillemets">"click"</span>, <span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onTest p.p1"</span><span class="parentheseOpenOne">)</span><span class="evenement">.show</span><span class="parentheseOpenThree">(</span><span class="guillemets">"slow"</span><span class="parentheseOpenThree">)</span>;
+                        <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onTest p.p4"</span><span class="parentheseOpenOne">)</span><span class="evenement">.show</span><span class="parentheseOpenThree">(</span><span class="guillemets">"slow"</span><span class="parentheseOpenThree">)</span>;
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
 
-                });
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>; <span class="commentaire">// Fin jquery</span>
             </pre>
         </fieldset>
 
@@ -244,17 +253,17 @@
             <p>Comme je l'ai déjà dit nous pouvons créer des objets avec l'évènement .on()</p>
             <h4>la syntaxe :</h4>
             <pre>
-                $("h1").on({
-                    mouseenter : function(){
-                        code de mouseenter ici...
-                    },
-                    mouseout : function(){
-                        code de mouseout ici...
-                    },
-                    click : function(){
-                        code de click ici...
-                    }
-                })
+                <span class="parentheseOpenOne">$(</span><span class="guillemets">"h1"</span><span class="parentheseOpenOne">)</span><span class="evenement">.on</span><span class="parentheseOpenTwo">(</span><span class="accolade">{</span>
+                    <span class="evenement">mouseenter</span> : <span class="function">function()</span><span class="accolade">{</span>
+                        <span class="commentaire">// code de mouseenter ici...</span>
+                    <span class="accolade">}</span>,
+                    <span class="evenement">mouseout</span> : <span class="function">function()</span><span class="accolade">{</span>
+                        <span class="commentaire">// code de mouseout ici...</span>
+                    <span class="accolade">}</span>,
+                    <span class="evenement">click</span> : <span class="function">function()</span><span class="accolade">{</span>
+                        <span class="commentaire">// code de click ici...</span>
+                    <span class="accolade">}</span>
+                <span class="accolade">}</span><span class="parentheseOpenTwo">)</span>
             </pre>
             <h4>Exemple :</h4>
             <p>Si j'entre sur le bloc 1, le bloc 2 devient bleu. Par contre si je clic sur le bloc 1, le bloc 3 devient bleu. <br />
@@ -266,31 +275,32 @@
             </div>
             <h4>Code html</h4>
             <pre>
-                &lt;div id="onObjet"&gt;
-                    &lt;div class="p1"&gt;1&lt;/div&gt;
-                    &lt;div class="p2"&gt;2&lt;/div&gt;
-                    &lt;div class="p3"&gt;3&lt;/div&gt;
-                &lt;/div&gt;
+                <span class="baliseHTML">&lt;div <span class="attribut">id=</span><span class="guillemets">"onObjet"</span>&gt;
+                    &lt;div</span> <span class="attribut">class=</span><span class="guillemets">"p1"</span><span class="baliseHTML">&gt;</span>1<span class="baliseHTML">&lt;/div&gt;
+                    &lt;div</span> <span class="attribut">class=</span><span class="guillemets">"p2"</span><span class="baliseHTML">&gt;</span>2<span class="baliseHTML">&lt;/div&gt;
+                    &lt;div</span> <span class="attribut">class=</span><span class="guillemets">"p3"</span><span class="baliseHTML">&gt;</span>3<span class="baliseHTML">&lt;/div&gt;
+                &lt;/div&gt;</span>
             </pre>
 
             <h4>code jquery</h4>
             <pre>
-                $(document).ready(function(){
+                <span class="parentheseOpenOne">$(</span>document<span class="parentheseOpenOne">)</span><span class="evenement">.ready</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
 
-                    // Exemple de l'objet avec .on({})
-                    $("div#onObjet div.p2").on({
-                        mouseenter: function(){
-                            $("div#onObjet div.p1").css("background-color", "#0080ff");
-                        }, 
-                        click: function(){
-                            $("div#onObjet div.p3").css("background-color", "#800000");
-                        },
-                        mouseleave: function(){
-                            $("div#onObjet div.p1").css("background-color", "#fff");
-                            $("div#onObjet div.p3").css("background-color", "#fff");
-                        }
-                    });
-                });
+                    <span class="commentaire">// Exemple de l'objet avec .on({})</span>
+                    <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onObjet div.p2"</span><span class="parentheseOpenOne">)</span><span class="evenement">.on</span><span class="parentheseOpenTwo">(</span><span class="accolade">{</span>
+                        <span class="evenement">mouseenter:</span> <span class="function">function()</span><span class="accolade">{</span>
+                            <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onObjet div.p1"</span><span class="parentheseOpenOne">)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="guillemets">"background-color"</span>, <span class="guillemets">"#0080ff"</span><span class="parentheseOpenThree">)</span>;
+                        <span class="accolade">}</span>, 
+                        <span class="evenement">click:</span> <span class="function">function()</span><span class="accolade">{</span>
+                            <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onObjet div.p3"</span><span class="parentheseOpenOne">)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="guillemets">"background-color"</span>, <span class="guillemets">"#800000"</span><span class="parentheseOpenThree">)</span>;
+                        <span class="accolade">}</span>,
+                        <span class="evenement">mouseleave:</span> <span class="function">function()</span><span class="accolade">{</span>
+                            <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onObjet div.p1"</span><span class="parentheseOpenOne">)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="guillemets">"background-color"</span>, <span class="guillemets">"#fff"</span><span class="parentheseOpenThree">)</span>;
+                            <span class="parentheseOpenOne">$(</span><span class="guillemets">"div#onObjet div.p3"</span><span class="parentheseOpenOne">)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="guillemets">"background-color"</span>, <span class="guillemets">"#fff"</span><span class="parentheseOpenThree">)</span>;
+                        <span class="accolade">}</span>
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>; <span class="commentaire">// Fin jquery</span>
             </pre>
         </fieldset>
         <footer>
@@ -335,17 +345,17 @@
                 $("div.autreImage").mouseenter(function(){
                     $('div.autreImage img')
                         .removeAttr("src")
-                        .attr("alt", "teste")
-                        .attr("src", "http://www.fsmwarden.com/developpez_4/jmduchesne_Individus(IdRel)Equipes_ressources.png");
-                    $('div.autreImage figcaption').text("Autre image");
+                        .attr("alt", "Soleil ombragé")
+                        .attr("src", "images/Nature-Paysages(559).jpg");
+                    $('div.autreImage figcaption').text("Soleil ombragé");
                 });
 
                 $("div.autreImage img").mouseout(function(){
                     $('div.autreImage img')
                         .removeAttr("src")
-                        .attr("alt", "Mon Logo FF 15")
-                        .attr("src", "http://image.jeuxvideo.com/medias-md/146359/1463589413-1698-card.png");
-                    $('div.autreImage figcaption').text("Mon logo FF15");
+                        .attr("alt", "Paysage idilique 1")
+                        .attr("src", "images/Nature-Paysages(558).jpg");
+                    $('div.autreImage figcaption').text("Paysage idilique 1");
                 });
 
                 // Exemple du ".mouseenter()" et du ".mouseleave()"

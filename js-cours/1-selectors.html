@@ -20,68 +20,70 @@
         <h1>Cours JQUERY</h1>
         <h2>1 - Les selecteurs "Selectors"</h2>
         <hr>
-        <h3>Selectionner un élément avec le $</h3>
+
+        <h3>Sélectionner un élément avec : $</h3>
         <fieldset>
-            <legend>Selectionner un élément avec le $</legend>
-        <p>$ permet de désigner un élément. <br />
-        On ouvre obligatoirement des parenthèses et des guillemets simple ( <span class="guillemets">' '</span> ) ou double ( <span class="guillemets">" "</span> ) soit : </p>
-            <pre>
-                $ <span class="parentheseOpenOne">(</span> <span class="guillemets">"</span> <span class="baliseHTML">element_html</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
+            <legend>Sélectionner un élément avec : $</legend>
+        <p>$ permet de désigner un élément. Il faut ouvrir obligatoirement des parenthèses et des guillemets simple ( ' ' ) ou double ( " " ). A l'intérieur on y ajoute nos sélecteurs utilisé en CSS.</p>
+        <h4>La Syntaxe</h4>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$ (</span> <span class="guillemets">"</span> <span class="baliseHTML">selecteur_html</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
             </pre>
-        <p>Exemple : { Selection d'une balise h5 }</p>
-            <pre>
-                $<span class="parentheseOpenOne">(</span><span class="guillemets">"</span><span class="baliseHTML">h5</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
+        <p>Exemple : { Sélection d'une balise h5. Ainsi le sélecteur sera h5 }</p>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(</span><span class="guillemets">"</span><span class="baliseHTML">h5</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
             </pre>
         </fieldset>
 
-        <hr>
-        <h3>Selectionner une classe</h3>
+        <h3>Sélectionner une class</h3>
         <fieldset>
-            <legend>Selectionner une classe</legend>
-        <p>$ permet toujours de désigner un élément. <br />
-        Donc comme auparavant, on ouvre obligatoirement des parenthèses et des guillemets simple ( <span class="guillemets">' '</span> ) ou double ( <span class="guillemets">" "</span> ). En revanche, comme en CSS pour sélectionner une classe, <br />
-        on doit y ajouter un POINT suivit du mot qu'on aura définit soit : </p>
-            <pre>
-                $ <span class="parentheseOpenOne">(</span> <span class="guillemets">"</span> <span class="baliseHTML">.motX</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
+            <legend>Sélectionner une class</legend>
+        <p>$ permet toujours de désigner un élément. Donc comme auparavant, on ouvre obligatoirement des parenthèses et des guillemets simple ( ' ' ) ou double ( " " ). En revanche, comme en CSS pour sélectionner une classe, on doit y ajouter un POINT suivit du mot qu'on aura pré-définit soit : </p>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$ (</span> <span class="guillemets">"</span> <span class="baliseHTML">.jeSuisUneClass</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
             </pre>
-        <p>Exemple : { Selection d'une classe avec comme mot "essai" }</p>
-            <pre>
-                $<span class="parentheseOpenOne">(</span><span class="guillemets">"</span><span class="baliseHTML">.essai</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
+        <p>Exemple : { Sélection d'une classe avec comme mot "essai" }</p>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(</span><span class="guillemets">"</span><span class="baliseHTML">.essai</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
             </pre>
         </fieldset>
 
-        <hr>
-        <h3>Selectionner un identifiant</h3>
+        <h3>Sélectionner un identifiant</h3>
         <fieldset>
-            <legend>Selectionner un identifiant</legend>
-        <p>C'est exactement comme pour une classe mais avec le selecteur # (aussi appelé sharp)<br /></p>
-            <pre>
-                $ <span class="parentheseOpenOne">(</span> <span class="guillemets">"</span> <span class="baliseHTML">#motY</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
+            <legend>Sélectionner un identifiant</legend>
+            <p>C'est exactement comme pour une classe mais avec le sélecteur # (aussi appelé sharp).</p>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$ (</span> <span class="guillemets">"</span> <span class="baliseHTML">#jeSuisUnIdentifiant</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
             </pre>
-        <p>Exemple : { Selection d'un identifiant (ID) avec comme mot "teste" }</p>
-            <pre>
-                $<span class="parentheseOpenOne">(</span><span class="guillemets">"</span><span class="baliseHTML">#teste</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
+            <p>Exemple : { Sélection d'un identifiant "ID" avec comme mot "essai" }</p>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(</span><span class="guillemets">"</span><span class="baliseHTML">#essai</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
             </pre>
         </fieldset>
 
-        <hr>
         <h3>Selectionner un element avec les pseudos selecteur</h3>
         <fieldset>
             <legend>Selectionner un element avec les pseudos selecteur</legend>
-        <p>en CSS, nous pouvons utiliser les pseudos selecteur comme par exemple :<br />
+            <p>En CSS, nous pouvons utiliser les pseudos sélecteurs pour recherché un élément précis.<br />
+            Comme par exemple :</p>
             <ul>
                 <li>:nth-child(x)</li>
                 <li>:first-child</li>
                 <li>:last-child</li>
                 <li>etc...</li>
             </ul>
-        En jQuery c'est la même chose</p>
-            <pre>
-                $ <span class="parentheseOpenOne">(</span> <span class="guillemets">"</span> <span class="baliseHTML">p:nth-child(odd)</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
+            <p>Avec jQuery c'est exactement la même chose</p>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$ (</span> <span class="guillemets">"</span> <span class="baliseHTML">p:nth-child(odd)</span> <span class="guillemets">"</span> <span class="parentheseCloseOne">)</span>
             </pre>
-        <p>Exemple : { Selection du 3ème paragraphe }</p>
-            <pre>
-                $<span class="parentheseOpenOne">(</span><span class="guillemets">"</span><span class="baliseHTML">p:nth-child(3)</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
+            <p>Exemple : { Selection du 3ème paragraphe }</p>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(</span><span class="guillemets">"</span><span class="baliseHTML">p:nth-child(3)</span><span class="guillemets">"</span><span class="parentheseCloseOne">)</span>
+            </pre>
+            <p>Attention, ici je spécifie la couleur du sélecteur en bleu. Par contre votre éditeur de code lui affichera ça comme mes guillemets. Ce n'est donc pas une erreur. A savoir tout de même que chaque éditeur de code dispose de plusieurs thème téléchargeable ainsi la couleur pourra différer ici.</p>
+            <p>Exemple : { Je re-sélectionne le 3ème paragraphe avec une couleur syntaxique réel }</p>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(</span><span class="guillemets">"p:nth-child(3)"</span><span class="parentheseCloseOne">)</span>
             </pre>
         </fieldset>
 

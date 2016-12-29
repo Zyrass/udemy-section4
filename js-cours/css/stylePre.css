@@ -6,6 +6,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
+h1, h2, h3, h4, h5, h6, legend {
+    text-transform: uppercase;
+}
 
 pre { 
     background-color: #000;
@@ -18,8 +21,8 @@ pre {
 pre.oneLine {
     height: 10px;
     line-height: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 p:first-letter {
@@ -105,22 +108,22 @@ i.fa {
     font-size: 2em;
 }
 span.parentheseOpenOne, pre span.parentheseCloseOne {
-    color: orange;
+    color: gold;
 }
 span.parentheseOpenTwo, pre span.parentheseCloseTwo {
     color: darkorange;
 }
 span.parentheseOpenThree, pre span.parentheseCloseThree {
-    color: coral;
+    color: hotpink;
 }
 span.guillemets {
     color: lightgreen;
 }
 span.evenement, span.attribut {
-    color: purple;
+    color: mediumpurple;
 }
 span.function {
-    color: darkorchid;
+    color: steelblue;
     font-style: italic;
 }
 span.baliseHTML {
