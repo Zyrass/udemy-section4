@@ -24,15 +24,15 @@
         <h3>A quoi sa sert ?</h3>
         <fieldset>
             <legend>A quoi sa sert ?</legend>
-            <p>Un évènement, est très souvent associé à un clic de souris, également on peut l'utiliser pour stylisé du HTML avec du CSS, modifié du CSS à la volée. Mais aussi, nous pouvons
-            caché, affiché des élements, affiché un contenu selon des critères prédéfinis et j'en passe... la liste est très très longue...</p>
+            <p>Un évènement, très souvent associé à un clic de souris, peut également être utilisé pour styliser du HTML avec du CSS ou modifier du CSS à la volée. Mais aussi, nous pouvons
+            cacher, afficher des éléments, afficher un contenu selon des critères prédéfinis et j'en passe... la liste est très très longue...</p>
         </fieldset>
         
         <h3>Evènement .click()</h3>
         <fieldset>
             <legend>Evènement .click()</legend>
-            <p>Nul besoin d'expliqué à quoi sert l'évènement .click(), vous vous en doutez bien. Passons donc directement à un exemple.</p>
-            <p>Pour notre exemple, je vais créer 2 bouttons permettant de cacher mais également d'afficher un paragraphe qui contient un Lorem Ipsum.<br />
+            <p>Nul besoin d'expliquer à quoi sert l'évènement .click(), vous vous en doutez bien. Passons donc directement à un exemple.</p>
+            <p>Pour notre exemple, je vais créer 2 boutons permettant de cacher mais également d'afficher un paragraphe qui contient un Lorem Ipsum.<br />
             Au départ le paragraphe est visible.</p>
 
             <p class="cacherMoi">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
@@ -75,12 +75,12 @@
         <h3>Evènement .mouseenter() & .mouseout()</h3>
         <fieldset>
             <legend>Evènement .mouseenter() & .mouseout()</legend>
-            <p>Ci-dessous une image d'un paysage idilique. Si on entre avec la souris dans la div contenant la classe "autreImage" avec la souris, l'image par défaut changera pour afficher un soleil ombragé magnifique.</p>
+            <p>Ci-dessous une image d'un paysage idyllique. Si on entre avec la souris dans la div contenant la classe "autreImage" avec la souris, l'image par défaut changera pour afficher un soleil ombragé magnifique.</p>
 
             <div class="autreImage">
                 <figure>
-                    <figcaption>Paysage idilique 1</figcaption>
-                    <img src="images/Nature-Paysages(558).jpg" alt="Paysage idilique 1" width="650" height="417" />
+                    <figcaption>Paysage idyllique 1</figcaption>
+                    <img src="images/Nature-Paysages(558).jpg" alt="Paysage idyllique 1" width="650" height="417" />
                 </figure>
             </div>
 
@@ -88,8 +88,8 @@
             <pre>
                 <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"autreImage"</span>&gt;
                     &lt;figure&gt;
-                        &lt;figcaption&gt;</span>Paysage idilique 1<span class="baliseHTML">&lt;/figcaption&gt;</span>
-                        <span class="baliseHTML">&lt;img <span class="attribut">src=</span><span class="guillemets">"images/Nature-Paysages(558).jpg"</span><span class="attribut"> alt=</span><span class="guillemets">"Paysage idilique 1"</span> <span class="attribut">width=</span><span class="guillemets">"650"</span> <span class="attribut">height=</span><span class="guillemets">"417"</span> /&gt;
+                        &lt;figcaption&gt;</span>Paysage idyllique 1<span class="baliseHTML">&lt;/figcaption&gt;</span>
+                        <span class="baliseHTML">&lt;img <span class="attribut">src=</span><span class="guillemets">"images/Nature-Paysages(558).jpg"</span><span class="attribut"> alt=</span><span class="guillemets">"Paysage idyllique 1"</span> <span class="attribut">width=</span><span class="guillemets">"650"</span> <span class="attribut">height=</span><span class="guillemets">"417"</span> /&gt;
                     &lt;/figure&gt;
                 &lt;/div&gt;</span>
             </pre>
@@ -108,9 +108,9 @@
                 <span class="parentheseOpenOne">$(<span class="guillemets">"div.autreImage img"</span>)</span><span class="evenement">.mouseout</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
                     <span class="parentheseOpenOne">$(<span class="guillemets">'div.autreImage img'</span>)</span>
                         <span class="evenement">.removeAttr</span><span class="parentheseOpenThree">(<span class="guillemets">"src"</span>)</span>
-                        <span class="evenement">.attr</span><span class="parentheseOpenThree">(</span><span class="guillemets">"alt"</span>, <span class="guillemets">"Paysage idilique 1"</span><span class="parentheseOpenThree">)</span>
+                        <span class="evenement">.attr</span><span class="parentheseOpenThree">(</span><span class="guillemets">"alt"</span>, <span class="guillemets">"Paysage idyllique 1"</span><span class="parentheseOpenThree">)</span>
                         <span class="evenement">.attr</span><span class="parentheseOpenThree">(</span><span class="guillemets">"src"</span>, <span class="guillemets">"images/Nature-Paysages(558).jpg"</span><span class="parentheseOpenThree">)</span>;
-                    <span class="parentheseOpenOne">$(<span class="guillemets">'div.autreImage figcaption'</span>)</span><span class="evenement">.text</span><span class="parentheseOpenThree">(<span class="guillemets">"Paysage idilique 1"</span>)</span>;
+                    <span class="parentheseOpenOne">$(<span class="guillemets">'div.autreImage figcaption'</span>)</span><span class="evenement">.text</span><span class="parentheseOpenThree">(<span class="guillemets">"Paysage idyllique 1"</span>)</span>;
                 <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>; <span class="commentaire">// Fin jquery</span>
             </pre>            
@@ -119,8 +119,8 @@
         <h3>Autre évènement ".mouseenter()" mais avec ".mouseleave()"</h3>
         <fieldset>
             <legend>Autre évènement ".mouseenter()" mais avec ".mouseleave()"</legend>
-            <p>Ici je vais créer 2 block de la même taille. Une fois qu'on entre dans le block bleu, le block rouge grandit. <br />
-            Quand nous sortons du block bleu, le block rouge redevient normal. Également je fais l'inverse afin de mieux comprendre le fonctionnement. J'y ajoute également un petit text afin de voir que ça fonctionne bien.</p>
+            <p>Ici je vais créer 2 blocs de la même taille. Une fois qu'on entre dans le block bleu, le bloc rouge grandit. <br />
+            Quand nous sortons du bloc bleu, le bloc rouge redevient normal. Également je fais l'inverse afin de mieux comprendre le fonctionnement. J'y ajoute également un petit texte afin de voir que ça fonctionne bien.</p>
 
             <div class="container">
                 <div class="blue">Bleu</div>
@@ -163,15 +163,14 @@
                             <span class="evenement">.text</span><span class="parentheseOpenThree">(</span><span class="guillemets">"Bleu"</span><span class="parentheseOpenThree">)</span>
                             <span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="guillemets">"width"</span>, <span class="guillemets">"30%"</span><span class="parentheseOpenThree">)</span>;
                     <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
-                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>; <span class="commentaire">// Fin jquery</span>    
-                            
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>; <span class="commentaire">// Fin jquery</span>                   
             </pre>
         </fieldset>
 
         <h3>Evènement ".hover()"</h3>
         <fieldset>
             <legend>Evènement ".hover()"</legend>
-            <p>Lorsque je vais passé sur mon lien, un texte apparaîtra indiquant que je survole le lien</p>
+            <p>Lorsque je vais passer sur mon lien, un texte apparaîtra indiquant que je survole le lien</p>
             <p>/!\ La particularité de la fonction ".hover()" c'est qu'elle peut prendre 2 fonctions</p>
             <p>Exemple :</p>
             <pre>
@@ -211,13 +210,13 @@
         <h3>Evènement ".on()"</h3>
         <fieldset>
             <legend>Evènement ".on()"</legend>
-            <p>L'évènement ".on()" permet de spécifié des attributs comme par exemple le click mais aussi bien la conception d'objet</p>
-            <p>Exemple d'un click. Si je clic sur le paragraphe 3, je cache le paragraphe 1 et 4. Si je clic sur le paragraphe 2 je les réaffiche</p>
+            <p>L'évènement ".on()" permet de spécifier des attributs comme par exemple le clic, mais aussi bien la conception d'objet</p>
+            <p>Exemple d'un clic. Si je clique sur le paragraphe 3, je cache le paragraphe 1 et 4. Si je clique sur le paragraphe 2 je les réaffiche</p>
             <div id="onTest">
-                <p class="p1">Je suis une paragraphe avec pour numéro le 1</p>
-                <p class="p2">Je suis une paragraphe avec pour numéro le 2</p>
-                <p class="p3">Je suis une paragraphe avec pour numéro le 3</p>
-                <p class="p4">Je suis une paragraphe avec pour numéro le 4</p>
+                <p class="p1">Je suis un paragraphe avec pour numéro le 1</p>
+                <p class="p2">Je suis un paragraphe avec pour numéro le 2</p>
+                <p class="p3">Je suis un paragraphe avec pour numéro le 3</p>
+                <p class="p4">Je suis un paragraphe avec pour numéro le 4</p>
             </div>
             <h4>code HTML</h4>
             <pre>
@@ -266,8 +265,8 @@
                 <span class="accolade">}</span><span class="parentheseOpenTwo">)</span>
             </pre>
             <h4>Exemple :</h4>
-            <p>Si j'entre sur le bloc 1, le bloc 2 devient bleu. Par contre si je clic sur le bloc 1, le bloc 3 devient bleu. <br />
-            J'ajoute un bouton pour réinitialisé l'évènement</p>
+            <p>Si j'entre sur le bloc 1, le bloc 2 devient bleu. Par contre si je clique sur le bloc 1, le bloc 3 devient bleu. <br />
+            J'ajoute un bouton pour réinitialiser l'évènement</p>
             <div id="onObjet">
                 <div class="p1">1</div>
                 <div class="p2">2</div>
