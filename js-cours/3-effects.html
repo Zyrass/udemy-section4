@@ -64,7 +64,7 @@
             <p>Nous pouvons cachez un élément avec le ".fadeOut()" et le ré afficher avec ".fadeIn()" <br />
             Il faut savoir qu'on peut utiliser des attributs comme "slow", "fast" ou bien un nombre en millisecondes (1000) pour 1 sec</p>
             <p>Exemple :</p>
-            <div class="fadeInShow"></div>
+            <div class="fadeInShow">
                 <button type="button" id="clickFadeOut">Cachez le paragraphe</button>
                 <p>Ce text peut être cacher via le bouton ci-dessus en fondu</p>
             </div>
@@ -100,8 +100,8 @@
             <legend>Conception d'un callBack</legend>
             <p>un callBack permet de spécifier des effets une fois qu'un certain effet spécifique c'est terminé.</p>
             <p>Exemple : <br />
-            4 paragraphes déjà utilisé précédemment. Quand je clic sur le paragraphe 1 en cascade je cache le p2 p3 p4.<br />
-            J'ajoute également un bouton permettant en cascade de réafficher les éléments qui ont été caché en fondu</p>
+            Ici, quatre paragraphes. Quand je clic sur le paragraphe 1 en cascade je cache le paragraphe 2. Une fois le paragraphe 2 caché, c'est autour du paragraphe 3 de se cacher. On finira par caché le paragrahe 4 uniquement quand l'avant dernier sera caché.<br /><br />
+            J'y ajoute également un bouton permettant en cascade de réafficher les éléments qui ont été caché précédemment</p>
             <div id="onTest">
                 <p class="p1">Je suis une paragraphe avec pour numéro le 1</p>
                 <p class="p2">Je suis une paragraphe avec pour numéro le 2</p>
@@ -145,7 +145,7 @@
         <h3>Effet .toggle()</h3>
         <fieldset>
             <legend>Effet .toggle()</legend>
-            <p>L'avantage de toggle, c'est que si on ne sais pas si par exemple un menu est ouvert, on peut le fermé ou l'ouvrir quelque soit ça position.</p>
+            <p>L'avantage de toggle, c'est que si on ne sais pas si par exemple un menu est ouvert, on peut le fermé ou l'ouvrir quelque soit sa position.</p>
             <p>Exemple avec un menu simple</p>
             <div>
                 <nav>
@@ -240,7 +240,7 @@
                 arg1 correspond au délais en milliseconde.
                 arg2 correspond lui à l'opacité qui pour rappel va de 0 à 1.
             </pre>
-            <p>Exemple d'un paragraphe qui une fois cliqué dessus devient partiellement transparent. Au bout de 5sec il retrouve sa forme d'origine</p>
+            <p>Exemple d'un paragraphe simple qui une fois survolé et uniquement au moment ou il n'est plus survolé, ce paragraphe devient vert. Mais par contre si une fois cliqué dessus il devient rouge et partiellement transparent.</p>
             <div class="testFadeTo">
                 <p>Ceci est un paragraphe qui devient vert avec une opacité de 1 si on sort avec la souris. Mais quand on clic dessus il devient rouge<br />
                 avec une opacité de 0.5</p>

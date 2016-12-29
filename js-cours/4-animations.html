@@ -72,23 +72,23 @@
         <h3>fonction .stop() sur une animation</h3>
         <fieldset>
             <legend>fonction .stop() sur une animation</legend>
-            <p>la fonction stop() permet comme son nom l'indique de stopper une animation <br />
-            si bien entendu le code correspondant à bien été attribué à un bouton spécifque pour stopper une animation.<br />
-            La fonction .stop() peut prendre deux arguments qui par défaut sont à "false". Si on applique pour le premier "true",<br />
-            celà permet de stopper TOUTES les animations en cours alors que sans cette arguement<br />
-            si il existe plusieurs animations qui s'éxécute à la suite, dans ce cas, quand on cliquera sur stop,<br />
-            l'animation suivante s'exécutera tout de même. Le second argument permet de sauter l'animation et d'allez jusqu'à la fin sans la jouer</p>
+            <p>la fonction stop() permet comme son nom l'indique de stopper une animation 
+            si bien entendu le code correspondant à bien été attribué à un bouton spécifque pour stopper une animation.<br /><br />
+            La fonction .stop() peut prendre deux arguments qui par défaut sont à "false".<br /><br/>
+            - Le premier argument, permet de stopper TOUTES les animations en cours avec l'argument "true" alors que par défaut "false"<br />
+              Si il existe plusieurs animations qui s'éxécute à la suite, dans ce cas, quand on cliquera sur stop, l'animation suivante s'exécutera tout de même.<br /><br />
+            - Le second argument permet de sauter l'animation et d'allez jusqu'à la fin sans la jouer entièrement</p>
             <h4>syntaxe de la function .stop()</h4>
             <pre>
                 $("selector").stop(arg1, arg2);
 
                 arg1 Correspond à un arrêt total de toutes les annimations 
-                     si cette dernière est passé sur "true". ("fasle" par défaut).
+                     si cette dernière est passée sur "true". ("fasle" par défaut).
                      
                 arg2 Correspond ici à une annulation de l'animation en cours en affichant
                      directement le résultat attendu avec "true". ("fasle" par défaut).
             </pre>
-            <p>Exemple :</p>
+            <p>Exemple : Un carré au départ qui une fois joué se transforme en un jolie rond bien gros. Un bouton pour stopper l'animation et un autre pour tout réinitialiser.</p>
             <div>
                 <button type="button" id="startAnimate">Start</button> 
                 <button type="button" id="stopAnimate">Stop</button> 
