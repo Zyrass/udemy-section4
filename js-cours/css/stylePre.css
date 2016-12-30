@@ -32,10 +32,7 @@ p.cacherMoi {
     word-spacing: 1px;
     letter-spacing : 3px; 
 }
-p.classAddClass {
-    color: cornflowerblue;
-}
-p.classRemoveClass {
+p.classAddClass, p.classRemoveClass, p.classToggleClass {
     color: cornflowerblue;
 }
 

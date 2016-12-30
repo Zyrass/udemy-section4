@@ -113,11 +113,88 @@
         <h3>function ".toggleClass()"</h3>
         <fieldset>
             <legend>function ".toggleClass()"</legend>
+            <p>Cette fonction vous est certainement familière. En effet nous l'avons vu dans le cours sur les effets de jQuery. L'avantage ici c'est qu'elle s'adresse uniquement à la classe. Ainsi si nous reprenons les 2 exemples qui ont été réalisé ci-dessus, avec la fonction .toggleClass, nous pouvons faire un mixte des 2. Attention tout de même ici il ne sera question que d'ajouté une seule classe.</p>
+            <h4>Rappel des 2 fonctions utilisés avant</h4>
+            <pre>
+                <span class="commentaire">// Exemple .addClass()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnAddClass"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pAddClass"</span>)</span><span class="evenement">.addClass</span><span class="parentheseOpenThree">(<span class="guillemets">"classAddClass"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+                <span class="commentaire">// Exemple .removeClass()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnRemoveClass"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pRemoveClass"</span>)</span><span class="evenement">.removeClass</span><span class="parentheseOpenThree">(<span class="guillemets">"classRemoveClass"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            </pre>
+            <h4>Rapide apperçu de la syntaxe</h4>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(<span class="guillemets">"elementHTML"</span>)</span><span class="evenement">.toggleClass</span><span class="parentheseOpenThree">(<span class="guillemets">"classToggleClass"</span>)</span>;
+            </pre>
+            <h4>Conception de notre exemple</h4>
+            <p>Je redéfinis le paragraphe déjà créer plus haut, je change le sélecteur ainsi que les identifiants et surtout je remplace la fonction.</p>
+            <div>
+                <p id="pToggleClass" style="background-color:#eee">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <button type="button" id="btnToggleClass">Mon bouton change de couleur au clique</button>
+            </div>
+            <h4>code html</h4>
+            <pre>
+    <span class="baliseHTML">&lt;div&gt;
+        &lt;p <span class="attribut">id=</span><span class="guillemets">"pToggleClass"</span> <span class="attribut">style=</span><span class="guillemets">"background-color: #eee"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="baliseHTML">&lt;/p&gt;
+        &lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnToggleClass"</span>&gt;</span>Suppression de la couleur sur le paragraphe<span class="baliseHTML">&lt;/button&gt;
+    &lt;/div&gt;</span>
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                <span class="commentaire">// Exemple .toggleClass()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnToggleClass"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pToggleClass"</span>)</span><span class="evenement">.toggleClass</span><span class="parentheseOpenThree">(<span class="guillemets">"classToggleClass"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            </pre>
+
         </fieldset>
 
         <h3>function ".css()"</h3>
         <fieldset>
             <legend>function ".css()"</legend>
+            <p>Nous venons de voir comment ajouter une class, en supprimer une ou même jouer avec. Sauf que jQuery va encore plus loin, nous pouvons directement éditer notre CSS avec la fonction qui porte le même nom. J'ai nommé : .css()</p>
+            <h4>Syntaxe de la fonction .css()</h4>
+            <pre class="oneLine">
+                <span class="parentheseOpenOne">$(<span class="guillemets">"elementHTML"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(<span class="guillemets">"propriété"</span>, <span class="guillemets">"valeur"</span>)</span>;
+            </pre>
+            <p>Imaginons maintenant que nous disposons d'une div avec comme contenu un paragraphe sans rien du tout à l'intérieur hormis une classe pour la reconnaître sur la div, mais sans style particulier !! Ainsi, nous aurions obtenu : </p>
+            <pre>
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">".origin"</span>&gt;
+                    <span class="baliseHTML">&lt;p&gt;&lt;/p&gt;</span>;
+                &lt;/div&gt;</span>;
+            </pre>
+            <p>Maintenant, donnons vie à notre imagination.<br />
+            Soit : Confectionnons un bouton permettant d'ajouter à notre paragraphe une largeur de 150px, une hauteur de 50px et une couleur de fond rouge. Afin de vous amuser, j'y ajoute un bouton afin de ré initialiser par défaut notre div.</p>
+            <button type="button" id="btnAdd">0 - Ajout du paragraphe</button> <button type="button" id="btnBGC">1 - Ajout du rouge</button> <button type="button" id="btnWidth">2 - 150 pixels de large</button> <button type="button" id="btnHeight">3 - 50 pixels de haut</button> <button type="button" id="btnClear">4 - Effacement complet</button>
+            <div class="origin"></div>
+            <h4>code jquery</h4>
+            <pre>
+                <span class="commentaire">// Plusieurs exemples .css()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnAddClass"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".origin p"</span>)</span><span class="evenement">.append</span><span class="parentheseOpenThree">(<span class="guillemets">"&lt;p id='testCss'&gt;&lt;/p&gt;"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnBGC"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".origin p"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(<span class="guillemets">"background-color"</span>, <span class="guillemets">"#990000"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnWidth"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".origin p"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(<span class="guillemets">"width"</span>, <span class="guillemets">"150px"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnHeight"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".origin p"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(<span class="guillemets">"height"</span>, <span class="guillemets">"50px"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnClear"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".origin p"</span>)</span><span class="evenement">.remove</span><span class="parentheseOpenThree">()</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            </pre>
+            <p>Volontairement je n'ajoute pas le code HTML. Je vous invite donc à ouvrir votre inspecteur de code et voir par vous-même les changements qu'il s'y passe lorsque vous appuyez sur chaque boutons.</p>
         </fieldset>
 
         <h3>Les objets avec la function ".css()"</h3>
@@ -173,6 +250,29 @@
                 $("#btnRemoveClass").click(function(){
                     $("#pRemoveClass").removeClass("classRemoveClass");
                 });
+
+                // Exemple .toggleClass()
+                $("#btnToggleClass").click(function(){
+                    $("#pToggleClass").toggleClass("classToggleClass");
+                });
+
+                // Plusieurs exemples .css()
+                $("#btnAdd").click(function(){
+                    $(".origin").append("<p id='testCss'></p>");
+                });
+                $("#btnBGC").click(function(){
+                    $(".origin p").css("background-color", "#990000");
+                });
+                $("#btnWidth").click(function(){
+                    $(".origin p").css("width", "150px");
+                });
+                $("#btnHeight").click(function(){
+                    $(".origin p").css("height", "50px");
+                });
+                $("#btnClear").click(function(){
+                    $(".origin p").remove();
+                });
+
 
             });
         </script>
