@@ -21,54 +21,239 @@
         <h2>5 - Le HTML dans JQuery</h2>
         <hr>
 
-        <h3>function ".txt()"</h3>
+        <h3>function ".text()"</h3>
         <fieldset>
-            <legend>function ".txt()"</legend>
+            <legend>function ".text()"</legend>
+            <p>La fonction .text() permet de définir un texte quelconque n'importe ou. Mais également, nous pouvons aussi redéfinir un texte pré-existant. Il faudra jouer avec des conditions si vous voulez retrouvez le texte d'origine. Attention tout de même cette fonction ne gère pas les balises HTML.</p>
+            <h4>Exemple</h4>
+            <p>Imaginons qu'on dispose d'un paragraphe avec écrit dedans : "Salut les amis". Si on survole ce text, on modifie son contenu.</p>
+            <div class="functionText">
+                <p id="pFunctionTxt">"Salut les amis".</p>
+            </div>
+            <h4>code html</h4>
+            <pre>
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"functionText"</span>&gt;</span>
+                    <span class="baliseHTML">&lt;p <span class="attribut">id=</span><span class="guillemets">"pFunctionTxt"</span>&gt;</span>"Salut les amis".<span class="baliseHTML">&lt;/p&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                <span class="commentaire">// Exemple .text()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">".functionText"</span>)</span><span class="evenement">.hover</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionTxt"</span>)</span><span class="evenement">.text</span><span class="parentheseCloseThree">(</span>;<span class="guillemets">'"Salut les amis".'</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span>, <span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionTxt"</span>)</span><span class="evenement">.text</span><span class="parentheseCloseThree">(</span>;<span class="guillemets">'Alors vous avez vue, jQuery C<span class="backslach">\</span>'est génial !'</span><span class="parentheseCloseThree">)</span>;              
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            </pre>
         </fieldset>
 
         <h3>function ".html()"</h3>
         <fieldset>
             <legend>function ".html()"</legend>
+            <p>la fonction .html() permet de faire sensiblement la même chose que la fonction .text() avec pour avantage, de pouvoir gérer les balises HTML. A savoir tout de même qu'en jquery, nous devrons saisir le code HTML entre guillemets ce qui implique un problème de coloration syntaxique. Mon conseil étant de se créer un petit fichier perso pour concevoir son code html correctement avec une bonne coloration syntaxique. Ainsi un simple copier coller du code vous évitera quelques erreurs probable.</p>
+            <h4>Exemple</h4>
+            <p>Pour cette exemple, nous allons reprendre exactement la même chose que dans notre fonction .text() tout en l'adaptant en .html()</p>
+            <div class="functionHtml">
+                <p id="pFunctionHtml">"Survolez-moi !!"</p>
+            </div>
+            <h4>code html</h4>
+            <pre>
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"functionHtml"</span>&gt;</span>
+                    <span class="baliseHTML">&lt;p <span class="attribut">id=</span><span class="guillemets">"pFunctionHtml"</span>&gt;</span>"Survolez-moi !!"<span class="baliseHTML">&lt;/p&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                <span class="commentaire">// Exemple .html()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">".functionHtml"</span>)</span><span class="evenement">.hover</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionHtml"</span>)</span><span class="evenement">.html</span><span class="parentheseCloseThree">(</span><span class="guillemets">'&lt;b&gt;Je suis un texte en gras. &lt;/b&gt;.'</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span>, <span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionHtml"</span>)</span><span class="evenement">.html</span><span class="parentheseCloseThree">(</span><span class="guillemets">'&lt;em&gt;Maintenant, je suis un texte en italic. &lt;/em&gt;.'</span><span class="parentheseCloseThree">)</span>;              
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            </pre>
         </fieldset>
 
         <h3>function ".val()"</h3>
         <fieldset>
             <legend>function ".val()"</legend>
+            <p>La fonction .val() permet elle d'afficher à l'écran la valeur d'un élément spécifique. Ainsi par exemple nous pouvons retrouver une fonction simple qui permettrai d'afficher à l'écran le contenu qui aurait été saisis par un utilisateur lambda. </p>
+            <h4>Exemple</h4>
+            <p>Dans notre cas, pour cette exemple, nous allons prendre un bouton et une fois qu'on cliquera sur ce bouton on affichera dans un paragraphe son contenu.</p>
+            <div class="functionVal">
+                <input type="text" placeholder="Walt Disney préféré ?" id="inputVal">
+                <button type="button" id="btnVal">Capturer l'information</button>
+                <p id="pFunctionVal"></p>
+            </div>
+            <h4>code html</h4>
+            <pre>
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"functionVal"</span>&gt;</span>
+                    <span class="baliseHTML">&lt;input <span class="attribut">type=</span><span class="guillemets">"text"</span> <span class="attribut">placeholder=</span><span class="guillemets">"Walt Disney préféré ?"</span> <span class="attribut">id=</span><span class="guillemets">"inputVal"</span>&gt;</span>
+                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnVal"</span>&gt;</span>Capturer l'information<span class="baliseHTML">&lt;/button&gt;</span>
+                    <span class="baliseHTML">&lt;p <span class="attribut">id=</span><span class="guillemets">"pFunctionVal"</span>&gt;</span><span class="baliseHTML">&lt;/p&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                <span class="commentaire">// Exemple .val()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnVal"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="function">var</span> <span class="variable">askVal</span> = <span class="parentheseOpenOne">$(<span class="guillemets">"#inputVal"</span>)</span><span class="evenement">.val</span><span class="parentheseCloseThree">()</span>;
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionVal"</span>)</span><span class="evenement">.text</span><span class="parentheseCloseThree">(</span><span class="variable">askVal</span><span class="parentheseCloseThree">)</span>;              
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            </pre>
         </fieldset>
 
         <h3>function ".attr()" & ".removeAttr()"</h3>
         <fieldset>
             <legend>function ".attr()"</legend>
+            <p>La fonction .attr() permet elle d'ajouter un attribut HTML quelconque à un élément. Par exemple pour les images, nous pouvons ajouter la source (src) une information sur l'image avec (alt), également nous pouvons ajouter du style avec (style)... etc.. Comme vous pouvez l'imaginez, la liste est longue...</p>
+            <h4>code html</h4>
+            <pre>
+
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                
+            </pre>
         </fieldset>
 
         <h3>function ".append()"</h3>
         <fieldset>
             <legend>function ".append()"</legend>
+            <p>La fonction .append() permet d'ajouter des éléments à la suite des enfants d'un même parent. Par exemple imaginons que nous disposions d'une div contenant en son sein 3 paragraphes. Avec .append() nous pourrions ajouter un 4ème paragraphe à la suite.</p>
+            <h4>code html</h4>
+            <pre>
+
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                
+            </pre>
         </fieldset>
 
         <h3>function ".prepend()"</h3>
         <fieldset>
             <legend>function ".prepend()"</legend>
+            <p>LA fonction .prepend() permet de faire l'inverse de la fonctione .append(). En effet avec .append() nous avons ajouté un paragraphe à la suite. Bah ici, avec prepend(), c'est au début qu'on ajoutera notre paragraphe.</p>
+            <h4>code html</h4>
+            <pre>
+
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                
+            </pre>
         </fieldset>
 
         <h3>function ".before()"</h3>
         <fieldset>
             <legend>function ".before()"</legend>
+            <p>La fonction .before() permet de remonter d'un parent et ainsi d'inscrire avant notre div notre paragraphe. Soit : notre paragraphe suivi d'une div contenant nos 3 autres paragraphes.</p>
+            <h4>code html</h4>
+            <pre>
+
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                
+            </pre>
         </fieldset>
 
         <h3>function ".after()"</h3>
         <fieldset>
             <legend>function ".after()"</legend>
+            <p>La fonction .after() permet de remonter également d'un parent mais à l'inverse de .before(), nous inscrirons notre paragraphe après notre div. Soit : notre div, puis au même niveau, notre paragraphe. Dans notre div, nous avons toujours nos 3 paragraphes.</p>
+            <h4>code html</h4>
+            <pre>
+
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                
+            </pre>
         </fieldset>
 
         <h3>function ".remove()"</h3>
         <fieldset>
             <legend>function ".remove()"</legend>
+            <p>La fonction .remove() permet elle de supprimer l'intégralité d'un élément. Quand je dis supprimer, c'est l'éffacer complètement de notre code html sans laisser une quelconque trace.</p>
+            <p>Imaginons un exemple simple. Un input de type texte qui serait généré automatiquement dans une div via un simple bouton. On ajouterai un autre bouton permettant de supprimer ce qui aura été généré.</p>
+            <div class="contentRemove">
+                <label for="inputAddTextRemove">Votre Pseudo :</label><br />
+                <input type="text" placeholder="Exemple : Dupont" id="inputAddTextRemove">
+                <button type="button" id="btnAddInput">Afficher le pseudo saisis</button> - <button type="button" id="btnRemove">Supprimer le pseudo enregistré</button>
+                <hr>
+                <q>Ci-dessous se trouve le pseudo pour le moment invisible à l'oeil nue.</q>
+            </div>
+            <h4>code html</h4>
+            <pre>
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"contentRemove"</span>&gt;</span>
+                    <span class="baliseHTML">&lt;label <span class="attribut">for=</span><span class="guillemets">"inputAddTextRemove"</span>&gt;</span>Pseudo :<span class="baliseHTML">&lt;/label&gt;</span>
+                    <span class="baliseHTML">&lt;input <span class="attribut">type=</span><span class="guillemets">"text"</span> <span class="attribut">placeholder=</span><span class="guillemets">"Exemple : Dupont"</span> <span class="attribut">id=</span><span class="guillemets">"inputAddTextRemove"</span>&gt;</span><br />
+                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnAddInput"</span>&gt;</span>Afficher le pseudo saisis<span class="baliseHTML">&gt;/button&gt;</span> - 
+                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnRemove"</span>&gt;</span>Supprimer le pseudo enregistré<span class="baliseHTML">&lt;/button&gt;</span><br />
+                    <span class="baliseHTML">&lt;hr&gt;</span>
+                    <span class="baliseHTML">&lt;q&gt;</span>Ci-dessous se trouve le pseudo pour le moment invisible à l'oeil nue.<span class="baliseHTML">&lt;/q&gt;</span>
+                    <span class="commentaire">&lt;-- Ici il n'y a rien pour le moment, mais tout sera généré en jquery grâce au bouton --&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                <span class="commentaire">// Exemple .remove()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnAddInput"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="function">var</span> <span class="variable">pseudo</span> = <span class="parentheseOpenOne">$(<span class="guillemets">"input#inputAddTextRemove"</span>)</span><span class="evenement">.val</span><span class="parentheseCloseThree">()</span>;
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"div.contentRemove"</span>)</span><span class="evenement">.append</span><span class="parentheseCloseThree">(</span><span class="guillemets">"&lt;p&gt;&lt;/p&gt;"</span><span class="parentheseCloseThree">)</span>;
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"div.contentRemove p"</span>)</span><span class="evenement">.addClass</span><span class="parentheseCloseThree">(</span><span class="guillemets">"pInputRemove"</span><span class="parentheseCloseThree">)</span>;
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"p.pInputRemove"</span>)</span><span class="evenement">.text</span><span class="parentheseCloseThree">(</span><span class="variable">pseudo</span><span class="parentheseCloseThree">)</span>;
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"div.contentRemove"</span>)</span><span class="evenement">.append</span><span class="parentheseCloseThree">(</span><span class="guillemets">"&lt;hr&gt;"</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnRemove"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"p.pInputRemove"</span>)</span><span class="evenement">.remove</span><span class="parentheseCloseThree">()</span>;
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"div.contentRemove hr:last-child()"</span>)</span><span class="evenement">.remove</span><span class="parentheseCloseThree">()</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            </pre>
         </fieldset>
 
         <h3>function ".empty()"</h3>
         <fieldset>
             <legend>function ".empty()"</legend>
+            <p>La fonction .empty() permet de vider le contenu d'un élément sans supprimer la base de l'élément.</p>
+            <h4>Exemple :</h4>
+            <p>Imaginons un exemple avec la function .remove(). Donc, nous aurions : Un champ texte qui permet à l'utilisateur de saisir n'importe quoi. Un bouton permettant de valider ce contenu et de l'afficher dans notre paragraphe. Enfin, sous ce paragraphe, on y ajoute un bouton permettant de vider le contenu du paragraphe.</p>
+            <div class="testEmpty">
+                <label for="inputAddText">Rentrez n'importe quoi ici :</label><br />
+                <textarea rows="5" cols="100" id="inputAddText" placeholder="Saisir un texte ici..."></textarea><br />
+                <button type="button" id="emptyAddText">Valider le contenu</button> - <button type="button" id="emptyText">Effacer le contenu qui a été saisis</button>
+                <hr>
+                <q>Ci-dessous se trouve le paragraphe pour le moment invisible à l'oeil nue.</q>
+                <p id="contentTextarea"></p>
+                <hr>
+            </div>
+            <h4>code html</h4>
+            <pre>
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"testEmpty"</span>&gt;</span>
+                    <span class="baliseHTML">&lt;label <span class="attribut">for=</span><span class="guillemets">"inputAddText"</span>&gt;</span>Rentrez n'importe quoi ici :<span class="baliseHTML">&lt;/label&gt;</span>
+                    <span class="baliseHTML">&lt;textarea <span class="attribut">rows=</span><span class="guillemets">"5"</span> <span class="attribut">cols=</span><span class="guillemets">"100"</span> <span class="attribut">id=</span><span class="guillemets">"inputAddText"</span> placeholder=</span><span class="guillemets">"Saisir un texte ici..."</span><span class="baliseHTML">&gt;&lt;/textarea&gt;</span><br />
+                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"emptyAddText"</span>&gt;</span>Valider le contenu<span class="baliseHTML">&lt;/button&gt;</span> - 
+                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"emptyText"</span>&gt;</span>Effacer le contenu qui a été saisis<span class="baliseHTML">&lt;/button&gt;</span><br />
+                    <span class="baliseHTML">&lt;hr&gt;</span>
+                    <span class="baliseHTML">&lt;q&gt;</span>Ci-dessous se trouve le paragraphe pour le moment invisible à l'oeil nue.<span class="baliseHTML">&lt;/q&gt;</span>
+                    <span class="baliseHTML">&lt;p <span class="attribut">id=</span><span class="guillemets">"contentTextarea"</span>&gt;</span><span class="commentaire">&lt;-- Ici se trouvera ce que l'utilisateur aura saisis. --&gt;</span><span class="baliseHTML">&lt;/p&gt;</span>
+                    <span class="baliseHTML">&lt;hr&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                <span class="commentaire">// Exemple .empty()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#emptyAddText"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="function">var</span> <span class="variable">message</span> = <span class="parentheseOpenOne">$(<span class="guillemets">"textarea#inputAddText"</span>)</span><span class="evenement">.val</span><span class="parentheseCloseThree">(</span><span class="parentheseCloseThree">)</span>;
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"p#contentTextarea"</span>)</span><span class="evenement">.text</span><span class="parentheseCloseThree">(</span><span class="variable">message</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#emptyText"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                   <span class="parentheseOpenOne">$(<span class="guillemets">"p#contentTextarea"</span>)</span><span class="evenement">.empty</span><span class="parentheseCloseThree">()</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            </pre>
         </fieldset>
 
         <footer>
@@ -97,6 +282,62 @@
         <!-- JQuery -->
         <script src="../jquery/jquery-3.1.1.min.js"></script>
         <script>
+            $(document).ready(function(){
+
+                // Exemple .text()
+                $(".functionText").hover(function(){
+                    $("#pFunctionTxt").text('"Salut les amis".');
+                }, function(){
+                    $("#pFunctionTxt").text('Alors vous avez vue, jQuery C\'est génial !');
+                });
+
+                // Exemple .html()
+                $(".functionHtml").hover(function(){
+                    $("#pFunctionHtml").html('<b>Je suis un texte en gras. </b>.');
+                }, function(){
+                    $("#pFunctionHtml").html('<em>Maintenant, je suis un texte en italic. </em>.');              
+                });
+
+                // Exemple .val()
+                $("#btnVal").click(function(){
+                    var askVal = $("#inputVal").val();
+                    $("#pFunctionVal").text(askVal);
+                });
+
+
+
+                // Exemple .remove()
+                $("#btnAddInput").click(function(){
+                    var pseudo = $("input#inputAddTextRemove").val();
+                    $("div.contentRemove").append("<p></p>");
+                    $("div.contentRemove p").addClass("pInputRemove");
+                    $("p.pInputRemove").text(pseudo);
+                    $("div.contentRemove").append("<hr>");
+                });
+
+                $("#btnRemove").click(function(){
+                    $("p.pInputRemove").remove();
+                    $("div.contentRemove hr:last-child()").remove();
+                });
+
+                // Exemple .empty()
+                $("#emptyAddText").click(function(){
+                    var message = $("textarea#inputAddText").val();
+                    $("p#contentTextarea").text(message);
+                });
+
+                $("#emptyText").click(function(){
+                   $("p#contentTextarea").empty();
+                });
+
+
+
+
+            });
+
+
+
+        
         
         </script>
     </body>

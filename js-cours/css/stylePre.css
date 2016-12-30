@@ -124,7 +124,7 @@ span.guillemets {
 span.evenement, span.attribut {
     color: mediumpurple;
 }
-span.function {
+span.function, span.backslach {
     color: steelblue;
     font-style: italic;
 }
@@ -137,6 +137,9 @@ span.commentaire {
 }
 span.accolade {
     color: #ff0000;
+}
+span.variable {
+    color: lightpink
 }
 
 footer {
