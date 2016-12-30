@@ -24,19 +24,19 @@
         <h3>Les animations</h3>
         <fieldset>
             <legend>Explication sur les animations</legend>
-            <p>Les animations sont courament utilisé dans jquery. La syntaxe ressemble fortement à l'évènement .on avec plusieurs arguments à renseigner.</p>
+            <p>Les animations sont couramment utilisées dans jQuery. La syntaxe ressemble fortement à l'évènement .on avec plusieurs arguments à renseigner.</p>
             <h4>Syntaxe de .animate()</h4>
             <pre>
                 $("selecteur").animate( arg1, arg2, arg3);
 
-                arg1 Correspond à un objet contenant toutes les propriétés qu'on va appliqué.
-                arg2 Correspond au délais qu'on souhaite pour notre animation (optionnel).
-                arg3 Correspond à un callBack, c'est à dire un code à exécuter en fin d'annimation. (optionnel).
+                arg1 Correspond à un objet contenant toutes les propriétés qu'on va appliquer.
+                arg2 Correspond au délai qu'on souhaite pour notre animation (optionnel).
+                arg3 Correspond à un callBack, c'est à dire un code à exécuter en fin d'animation. (optionnel).
             </pre>
             <p>Exemple : Conception ci dessous d'un bouton permettant de lancer une animation.<br />
-            Cette animation permettra de changer un carré en rectangle avec un délais de 1seconde.<br />
+            Cette animation permettra de changer un carré en rectangle avec un délai de 1 seconde.<br />
             En tant qu'objet il y aura 2 propriétés qui changeront (l'opacité et la largeur de l'élément).<br />
-            De plus nous y ajoutons un callBack permettant de revenir à sa position d'origine une fois l'animation terminé.</p>
+            De plus nous y ajoutons un callBack permettant de revenir à sa position d'origine une fois l'animation terminée.</p>
             <div>
                 <button type="button" id="launchAnimate">Cliquez ici pour lancer l'animation</button>
                 <div class="formAnimate"></div>
@@ -50,7 +50,7 @@
             </pre>
             <h4>code jquery</h4>
             <p>/!\ important /!\<br />
-            <b>width: "+=300px"</b> veut dire qu'on ne sait pas combien fait notre carré au départ ainsi donc on ajoute à notre width d'origine +300 px</p>
+            <b>width: "+=300px"</b> veut dire qu'on ne sait pas combien fait notre carré au départ donc on ajoute à notre width d'origine +300 px</p>
             <pre>
                 $(document).ready(function(){
                     // Exemple d'une animation
@@ -72,21 +72,21 @@
         <h3>fonction .stop() sur une animation</h3>
         <fieldset>
             <legend>fonction .stop() sur une animation</legend>
-            <p>la fonction stop() permet comme son nom l'indique de stopper une animation 
-            si bien entendu le code correspondant à bien été attribué à un bouton spécifque pour stopper une animation.<br /><br />
-            La fonction .stop() peut prendre deux arguments qui par défaut sont à "false".<br /><br/>
-            - Le premier argument, permet de stopper TOUTES les animations en cours avec l'argument "true" alors que par défaut "false"<br />
-              Si il existe plusieurs animations qui s'éxécute à la suite, dans ce cas, quand on cliquera sur stop, l'animation suivante s'exécutera tout de même.<br /><br />
-            - Le second argument permet de sauter l'animation et d'allez jusqu'à la fin sans la jouer entièrement</p>
+            <p>la fonction stop() permet, comme son nom l'indique, de stopper une animation 
+            si le code correspondant a bien été attribué à un bouton spécifque pour stopper une animation.<br /><br />
+            La fonction .stop() peut prendre deux arguments qui, par défaut, sont à "false".<br /><br/>
+            - Si on applique pour le premier "true", cela permet de stopper TOUTES les animations en cours alors que sans cet argument <br />
+            si il existe plusieurs animations qui s'éxécute à la suite, dans ce cas, l'animation suivante s'exécutera tout de même.<br /><br />
+            - Le second argument permet de voir le résultat de l'animation final sans la jouer entièrement</p>
             <h4>syntaxe de la function .stop()</h4>
             <pre>
                 $("selector").stop(arg1, arg2);
 
-                arg1 Correspond à un arrêt total de toutes les annimations 
-                     si cette dernière est passée sur "true". ("fasle" par défaut).
+                arg1 Correspond à un arrêt total de toutes les animations 
+                     si cette dernière est passé sur "true". ("false" par défaut).
                      
                 arg2 Correspond ici à une annulation de l'animation en cours en affichant
-                     directement le résultat attendu avec "true". ("fasle" par défaut).
+                     directement le résultat attendu avec "true". ("false" par défaut).
             </pre>
             <p>Exemple : Un carré au départ qui une fois joué se transforme en un jolie rond bien gros. Un bouton pour stopper l'animation et un autre pour tout réinitialiser.</p>
             <div>
@@ -134,8 +134,8 @@
         <footer>
             <p>Conception : Alain GUILLON</p>
             <hr>
-            <p>Page créer afin d'obtenir dans quelques temps mon diplôme à la 3wa</p>
-            <h6>Lien directe</h6>
+            <p>Page créée afin d'obtenir dans quelques temps mon diplôme à la 3wa</p>
+            <h6>Lien direct</h6>
             <p>Home</p>
             <ul>
                 <a href="../index.html"><li><i class="fa fa-home" aria-hidden="true"></i></li></a>

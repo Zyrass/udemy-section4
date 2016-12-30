@@ -24,7 +24,6 @@ pre.oneLine {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
 p:first-letter {
     font-size: 1.5em;
 }
@@ -32,6 +31,12 @@ p:first-letter {
 p.cacherMoi {
     word-spacing: 1px;
     letter-spacing : 3px; 
+}
+p.classAddClass {
+    color: cornflowerblue;
+}
+p.classRemoveClass {
+    color: cornflowerblue;
 }
 
 div.autreImage {

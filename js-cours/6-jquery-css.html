@@ -35,6 +35,26 @@
                 <span class="parentheseOpenOne">$(<span class="guillemets">"h1"</span>)</span><span class="evenement">.addClass</span><span class="parentheseOpenThree">(</span><span class="guillemets">"nomDeLaClass1 nomDeLaClass2"</span><span class="parentheseOpenThree">)</span>;
             </pre>
             <p>A noter qu'il n'y a pas de virgule entre les classes. C'est volontaire vu qu'en CSS, quand nous voulons ajouter une autre classe sur un même élément, on saisi strictement la même chose soit un mot un espace une autre mot etc...</p>
+            <h4>Exemple concrêt</h4>
+            <p>Je créé ici, une div contenant un paragraphe sans couleur. J'ajoute également un bouton et quand je clique sur le bouton, automatiquement le paragraphe prends une couleur bleu.</p>
+            <div>
+                <p id="pAddClass" style="background-color:#eee">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <button type="button" id="btnAddClass">Ajout d'une couleur bleu sur mon paragraphe</button>
+            </div>
+            <h4>code html</h4>
+            <pre>
+    <span class="baliseHTML">&lt;div&gt;
+        &lt;p <span class="attribut">id=</span><span class="guillemets">"pAddClass"</span> <span class="attribut">style=</span><span class="guillemets">"background-color: #eee"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="baliseHTML">&lt;/p&gt;
+        &lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnAddClass"</span>&gt;</span>Suppression de la couleur sur le paragraphe<span class="baliseHTML">&lt;/button&gt;
+    &lt;/div&gt;</span>
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                <span class="commentaire">// Exemple .addClass()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnAddClass"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pAddClass"</span>)</span><span class="evenement">.addClass</span><span class="parentheseOpenThree">(<span class="guillemets">"classAddClass"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            </pre>
         </fieldset>
 
         <h3>function ".removeClass()"</h3>
@@ -65,6 +85,28 @@
             <h4>Code html apprès la suppression de la première classe</h4>
             <pre class="oneLine">
                 <span class="baliseHTML">&lt;h1 <span class="attribut">class=</span><span class="guillemets">"nomDeLaClass2"</span>&gt;</span>My title<span class="baliseHTML">&lt;/h1&gt;</span>
+            </pre>
+            <h4>Exemple concrêt</h4>
+            <p>Je créé ici, une div contenant un paragraphe de couleur bleu. J'ajoute également un bouton. Quand je clique sur le bouton, automatiquement le paragraphe perds ça couleur et redevient noir.</p>
+            <div>
+                <p class="classRemoveClass" id="pRemoveClass">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <button type="button" id="btnRemoveClass">Suppression de la couleur sur le paragraphe</button>
+            </div>
+            <h4>code html</h4>
+            <pre>
+                <span class="baliseHTML">&lt;div&gt;
+                    &lt;p <span class="attribut">class=</span><span class="guillemets">"classRemoveClass"</span> <span class="attribut">id=</span><span class="guillemets">"pRemoveClass"</span>&gt;</span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <span class="baliseHTML">&lt;/p&gt;
+                    &lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnRemoveClass"</span>&gt;</span>Suppression de la couleur sur le paragraphe<span class="baliseHTML">&lt;/button&gt;
+                &lt;/div&gt;</span>
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                <span class="commentaire">// Exemple .removeClass()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnRemoveClass"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pRemoveClass"</span>)</span><span class="evenement">.removeClass</span><span class="parentheseOpenThree">(<span class="guillemets">"classRemoveClass"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -121,7 +163,18 @@
         <!-- JQuery -->
         <script src="../jquery/jquery-3.1.1.min.js"></script>
         <script>
-        
+            $(document).ready(function(){
+
+                // Exemple .addClass()
+                $("#btnAddClass").click(function(){
+                    $("#pAddClass").addClass("classAddClass");
+                });
+                // Exemple .removeClass()
+                $("#btnRemoveClass").click(function(){
+                    $("#pRemoveClass").removeClass("classRemoveClass");
+                });
+
+            });
         </script>
     </body>
 </html>

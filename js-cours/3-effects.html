@@ -21,21 +21,21 @@
         <h2>3 - Les effets dans JQuery</h2>
         <hr>
 
-        <h3>Cachez un element et le réafficher</h3>
+        <h3>Cacher un element et le réafficher</h3>
         <fieldset>
-            <legend>Cachez un element avec ".hide()" et le réafficher avec ".show()"</legend>
-            <p>Nous pouvons cachez un élément avec le ".hide()" et le ré afficher avec ".show()" <br />
+            <legend>Cacher un element avec ".hide()" et le ré afficher avec ".show()"</legend>
+            <p>Nous pouvons cacher un élément avec le ".hide()" et le ré afficher avec ".show()" <br />
             Il faut savoir qu'on peut utiliser des attributs comme "slow", "fast" ou bien un nombre en millisecondes (1000) pour 1 sec</p>
             <p>Exemple :</p>
             <div class="hideShow">
                 <button type="button" id="clickHide">Cachez le paragraphe</button>
-                <p>Ce text peut être cacher via le bouton ci-dessus</p>
+                <p>Ce texte peut être caché via le bouton ci-dessus</p>
             </div>
             <h4>Code html</h4>
             <pre>
                 &lt;div class="hideShow"&gt;
                     &lt;button type="button" id="clickHide"&gt;Cachez le paragraphe&lt;/button&gt;
-                    &lt;p&gt;Ce text peut être cacher via le bouton ci-dessus&lt;/p&gt;
+                    &lt;p&gt;Ce texte peut être caché via le bouton ci-dessus&lt;/p&gt;
                 &lt;/div&gt;
             </pre>
             <h4>code jquery</h4>
@@ -46,7 +46,7 @@
                     $("#clickHide").click(function(){
                         if (ask == 0) {
                             $("div.hideShow p").hide("slow");
-                            $("#clickHide").text("Affiché à nouveau le paragraphe");
+                            $("#clickHide").text("Afficher à nouveau le paragraphe");
                             ask = 1;
                         } else {
                             $("div.hideShow p").show("slow");
@@ -58,21 +58,21 @@
             </pre>
         </fieldset>
 
-        <h3>Cachez à nouveau un element et le réafficher de nouveau</h3>
+        <h3>Cacher à nouveau un element et le réafficher de nouveau</h3>
         <fieldset>
-            <legend>Cachez un element avec ".fadeOut()" et le réafficher avec ".fadeIn()"</legend>
+            <legend>Cacher un element avec ".fadeOut()" et le réafficher avec ".fadeIn()"</legend>
             <p>Nous pouvons cachez un élément avec le ".fadeOut()" et le ré afficher avec ".fadeIn()" <br />
             Il faut savoir qu'on peut utiliser des attributs comme "slow", "fast" ou bien un nombre en millisecondes (1000) pour 1 sec</p>
             <p>Exemple :</p>
             <div class="fadeInShow">
                 <button type="button" id="clickFadeOut">Cachez le paragraphe</button>
-                <p>Ce text peut être cacher via le bouton ci-dessus en fondu</p>
+                <p>Ce texte peut être caché via le bouton ci-dessus en fondu</p>
             </div>
             <h4>Code html</h4>
             <pre>
                 &lt;div class="fadeInShow"&gt;
-                    &lt;button type="button" id="clickFadeOut"&gt;Cachez le paragraphe&lt;/button&gt;
-                    &lt;p&gt;Ce text peut être cacher via le bouton ci-dessus en fondu&lt;/p&gt;
+                    &lt;button type="button" id="clickFadeOut"&gt;Cacher le paragraphe&lt;/button&gt;
+                    &lt;p&gt;Ce texte peut être caché via le bouton ci-dessus en fondu&lt;/p&gt;
                 &lt;/div&gt;
             </pre>
             <h4>code jquery</h4>
@@ -83,7 +83,7 @@
                     $("#clickFadeOut").click(function(){
                         if (askTwo == 0) {
                             $("div.fadeInShow p").fadeOut("slow");
-                            $("#clickFadeOut").text("Affiché à nouveau le paragraphe");
+                            $("#clickFadeOut").text("Afficher à nouveau le paragraphe");
                             askTwo = 1;
                         } else {
                             $("div.fadeInShow p").fadeIn("slow");
@@ -98,24 +98,24 @@
         <h3>Conception d'un callBack</h3>
         <fieldset>
             <legend>Conception d'un callBack</legend>
-            <p>un callBack permet de spécifier des effets une fois qu'un certain effet spécifique c'est terminé.</p>
+            <p>un callBack permet de spécifier des effets une fois qu'un certain effet spécifique s'est terminé.</p>
             <p>Exemple : <br />
-            Ici, quatre paragraphes. Quand je clic sur le paragraphe 1 en cascade je cache le paragraphe 2. Une fois le paragraphe 2 caché, c'est autour du paragraphe 3 de se cacher. On finira par caché le paragrahe 4 uniquement quand l'avant dernier sera caché.<br /><br />
-            J'y ajoute également un bouton permettant en cascade de réafficher les éléments qui ont été caché précédemment</p>
+            Ici, quatre paragraphes. Quand je clique sur le paragraphe 1, je cache en cascade le paragraphe 2. Une fois le paragraphe 2 caché, c'est autour du paragraphe 3 de se cacher. On finira par cacher le paragrahe 4 uniquement quand l'avant dernier sera caché.<br /><br />
+            J'y ajoute également un bouton permettant, également en cascade de ré afficher les éléments qui ont été caché précédemment</p>
             <div id="onTest">
-                <p class="p1">Je suis une paragraphe avec pour numéro le 1</p>
-                <p class="p2">Je suis une paragraphe avec pour numéro le 2</p>
-                <p class="p3">Je suis une paragraphe avec pour numéro le 3</p>
-                <p class="p4">Je suis une paragraphe avec pour numéro le 4</p>
+                <p class="p1">Je suis un paragraphe avec pour numéro le 1</p>
+                <p class="p2">Je suis un paragraphe avec pour numéro le 2</p>
+                <p class="p3">Je suis un paragraphe avec pour numéro le 3</p>
+                <p class="p4">Je suis un paragraphe avec pour numéro le 4</p>
                 <button type="button" id="callBack">Réinitialisation l'exemple d'un callBack</button>
             </div>
             <h4>code html</h4>
             <pre>
                 &lt;div&gt;
-                    &lt;p class="p1"&gt;Je suis une paragraphe avec pour numéro le 1&lt;/p&gt;
-                    &lt;p class="p2"&gt;Je suis une paragraphe avec pour numéro le 2&lt;/p&gt;
-                    &lt;p class="p3"&gt;Je suis une paragraphe avec pour numéro le 3&lt;/p&gt;
-                    &lt;p class="p4"&gt;Je suis une paragraphe avec pour numéro le 4&lt;/p&gt;
+                    &lt;p class="p1"&gt;Je suis un paragraphe avec pour numéro le 1&lt;/p&gt;
+                    &lt;p class="p2"&gt;Je suis un paragraphe avec pour numéro le 2&lt;/p&gt;
+                    &lt;p class="p3"&gt;Je suis un paragraphe avec pour numéro le 3&lt;/p&gt;
+                    &lt;p class="p4"&gt;Je suis un paragraphe avec pour numéro le 4&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;button type="button" id="callBack"&gt;Réinitialisation l'exemple d'un callBack&lt;/button&gt;
             </pre>
@@ -145,7 +145,7 @@
         <h3>Effet .toggle()</h3>
         <fieldset>
             <legend>Effet .toggle()</legend>
-            <p>L'avantage de toggle, c'est que si on ne sais pas si par exemple un menu est ouvert, on peut le fermé ou l'ouvrir quelque soit sa position.</p>
+            <p>L'avantage de toggle, c'est que si on ne sait pas si un menu est ouvert, on peut le fermer ou l'ouvrir quelque soit ça position.</p>
             <p>Exemple avec un menu simple</p>
             <div>
                 <nav>
@@ -189,7 +189,7 @@
         <fieldset>
             <legend>Effet .fadeToggle()</legend>
             <p>.fadeToggle est exactement le même effet que .toggle à contrario que ce dernier permet une apparition ou disparition en fondu.</p>
-            <p>Exemple du même menu précédemment créer</p>
+            <p>Exemple du même menu précédemment créé</p>
             <div>
                 <nav>
                     <button type="button" id="myFadeToggle">Menu .fadeToggle</button>
@@ -237,12 +237,12 @@
             <pre>
                 $("h1").fadeTo( arg1, arg2);
 
-                arg1 correspond au délais en milliseconde.
+                arg1 correspond au délai en millisecondes.
                 arg2 correspond lui à l'opacité qui pour rappel va de 0 à 1.
             </pre>
-            <p>Exemple d'un paragraphe simple qui une fois survolé et uniquement au moment ou il n'est plus survolé, ce paragraphe devient vert. Mais par contre si une fois cliqué dessus il devient rouge et partiellement transparent.</p>
+            <p>Exemple d'un paragraphe simple qui une fois survolé, ne provoque aucun changement. Par contre, au moment ou il n'est plus survolé, ce paragraphe devient vert. Mais ce n'est pas tout, si nous cliquons dessus il devient cette fois-ci, rouge et partiellement transparent.</p>
             <div class="testFadeTo">
-                <p>Ceci est un paragraphe qui devient vert avec une opacité de 1 si on sort avec la souris. Mais quand on clic dessus il devient rouge<br />
+                <p>Ceci est un paragraphe qui devient vert avec une opacité de 1 si on sort avec la souris. Mais quand on clique dessus il devient rouge<br />
                 avec une opacité de 0.5</p>
             </div>
             <h4>code html</h4>
@@ -277,13 +277,13 @@
         <h3>Effet .slideUp() & .slideDown()</h3>
         <fieldset>
             <legend>Effet .slideUp() & .slideDown()</legend>
-            <p>Cette effet permet de créer un effet bien sympa. Vous allez directement pensez à l'ouverture et la fermetre des menus.</p>
+            <p>Cet effet permet de créer un effet bien sympa. Avec cet effet, vous allez directement pensez à l'ouverture et la fermetre des menus.</p>
             <h4>syntaxe</h4>
             <pre>
                 $("selector").slideDown(arg1);
                 $("selector").slideUp(arg1);
 
-                arg1 Correspond au délais pour les deux effets.
+                arg1 Correspond au délai pour les deux effets.
             </pre>
             <p>Exemple d'un menu</p>
             <div>
@@ -365,7 +365,7 @@
                 $("#clickHide").click(function(){
                     if (ask == 0) {
                         $("div.hideShow p").hide("slow");
-                        $("#clickHide").text("Affiché à nouveau le paragraphe");
+                        $("#clickHide").text("Afficher à nouveau le paragraphe");
                         ask = 1;
                     } else {
                         $("div.hideShow p").show("slow");
@@ -379,7 +379,7 @@
                 $("#clickFadeOut").click(function(){
                     if (askTwo == 0) {
                         $("div.fadeInShow p").fadeOut("slow");
-                        $("#clickFadeOut").text("Affiché à nouveau le paragraphe");
+                        $("#clickFadeOut").text("Afficher à nouveau le paragraphe");
                         askTwo = 1;
                     } else {
                         $("div.fadeInShow p").fadeIn("slow");
