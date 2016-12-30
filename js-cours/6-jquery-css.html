@@ -200,18 +200,118 @@
         <h3>Les objets avec la function ".css()"</h3>
         <fieldset>
             <legend>Les objets avec la function ".css()"</legend>
+            <p>La fonction .css() nous permets d'utiliser les objets et donc d'éviter d'avoir une répétition de code. Ainsi nous pouvons ajoutés plusieurs propriétés à notre objet afin de pouvoir stylisé un élément simplement.</p>
+            <h4>La syntaxe des objets avec la fonction .css()</h4>
+            <pre>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"element_HTML"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                    <span class="guillemets">"propriété"</span>: <span class="guillemets">"valeurs"</span>,
+                    <span class="guillemets">"propriété"</span>: <span class="guillemets">"valeurs"</span>,
+                    <span class="guillemets">"propriété"</span>: <span class="guillemets">"valeurs"</span>,
+                    <span class="guillemets">"propriété"</span>: <span class="guillemets">"valeurs"</span>
+                <span class="accolade">}</span><span class="parentheseOpenThree">)</span>;
+            </pre>
+            <p>Afin de mieux comprendre, procédons à la conception d'un exemple ensemble. La première chose c'est que l'on va imaginé un cercle de couleur bleu. Nous y ajoutons une bordure de 2px en lui attribuant une couleur verte. Nous allons concevoir un bouton permettant au clique d'inter-changer sa couleur et sa bordure.</p>
+            <div class="contenu">
+                <button type="button" id="btnObjetCss">Fond rouge avec une bordure noire</button> <button type="button" id="btnChangeObjetCss">Fond noir avec une bordure rouge</button>
+                <div id="cercleObjetCss"></div>
+            </div>
+            <h4>Code html</h4>
+            <pre>
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"contenu"</span>&gt;
+                    &lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnObjetCss"</span>&gt;</span>Fond rouge avec une bordure noire<span class="baliseHTML">&lt;/button&gt;
+                    &lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnChangeObjetCss"</span>&gt;</span>Fond noir avec une bordure rouge<span class="baliseHTML">&lt;/button&gt;
+                    &lt;div <span class="attribut">id=</span><span class="guillemets">"cercleObjetCss"</span>&gt;&lt;/div&gt;
+                &lt;/div&gt;</span>
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+
+                <span class="commentaire">// Exemple d'un objet avec .css()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnObjetCss"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#cercleObjetCss"</span>)</span>
+                        <span class="evenement">.css</span><span class="parentheseCloseThree">(</span><span class="accolade">{</span>
+                            <span class="guillemets">"margin-top"</span> : <span class="guillemets">"20px"</span>,
+                            <span class="guillemets">"width"</span> : <span class="guillemets">"75px"</span>,
+                            <span class="guillemets">"height"</span> : <span class="guillemets">"75px"</span>,
+                            <span class="guillemets">"background-color"</span> : <span class="guillemets">"red"</span>,
+                            <span class="guillemets">"border-radius"</span> : <span class="guillemets">"50%"</span>,
+                            <span class="guillemets">"border"</span> : <span class="guillemets">"2px solid black"</span>
+                        <span class="accolade">}</span><span class="parentheseCloseThree">)</span>
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnChangeObjetCss"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#cercleObjetCss"</span>)</span>
+                        <span class="evenement">.css</span><span class="parentheseCloseThree">(</span><span class="accolade">{</span>
+                            <span class="guillemets">"margin-top"</span> : <span class="guillemets">"20px"</span>,
+                            <span class="guillemets">"width"</span> : <span class="guillemets">"75px"</span>,
+                            <span class="guillemets">"height"</span> : <span class="guillemets">"75px"</span>,
+                            <span class="guillemets">"background-color"</span> : <span class="guillemets">"black"</span>,
+                            <span class="guillemets">"border-radius"</span> : <span class="guillemets">"50%"</span>,
+                            <span class="guillemets">"border"</span> : <span class="guillemets">"2px solid red"</span>
+                        <span class="accolade">}</span><span class="parentheseCloseThree">)</span>
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+            </pre>
         </fieldset>
 
-        <h3>function ".width()"</h3>
+        <h3>function ".width()" & ".height()"</h3>
         <fieldset>
-            <legend>function ".width()"</legend>
+            <legend>function ".width()"& ".height()"</legend>
+            <p>En css nous disposons d'une propriété "width" pour définir la largeur, mais également nous avons la propriété "height" pour définir la hauteur. En html, à la différence que ce n'est pas des propriétés mais des attributs. Avec jQuery, il existe des fonctions portant sensiblement le même nom. soit :</p>
+            <ul>
+                <li>la fonction : ".width()" <em>[ permettant de définir la largeur ]</em></li>
+                <li>La fonction : ".height()" <em>[ permettant de définir la hauteur ]</em></li>
+            </ul>
+            <h4>Syntaxe indépendante des 2 fonctions</h4>
+            <pre>
+            <span class="parentheseOpenOne">$(<span class="guillemets">"elementHTML"</span>)</span><span class="evenement">.width</span><span class="parentheseOpenThree">(<span class="guillemets">"valeur"</span>)</span>;
+            <span class="parentheseOpenOne">$(<span class="guillemets">"elementHTML"</span>)</span><span class="evenement">.height</span><span class="parentheseOpenThree">(<span class="guillemets">"valeur"</span>)</span>;
+            
+            <span class="commentaire">/* A savoir que la valeur peut être spécifiée de 2 façons différentes :
+             * ------------------------------------------------------------------------------------------------
+             * 1 - Avec un nombre de type number [exemple : .width(200) / .height(100)] 
+             * 2 - Avec une chaîne de caratères de type string [exemple : .width("200px") / .height("100px")] 
+             * ------------------------------------------------------------------------------------------------
+             */</span>
+            </pre>
+            <h4>Mixte des 2 fonctions en une ligne</h4>
+            <pre>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"elementHTML"</span>)</span><span class="evenement">.width</span><span class="parentheseOpenThree">(<span class="guillemets">"valeur"</span>)</span><span class="evenement">.heigth</span><span class="parentheseOpenThree">(<span class="guillemets">"valeur"</span>)</span>;
+            </pre>
+            <h4>Autre façon d'écrire la ligne de code ci-dessus</h4>
+            <pre>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"elementHTML"</span>)
+                    </span><span class="evenement">.width</span><span class="parentheseOpenThree">(<span class="guillemets">"valeur"</span>)</span>
+                    <span class="evenement">.heigth</span><span class="parentheseOpenThree">(<span class="guillemets">"valeur"</span>)</span>;
+            </pre>
+            <h4>Exemple</h4>
+            <p>Passons maintenant à la conception d'un exemple. Alors ici imaginons qu'on ai une div contenant un identifiant, à l'intérieur de cette div, nous aurions un bouton et un paragraphe contenant lui même un titre et une image. Notre bouton lui permettrait d'agrandire notre image. A ce stade, ça devrait être pour vous un jeu d'enfant :D</p>
+            <div class="contentImg">
+                <button type="button" id="resizeImg">Agrandissons notre image</button>
+                <button type="button" id="resizeImg2">Re-définition de la taille de l'image</button>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br /><br />
+                <img src="images/14.png" alt="une image classique" width="480" height="300"></p>
+            </div>
+            <h4>code html</h4>
+            <pre>
+                <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"contentImg"</span>&gt;</span>
+                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"resizeImg"</span>&gt;</span>Agrandissons notre image<span class="baliseHTML">&lt;/button&gt;</span>
+                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"resizeImg2"</span>&gt;</span>Re-définition de la taille de l'image<span class="baliseHTML">&lt;/button&gt;</span>
+                    <span class="baliseHTML">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="baliseHTML">&lt;br /&gt;&lt;br /&gt;</span>
+                    <span class="baliseHTML">&lt;img <span class="attribut">src=</span><span class="guillemets">"images/14.png"</span> <span class="attribut">alt=</span><span class="guillemets">"une image classique"</span> <span class="attribut">width=</span><span class="guillemets">"480"</span> <span class="attribut">height=</span><span class="guillemets">"300"</span>&gt;&lt;/p&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
+            </pre>
+            <h4>code jquery</h4>
+            <pre>
+                <span class="commentaire">// Exemple fonction .width() & .height()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#resizeImg"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"div.contentImg img"</span>)</span><span class="evenement">.width</span><span class="parentheseOpenThree">(<span class="guillemets">"720px"</span>)</span><span class="evenement">.height</span><span class="parentheseOpenThree">(<span class="guillemets">450</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#resizeImg2"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"div.contentImg img"</span>)</span><span class="evenement">.width</span><span class="parentheseOpenThree">(<span class="guillemets">"480px"</span>)</span><span class="evenement">.height</span><span class="parentheseOpenThree">(<span class="guillemets">300</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+            </pre>
         </fieldset>
-
-        <h3>function ".height()"</h3>
-        <fieldset>
-            <legend>function ".height()"</legend>
-        </fieldset>
-
 
 
         <footer>
@@ -273,6 +373,38 @@
                     $(".origin p").remove();
                 });
 
+                // Exemple d'un objet avec .css()
+                $("#btnObjetCss").click(function(){
+                    $("#cercleObjetCss")
+                        .css({
+                            "margin-top" : "20px",
+                            "width" : "75px",
+                            "height" : "75px",
+                            "background-color" : "red",
+                            "border-radius" : "50%",
+                            "border" : "2px solid black"
+                        })
+                });
+
+                $("#btnChangeObjetCss").click(function(){
+                    $("#cercleObjetCss")
+                        .css({
+                            "margin-top" : "20px",
+                            "width" : "75px",
+                            "height" : "75px",
+                            "background-color" : "black",
+                            "border-radius" : "50%",
+                            "border" : "2px solid red"
+                        })
+                });
+
+                // Exemple fonction .width() & .height()
+                $("#resizeImg").click(function(){
+                    $("div.contentImg img").width("720px").height(450);
+                });
+                $("#resizeImg2").click(function(){
+                    $("div.contentImg img").width("480px").height(300);
+                });
 
             });
         </script>
