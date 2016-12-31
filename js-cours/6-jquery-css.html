@@ -34,9 +34,9 @@
             <pre class="oneLine">
                 <span class="parentheseOpenOne">$(<span class="guillemets">"h1"</span>)</span><span class="evenement">.addClass</span><span class="parentheseOpenThree">(</span><span class="guillemets">"nomDeLaClass1 nomDeLaClass2"</span><span class="parentheseOpenThree">)</span>;
             </pre>
-            <p>A noter qu'il n'y a pas de virgule entre les classes. C'est volontaire vu qu'en CSS, quand nous voulons ajouter une autre classe sur un même élément, on saisi strictement la même chose soit un mot un espace une autre mot etc...</p>
-            <h4>Exemple concrêt</h4>
-            <p>Je créé ici, une div contenant un paragraphe sans couleur. J'ajoute également un bouton et quand je clique sur le bouton, automatiquement le paragraphe prends une couleur bleu.</p>
+            <p>A noter qu'il n'y a pas de virgule entre les classes. C'est volontaire vu qu'en CSS, quand nous voulons ajouter une autre classe sur un même élément, on saisit strictement la même chose soit un mot un espace une autre mot etc...</p>
+            <h4>Exemple concret</h4>
+            <p>Je cré ici, une div contenant un paragraphe sans couleur. J'ajoute également un bouton et quand je clique sur le bouton, automatiquement le paragraphe prend une couleur bleu.</p>
             <div>
                 <p id="pAddClass" style="background-color:#eee">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <button type="button" id="btnAddClass">Ajout d'une couleur bleu sur mon paragraphe</button>
@@ -76,7 +76,7 @@
             <pre class="oneLine">
                 <span class="parentheseOpenOne">$(<span class="guillemets">"h1"</span>)</span><span class="evenement">.removeClass</span><span class="parentheseOpenThree">(<span class="guillemets">"nomDeLaClass1"</span>)</span>;
             </pre>
-            <p>Avec le code saisi ci-dessus, nous cherchons à supprimer la class portant le nom : "nomDeLaClass1". Rappelez-vous, nous avions deux classes indiqués au départ. Maintenant, il ne restera que la seconde classe, soit :</p>
+            <p>Avec le code saisi ci-dessus, nous cherchons à supprimer la classe portant le nom : "nomDeLaClass1". Rappelez-vous, nous avions deux classes indiquées au départ. Maintenant, il ne restera que la seconde classe, soit :</p>
             <h4>Code html avant la suppression de la première classe</h4>
             <pre class="oneLine">
                 <span class="baliseHTML">&lt;h1 <span class="attribut">class=</span><span class="guillemets">"nomDeLaClass1 nomDeLaClass2"</span>&gt;</span>My title<span class="baliseHTML">&lt;/h1&gt;</span>
@@ -87,7 +87,7 @@
                 <span class="baliseHTML">&lt;h1 <span class="attribut">class=</span><span class="guillemets">"nomDeLaClass2"</span>&gt;</span>My title<span class="baliseHTML">&lt;/h1&gt;</span>
             </pre>
             <h4>Exemple concrêt</h4>
-            <p>Je créé ici, une div contenant un paragraphe de couleur bleu. J'ajoute également un bouton. Quand je clique sur le bouton, automatiquement le paragraphe perds ça couleur et redevient noir.</p>
+            <p>Je cré ici, une div contenant un paragraphe de couleur bleue. J'ajoute également un bouton. Quand je clique sur le bouton, automatiquement le paragraphe perd sa couleur et redevient noir.</p>
             <div>
                 <p class="classRemoveClass" id="pRemoveClass">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <button type="button" id="btnRemoveClass">Suppression de la couleur sur le paragraphe</button>
@@ -114,7 +114,7 @@
         <fieldset>
             <legend>function ".toggleClass()"</legend>
             <p>Cette fonction vous est certainement familière. En effet nous l'avons vu dans le cours sur les effets de jQuery. L'avantage ici c'est qu'elle s'adresse uniquement à la classe. Ainsi si nous reprenons les 2 exemples qui ont été réalisé ci-dessus, avec la fonction .toggleClass, nous pouvons faire un mixte des 2. Attention tout de même ici il ne sera question que d'ajouté une seule classe.</p>
-            <h4>Rappel des 2 fonctions utilisés avant</h4>
+            <h4>Rappel des 2 fonctions utilisées avant</h4>
             <pre>
                 <span class="commentaire">// Exemple .addClass()</span>
                 <span class="parentheseOpenOne">$(<span class="guillemets">"#btnAddClass"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
@@ -126,7 +126,7 @@
                     <span class="parentheseOpenOne">$(<span class="guillemets">"#pRemoveClass"</span>)</span><span class="evenement">.removeClass</span><span class="parentheseOpenThree">(<span class="guillemets">"classRemoveClass"</span>)</span>;
                 <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
-            <h4>Rapide apperçu de la syntaxe</h4>
+            <h4>Rapide aperçu de la syntaxe</h4>
             <pre class="oneLine">
                 <span class="parentheseOpenOne">$(<span class="guillemets">"elementHTML"</span>)</span><span class="evenement">.toggleClass</span><span class="parentheseOpenThree">(<span class="guillemets">"classToggleClass"</span>)</span>;
             </pre>
@@ -156,7 +156,7 @@
         <h3>function ".css()"</h3>
         <fieldset>
             <legend>function ".css()"</legend>
-            <p>Nous venons de voir comment ajouter une class, en supprimer une ou même jouer avec. Sauf que jQuery va encore plus loin, nous pouvons directement éditer notre CSS avec la fonction qui porte le même nom. J'ai nommé : .css()</p>
+            <p>Nous venons de voir comment ajouter une classe, en supprimer une ou même jouer avec. Sauf que jQuery va encore plus loin, nous pouvons directement éditer notre CSS avec la fonction qui porte le même nom. J'ai nommé : .css()</p>
             <h4>Syntaxe de la fonction .css()</h4>
             <pre class="oneLine">
                 <span class="parentheseOpenOne">$(<span class="guillemets">"elementHTML"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(<span class="guillemets">"propriété"</span>, <span class="guillemets">"valeur"</span>)</span>;
@@ -168,14 +168,18 @@
                 &lt;/div&gt;</span>;
             </pre>
             <p>Maintenant, donnons vie à notre imagination.<br />
-            Soit : Confectionnons un bouton permettant d'ajouter à notre paragraphe une largeur de 150px, une hauteur de 50px et une couleur de fond rouge. Afin de vous amuser, j'y ajoute un bouton afin de ré initialiser par défaut notre div.</p>
-            <button type="button" id="btnAdd">0 - Ajout du paragraphe</button> <button type="button" id="btnBGC">1 - Ajout du rouge</button> <button type="button" id="btnWidth">2 - 150 pixels de large</button> <button type="button" id="btnHeight">3 - 50 pixels de haut</button> <button type="button" id="btnClear">4 - Effacement complet</button>
+            Confectionnons un bouton permettant d'ajouter à notre paragraphe une largeur de 150px, une hauteur de 50px et une couleur de fond rouge. Afin de vous amuser, j'y ajoute un bouton afin de réinitialiser par défaut notre div.</p>
+            <button type="button" id="btnAdd">0 - Ajout du paragraphe</button> <button type="button" id="btnHeight">1 - 50 pixels de haut</button> <button type="button" id="btnBGC">2 - Ajout du rouge</button> <button type="button" id="btnWidth">3 - 150 pixels de large</button> <button type="button" id="btnClear">4 - Effacement complet</button>
             <div class="origin"></div>
             <h4>code jquery</h4>
             <pre>
                 <span class="commentaire">// Plusieurs exemples .css()</span>
-                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnAddClass"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnAdd"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
                     <span class="parentheseOpenOne">$(<span class="guillemets">".origin p"</span>)</span><span class="evenement">.append</span><span class="parentheseOpenThree">(<span class="guillemets">"&lt;p id='testCss'&gt;&lt;/p&gt;"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnHeight"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".origin p"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(<span class="guillemets">"height"</span>, <span class="guillemets">"50px"</span>)</span>;
                 <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
 
                 <span class="parentheseOpenOne">$(<span class="guillemets">"#btnBGC"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
@@ -186,21 +190,17 @@
                     <span class="parentheseOpenOne">$(<span class="guillemets">".origin p"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(<span class="guillemets">"width"</span>, <span class="guillemets">"150px"</span>)</span>;
                 <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
 
-                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnHeight"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
-                    <span class="parentheseOpenOne">$(<span class="guillemets">".origin p"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(<span class="guillemets">"height"</span>, <span class="guillemets">"50px"</span>)</span>;
-                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
-
                 <span class="parentheseOpenOne">$(<span class="guillemets">"#btnClear"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
                     <span class="parentheseOpenOne">$(<span class="guillemets">".origin p"</span>)</span><span class="evenement">.remove</span><span class="parentheseOpenThree">()</span>;
                 <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
-            <p>Volontairement je n'ajoute pas le code HTML. Je vous invite donc à ouvrir votre inspecteur de code et voir par vous-même les changements qu'il s'y passe lorsque vous appuyez sur chaque boutons.</p>
+            <p>Volontairement je n'ajoute pas le code HTML. Je vous invite donc à ouvrir votre inspecteur de code et voir par vous-même les changements qu'il s'y passe lorsque vous appuyez sur chaque bouton.</p>
         </fieldset>
 
         <h3>Les objets avec la function ".css()"</h3>
         <fieldset>
             <legend>Les objets avec la function ".css()"</legend>
-            <p>La fonction .css() nous permets d'utiliser les objets et donc d'éviter d'avoir une répétition de code. Ainsi nous pouvons ajoutés plusieurs propriétés à notre objet afin de pouvoir stylisé un élément simplement.</p>
+            <p>La fonction .css() nous permet d'utiliser les objets et donc d'éviter d'avoir une répétition de code. Ainsi nous pouvons ajouter plusieurs propriétés à notre objet afin de pouvoir styliser un élément simplement.</p>
             <h4>La syntaxe des objets avec la fonction .css()</h4>
             <pre>
                 <span class="parentheseOpenOne">$(<span class="guillemets">"element_HTML"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
@@ -210,7 +210,7 @@
                     <span class="guillemets">"propriété"</span>: <span class="guillemets">"valeurs"</span>
                 <span class="accolade">}</span><span class="parentheseOpenThree">)</span>;
             </pre>
-            <p>Afin de mieux comprendre, procédons à la conception d'un exemple ensemble. La première chose c'est que l'on va imaginé un cercle de couleur bleu. Nous y ajoutons une bordure de 2px en lui attribuant une couleur verte. Nous allons concevoir un bouton permettant au clique d'inter-changer sa couleur et sa bordure.</p>
+            <p>Afin de mieux comprendre, procédons à la conception d'un exemple ensemble. La première chose c'est que l'on va imaginer un cercle de couleur bleue. Nous y ajoutons une bordure de 2px en lui attribuant une couleur verte. Nous allons concevoir un bouton permettant au clic d'inter-changer sa couleur et sa bordure.</p>
             <div class="contenu">
                 <button type="button" id="btnObjetCss">Fond rouge avec une bordure noire</button> <button type="button" id="btnChangeObjetCss">Fond noir avec une bordure rouge</button>
                 <div id="cercleObjetCss"></div>
@@ -257,7 +257,7 @@
         <h3>function ".width()" & ".height()"</h3>
         <fieldset>
             <legend>function ".width()"& ".height()"</legend>
-            <p>En css nous disposons d'une propriété "width" pour définir la largeur, mais également nous avons la propriété "height" pour définir la hauteur. En html, à la différence que ce n'est pas des propriétés mais des attributs. Avec jQuery, il existe des fonctions portant sensiblement le même nom. soit :</p>
+            <p>En css nous disposons d'une propriété "width" pour définir la largeur, mais également nous avons la propriété "height" pour définir la hauteur. En Html, la différence est que l’on ne parle pas de propriétés mais d’attributs. Avec jQuery, il existe des fonctions portant sensiblement le même nom soit :</p>
             <ul>
                 <li>la fonction : ".width()" <em>[ permettant de définir la largeur ]</em></li>
                 <li>La fonction : ".height()" <em>[ permettant de définir la hauteur ]</em></li>
@@ -285,7 +285,7 @@
                     <span class="evenement">.heigth</span><span class="parentheseOpenThree">(<span class="guillemets">"valeur"</span>)</span>;
             </pre>
             <h4>Exemple</h4>
-            <p>Passons maintenant à la conception d'un exemple. Alors ici imaginons qu'on ai une div contenant un identifiant, à l'intérieur de cette div, nous aurions un bouton et un paragraphe contenant lui même un titre et une image. Notre bouton lui permettrait d'agrandire notre image. A ce stade, ça devrait être pour vous un jeu d'enfant :D</p>
+            <p>Passons maintenant à la conception d'un exemple. Alors ici imaginons qu'on ait une div contenant un identifiant, à l'intérieur de cette div, nous aurions un bouton et un paragraphe contenant lui-même un titre et une image. Notre bouton lui permettrait d'agrandir notre image. A ce stade, ça devrait être pour vous un jeu d'enfant :D</p>
             <div class="contentImg">
                 <button type="button" id="resizeImg">Agrandissons notre image</button>
                 <button type="button" id="resizeImg2">Re-définition de la taille de l'image</button>
@@ -317,8 +317,8 @@
         <footer>
             <p>Conception : Alain GUILLON</p>
             <hr>
-            <p>Page créer afin d'obtenir dans quelques temps mon diplôme à la 3wa</p>
-            <h6>Lien directe</h6>
+            <p>Page créé afin d'obtenir dans quelques temps mon diplôme à la 3wa</p>
+            <h6>Lien direct</h6>
             <p>Home</p>
             <ul>
                 <a href="../index.html"><li><i class="fa fa-home" aria-hidden="true"></i></li></a>
@@ -360,18 +360,19 @@
                 $("#btnAdd").click(function(){
                     $(".origin").append("<p id='testCss'></p>");
                 });
+                $("#btnHeight").click(function(){
+                    $(".origin p").css("height", "50px");
+                });
                 $("#btnBGC").click(function(){
                     $(".origin p").css("background-color", "#990000");
                 });
                 $("#btnWidth").click(function(){
                     $(".origin p").css("width", "150px");
                 });
-                $("#btnHeight").click(function(){
-                    $(".origin p").css("height", "50px");
-                });
                 $("#btnClear").click(function(){
                     $(".origin p").remove();
                 });
+
 
                 // Exemple d'un objet avec .css()
                 $("#btnObjetCss").click(function(){
