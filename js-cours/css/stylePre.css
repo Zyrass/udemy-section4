@@ -141,7 +141,7 @@ i.fa {
 span.parentheseOpenOne, pre span.parentheseCloseOne {
     color: gold;
 }
-span.parentheseOpenTwo, pre span.parentheseCloseTwo {
+span.parentheseOpenTwo, pre span.parentheseCloseTwo, span.arguments {
     color: darkorange;
 }
 span.parentheseOpenThree, pre span.parentheseCloseThree {

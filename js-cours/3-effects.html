@@ -33,28 +33,26 @@
             </div>
             <h4>Code html</h4>
             <pre>
-                &lt;div class="hideShow"&gt;
-                    &lt;button type="button" id="clickHide"&gt;Cachez le paragraphe&lt;/button&gt;
-                    &lt;p&gt;Ce texte peut être caché via le bouton ci-dessus&lt;/p&gt;
-                &lt;/div&gt;
+                <span class="baliseHTML">&lt;div class="hideShow"&gt;</span>
+                    <span class="baliseHTML">&lt;button type="button" id="clickHide"&gt;</span>Cachez le paragraphe<span class="baliseHTML">&lt;/button&gt;</span>
+                    <span class="baliseHTML">&lt;p&gt;</span>Ce texte peut être caché via le bouton ci-dessus<span class="baliseHTML">&lt;/p&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
             </pre>
             <h4>code jquery</h4>
             <pre>
-                $(document).ready(function(){
-                    // Exemple hide & show
-                    var ask = 0;
-                    $("#clickHide").click(function(){
-                        if (ask == 0) {
-                            $("div.hideShow p").hide("slow");
-                            $("#clickHide").text("Afficher à nouveau le paragraphe");
-                            ask = 1;
-                        } else {
-                            $("div.hideShow p").show("slow");
-                            $("#clickHide").text("Cacher de nouveau le paragraphe");
-                            ask = 0;
-                        }
-                    });
-                }); // Fin jquery
+                <span class="commentaire">// Exemple hide & show</span>
+                var <span class="variable">ask</span> = 0;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#clickHide"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    if (<span class="variable">ask</span> == 0) {
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"div.hideShow p"</span>)</span><span class="evenement">.hide</span>(<span class="guillemets">"slow"</span>);
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"#clickHide"</span>)</span><span class="evenement">.text</span>(<span class="guillemets">"Afficher à nouveau le paragraphe"</span>);
+                        <span class="variable">ask</span> = 1;
+                    <span class="accolade">}</span> else {
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"div.hideShow p"</span>)</span><span class="evenement">.show</span>(<span class="guillemets">"slow"</span>);
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"#clickHide"</span>)</span><span class="evenement">.text</span>(<span class="guillemets">"Cacher de nouveau le paragraphe"</span>);
+                        <span class="variable">ask</span> = 0;
+                    <span class="accolade">}</span>
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -70,29 +68,27 @@
             </div>
             <h4>Code html</h4>
             <pre>
-                &lt;div class="fadeInShow"&gt;
-                    &lt;button type="button" id="clickFadeOut"&gt;Cacher le paragraphe&lt;/button&gt;
-                    &lt;p&gt;Ce texte peut être caché via le bouton ci-dessus en fondu&lt;/p&gt;
-                &lt;/div&gt;
+                <span class="baliseHTML">&lt;div class="fadeInShow"&gt;</span>
+                    <span class="baliseHTML">&lt;button type="button" id="clickFadeOut"&gt;</span>Cacher le paragraphe<span class="baliseHTML">&lt;/button&gt;</span>
+                    <span class="baliseHTML">&lt;p&gt;</span>Ce texte peut être caché via le bouton ci-dessus en fondu<span class="baliseHTML">&lt;/p&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
             </pre>
             <h4>code jquery</h4>
             <pre>
-                $(document).ready(function(){
-                    // Exemple fadeOut & fadeIn
-                    var askTwo = 0;
-                    $("#clickFadeOut").click(function(){
-                        if (askTwo == 0) {
-                            $("div.fadeInShow p").fadeOut("slow");
-                            $("#clickFadeOut").text("Afficher à nouveau le paragraphe");
-                            askTwo = 1;
-                        } else {
-                            $("div.fadeInShow p").fadeIn("slow");
-                            $("#clickFadeOut").text("Cacher de nouveau le paragraphe");
-                            askTwo = 0;
-                        }
-                    });
-                }); // Fin jquery
-            </pre>
+                <span class="commentaire">// Exemple fadeOut & fadeIn</span>
+                var <span class="variable">askTwo</span> = 0;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#clickFadeOut"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    if (<span class="variable">askTwo</span> == 0) {
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"div.fadeInShow p"</span>)</span><span class="evenement">.fadeOut</span>(<span class="guillemets">"slow"</span>);
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"#clickFadeOut"</span>)</span><span class="evenement">.text</span>(<span class="guillemets">"Afficher à nouveau le paragraphe"</span>);
+                        <span class="variable">askTwo</span> = 1;
+                    <span class="accolade">}</span> else {
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"div.fadeInShow p"</span>)</span><span class="evenement">.fadeIn</span>(<span class="guillemets">"slow"</span>);
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"#clickFadeOut"</span>)</span><span class="evenement">.text</span>(<span class="guillemets">"Cacher de nouveau le paragraphe"</span>);
+                        <span class="variable">askTwo</span> = 0;
+                    <span class="accolade">}</span>
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+        </pre>
         </fieldset>
 
         <h3>Conception d'un callBack</h3>
@@ -111,34 +107,32 @@
             </div>
             <h4>code html</h4>
             <pre>
-                &lt;div&gt;
-                    &lt;p class="p1"&gt;Je suis un paragraphe avec pour numéro le 1&lt;/p&gt;
-                    &lt;p class="p2"&gt;Je suis un paragraphe avec pour numéro le 2&lt;/p&gt;
-                    &lt;p class="p3"&gt;Je suis un paragraphe avec pour numéro le 3&lt;/p&gt;
-                    &lt;p class="p4"&gt;Je suis un paragraphe avec pour numéro le 4&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;button type="button" id="callBack"&gt;Réinitialisation l'exemple d'un callBack&lt;/button&gt;
+                <span class="baliseHTML">&lt;div&gt;</span>
+                    <span class="baliseHTML">&lt;p class="p1"&gt;</span>Je suis un paragraphe avec pour numéro le 1<span class="baliseHTML">&lt;/p&gt;</span>
+                    <span class="baliseHTML">&lt;p class="p2"&gt;</span>Je suis un paragraphe avec pour numéro le 2<span class="baliseHTML">&lt;/p&gt;</span>
+                    <span class="baliseHTML">&lt;p class="p3"&gt;</span>Je suis un paragraphe avec pour numéro le 3<span class="baliseHTML">&lt;/p&gt;</span>
+                    <span class="baliseHTML">&lt;p class="p4"&gt;</span>Je suis un paragraphe avec pour numéro le 4<span class="baliseHTML">&lt;/p&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
+                <span class="baliseHTML">&lt;button type="button" id="callBack"&gt;</span>Réinitialisation l'exemple d'un callBack<span class="baliseHTML">&lt;/button&gt;</span>
             </pre>
             <h4>code jquery</h4>
             <pre>
-                $(document).ready(function(){
-                    // Exemple d'un callBack
-                    $("div#onTest p.p1").click(function(){
-                        $("div#onTest p.p2").hide(2000, function(){
-                            $("div#onTest p.p3").hide(2000, function(){
-                                $("div#onTest p.p4").hide(2000);
-                            });
-                        });
-                    });
-                        
-                    $("#callBack").click(function(){
-                        $("div#onTest p.p2").fadeIn(2000, function(){
-                            $("div#onTest p.p3").fadeIn(2000, function(){
-                                $("div#onTest p.p4").fadeIn(2000);
-                            });
-                        });
-                    });
-                });
+                <span class="commentaire">// Exemple d'un callBack</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"div#onTest p.p1"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"div#onTest p.p2"</span>)</span><span class="evenement">.hide</span>(<span class="arguments">2000</span>, <span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"div#onTest p.p3"</span>)</span><span class="evenement">.hide</span>(<span class="arguments">2000</span>, <span class="function">function()</span><span class="accolade">{</span>
+                            <span class="parentheseOpenOne">$(<span class="guillemets">"div#onTest p.p4"</span>)</span><span class="evenement">.hide</span>(<span class="arguments">2000</span>);
+                        <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                    
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#callBack"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"div#onTest p.p2"</span>)</span><span class="evenement">.fadeIn</span>(<span class="arguments">2000</span>, <span class="function">function()</span><span class="accolade">{</span>
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"div#onTest p.p3"</span>)</span><span class="evenement">.fadeIn</span>(<span class="arguments">2000</span>, <span class="function">function()</span><span class="accolade">{</span>
+                            <span class="parentheseOpenOne">$(<span class="guillemets">"div#onTest p.p4"</span>)</span><span class="evenement">.fadeIn</span>(<span class="arguments">2000</span>);
+                        <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -161,27 +155,25 @@
             </div>
             <h4>code HTML</h4>
             <pre>
-                &lt;div&gt;
-                    &lt;nav&gt;
-                        &lt;button type="button" id="myToggle"&gt;Menu .toggle&lt;/button&gt;
-                        &lt;ul class="testToggle"&gt;
-                            &lt;li&gt;menu 1&lt;/li&gt;
-                            &lt;li&gt;menu 2&lt;/li&gt;
-                            &lt;li&gt;menu 3&lt;/li&gt;
-                            &lt;li&gt;menu 4&lt;/li&gt;
-                            &lt;li&gt;menu 5&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/nav&gt;
-                &lt;/div&gt;
+                <span class="baliseHTML">&lt;div&gt;</span>
+                    <span class="baliseHTML">&lt;nav&gt;</span>
+                        <span class="baliseHTML">&lt;button type="button" id="myToggle"&gt;</span>.toggle<span class="baliseHTML">&lt;/button&gt;</span>
+                        <span class="baliseHTML">&lt;ul class="testToggle"&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span>menu 1<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span>menu 2<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span>menu 3<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span>menu 4<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span>menu 5<span class="baliseHTML">&lt;/li&gt;</span>
+                        <span class="baliseHTML">&lt;/ul&gt;</span>
+                    <span class="baliseHTML">&lt;/nav&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
             </pre>
             <h4>code jquery</h4>
             <pre>
-                $(document).ready(function(){
-                    // Exemple d'un .toggle()
-                    $("#myToggle").click(function(){
-                        $("ul.testToggle").toggle('slow');
-                    });
-                });
+                <span class="commentaire">// Exemple d'un .toggle()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#myToggle"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"ul.testToggle"</span>)</span><span class="evenement">.toggle</span>(<span class="guillemets">'slow'</span>);
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -205,27 +197,25 @@
 
             <h4>Code html</h4>
             <pre>
-                &lt;div&gt;
-                    &lt;nav&gt;
-                        &lt;button type="button" id="myToggle"&gt;Menu .fadeToggle&lt;/button&gt;
-                        &lt;ul class="testFadeToggle"&gt;
-                            &lt;li&gt;menu 1&lt;/li&gt;
-                            &lt;li&gt;menu 2&lt;/li&gt;
-                            &lt;li&gt;menu 3&lt;/li&gt;
-                            &lt;li&gt;menu 4&lt;/li&gt;
-                            &lt;li&gt;menu 5&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/nav&gt;
-                &lt;/div&gt;
+                <span class="baliseHTML">&lt;div&gt;</span>
+                    <span class="baliseHTML">&lt;nav&gt;</span>
+                        <span class="baliseHTML">&lt;button type="button" id="myToggle"&gt;</span>.fadeToggle<span class="baliseHTML">&lt;/button&gt;</span>
+                        <span class="baliseHTML">&lt;ul class="testFadeToggle"&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span> 1<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span> 2<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span> 3<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span> 4<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span> 5<span class="baliseHTML">&lt;/li&gt;</span>
+                        <span class="baliseHTML">&lt;/ul&gt;</span>
+                    <span class="baliseHTML">&lt;/nav&gt;</span>
+               <span class="baliseHTML"> &lt;/div&gt;</span>
             </pre>
             <h4>code jquery</h4>
             <pre>
-                $(document).ready(function(){
-                    // Exemple d'un .fadeToggle()
-                    $("#myFadeToggle").click(function(){
-                        $("ul.testFadeToggle").fadeToggle();
-                    });
-                });
+                <span class="commentaire">// Exemple d'un .fadeToggle()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#myFadeToggle"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"ul.testFadeToggle"</span>)</span><span class="evenement">.fadeToggle</span>();
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -235,7 +225,7 @@
             <p>Parfois vous voudrez créer un effet pour spécifier une certaine opacité. Avec .fadeTo c'est possible !</p>
             <h4>syntaxe du fadeTo</h4>
             <pre>
-                $("h1").fadeTo( arg1, arg2);
+                <span class="parentheseOpenOne">$(<span class="guillemets">"h1"</span>)</span><span class="evenement">.fadeTo</span>( <span class="arguments">arg1, arg2</span>);
 
                 arg1 correspond au délai en millisecondes.
                 arg2 correspond lui à l'opacité qui pour rappel va de 0 à 1.
@@ -247,30 +237,28 @@
             </div>
             <h4>code html</h4>
                 <pre>
-                    &lt;div class="testFadeTo"&gt;
-                        &lt;p&gt;Ceci est un paragraphe qui devient vert avec une opacité de 1 si on sort avec la souris.<br />
-                        Mais quand on clic dessus il devient rouge avec une opacité de 0.5&lt;/p&gt;
-                    &lt;/div&gt;
+                    <span class="baliseHTML">&lt;div class="testFadeTo"&gt;</span>
+                        <span class="baliseHTML">&lt;p&gt;</span>Ceci est un paragraphe qui devient vert avec une opacité de 1 si on sort avec la souris.
+                        Mais quand on clic dessus il devient rouge avec une opacité de 0.5<span class="baliseHTML">&lt;/p&gt;</span>
+                    <span class="baliseHTML">&lt;/div&gt;</span>
                 </pre>
             <h4>code jquery</h4>
                 <pre>
-                    $(document).ready(function() {
-                        // Exemple d'un .fadeTo sous forme d'objet
-                        $(".testFadeTo").on({
-                            click: function(){
-                                $(".testFadeTo p")
-                                    .fadeTo(1000, .5)
-                                    .css("background-color", "#800000")
-                                    .css("color", "#fff");
-                            },
-                            mouseleave: function(){
-                                $(".testFadeTo p")
-                                    .fadeTo(1000, 1)
-                                    .css("background-color", "#008000")
-                                    .css("color", "#fff");
-                            }
-                        });
-                    });
+                    <span class="commentaire">// Exemple d'un .fadeTo sous forme d'objet</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".testFadeTo"</span>)</span><span class="evenement">.on</span>({
+                        <span class="evenement">click</span>: <span class="function">function()</span><span class="accolade">{</span>
+                            <span class="parentheseOpenOne">$(<span class="guillemets">".testFadeTo p"</span>)</span>
+                                <span class="evenement">.fadeTo</span>(<span class="arguments">1000, .5</span>)
+                                <span class="evenement">.css</span>(<span class="guillemets">"background-color"</span>, <span class="guillemets">"#800000"</span>)
+                                <span class="evenement">.css</span>(<span class="guillemets">"color"</span>, <span class="guillemets">"#fff"</span>);
+                        <span class="accolade">}</span>,
+                        <span class="evenement">mouseleave</span>: <span class="function">function()</span><span class="accolade">{</span>
+                            <span class="parentheseOpenOne">$(<span class="guillemets">".testFadeTo p"</span>)</span>
+                                <span class="evenement">.fadeTo</span>(<span class="arguments">1000, 1</span>)
+                                <span class="evenement">.css</span>(<span class="guillemets">"background-color"</span>, <span class="guillemets">"#008000"</span>)
+                                <span class="evenement">.css</span>(<span class="guillemets">"color"</span>, <span class="guillemets">"#fff"</span>);
+                        <span class="accolade">}</span>
+                    <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
                 </pre>
         </fieldset>
 
@@ -280,8 +268,8 @@
             <p>Cet effet permet de créer un effet bien sympa. Avec cet effet, vous allez directement pensez à l'ouverture et la fermetre des menus.</p>
             <h4>syntaxe</h4>
             <pre>
-                $("selector").slideDown(arg1);
-                $("selector").slideUp(arg1);
+                <span class="parentheseOpenOne">$(<span class="guillemets">"selector"</span>)</span><span class="evenement">.slideDown</span>(<span class="arguments">arg1</span>);
+                <span class="parentheseOpenOne">$(<span class="guillemets">"selector"</span>)</span><span class="evenement">.slideUp</span>(<span class="arguments">arg1</span>);
 
                 arg1 Correspond au délai pour les deux effets.
             </pre>
@@ -301,34 +289,34 @@
 
             <h4>Code html</h4>
             <pre>
-                &lt;div&gt;
-                    &lt;nav&gt;
-                        &lt;button type="button" id="openMenu"&gt;.slideDown(1000)&lt;/button&gt;
-                        &lt;ul class="testSlide"&gt;
-                            &lt;li&gt;menu 1&lt;/li&gt;
-                            &lt;li&gt;menu 2&lt;/li&gt;
-                            &lt;li&gt;menu 3&lt;/li&gt;
-                            &lt;li&gt;menu 4&lt;/li&gt;
-                            &lt;li&gt;menu 5&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/nav&gt;
-                &lt;/div&gt;
+                <span class="baliseHTML">&lt;div&gt;</span>
+                    <span class="baliseHTML">&lt;nav&gt;</span>
+                        <span class="baliseHTML">&lt;button type="button" id="openMenu"&gt;</span>.slideDown(1000)<span class="baliseHTML">&lt;/button&gt;</span>
+                        <span class="baliseHTML">&lt;ul class="testSlide"&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span>menu 1<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span>menu 2<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span>menu 3<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span>menu 4<span class="baliseHTML">&lt;/li&gt;</span>
+                            <span class="baliseHTML">&lt;li&gt;</span>menu 5<span class="baliseHTML">&lt;/li&gt;</span>
+                        <span class="baliseHTML">&lt;/ul&gt;</span>
+                    <span class="baliseHTML">&lt;/nav&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span>
             </pre>
             <h4>code jquery</h4>
             <pre>
-                // Exemple d'un slideUp() & d'un slideDown()
-                var open = 0;
-                $("#openMenu").click(function(){
-                    if ( open == 0 ) {
-                        $("ul.testSlide").slideUp(1000);                        
-                        $("#openMenu").text(".slideUp(1000)");
-                        open = 1;
-                    } else {
-                        $("ul.testSlide").slideDown(1000);
-                        $("#openMenu").text(".slideDown(1000)");                        
-                        open = 0;
-                    }    
-                });
+                <span class="commentaire">// Exemple d'un slideUp() & d'un slideDown()</span>
+                var <span class="variable">open</span> = 0;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#openMenu"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    if ( <span class="variable">open</span> == 0 ) {
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"ul.testSlide"</span>)</span><span class="evenement">.slideUp</span>(<span class="arguments">1000</span>);                        
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"#openMenu"</span>)</span><span class="evenement">.text</span>(<span class="guillemets">".slideUp(1000)"</span>);
+                        <span class="variable">open</span> = 1;
+                    <span class="accolade">}</span> else {
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"ul.testSlide"</span>)</span><span class="evenement">.slideDown</span>(<span class="arguments">1000</span>);
+                        <span class="parentheseOpenOne">$(<span class="guillemets">"#openMenu"</span>)</span><span class="evenement">.text</span>(<span class="guillemets">".slideDown(1000)"</span>);                        
+                        <span class="variable">open</span> = 0;
+                    <span class="accolade">}</span>    
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
 
         </fieldset>
