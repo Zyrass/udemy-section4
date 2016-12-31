@@ -24,9 +24,9 @@
         <h3>function ".text()"</h3>
         <fieldset>
             <legend>function ".text()"</legend>
-            <p>La fonction .text() permet de définir un texte quelconque n'importe ou. Mais également, nous pouvons aussi redéfinir un texte pré-existant. Il faudra jouer avec des conditions si vous voulez retrouvez le texte d'origine. Attention tout de même cette fonction ne gère pas les balises HTML.</p>
+            <p>La fonction .text() permet de définir un texte quelconque n'importe où. Mais également, nous pouvons aussi redéfinir un texte pré-existant. Il faudra jouer avec des conditions si vous voulez retrouver le texte d'origine. Attention tout de même, cette fonction ne gère pas les balises HTML.</p>
             <h4>Exemple</h4>
-            <p>Imaginons qu'on dispose d'un paragraphe avec écrit dedans : "Salut les amis". Si on survole ce text, on modifie son contenu.</p>
+            <p>Imaginons qu'on dispose d'un paragraphe avec écrit dedans : "Salut les amis". Si on survole ce texte, on modifie son contenu.</p>
             <div class="functionText">
                 <p id="pFunctionTxt">"Salut les amis".</p>
             </div>
@@ -42,7 +42,7 @@
                 <span class="parentheseOpenOne">$(<span class="guillemets">".functionText"</span>)</span><span class="evenement">.hover</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
                     <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionTxt"</span>)</span><span class="evenement">.text</span><span class="parentheseCloseThree">(</span>;<span class="guillemets">'"Salut les amis".'</span><span class="parentheseCloseThree">)</span>;
                 <span class="accolade">}</span>, <span class="function">function()</span><span class="accolade">{</span>
-                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionTxt"</span>)</span><span class="evenement">.text</span><span class="parentheseCloseThree">(</span>;<span class="guillemets">'Alors vous avez vue, jQuery C<span class="backslach">\</span>'est génial !'</span><span class="parentheseCloseThree">)</span>;              
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionTxt"</span>)</span><span class="evenement">.text</span><span class="parentheseCloseThree">(</span>;<span class="guillemets">'Alors vous avez vu, jQuery C<span class="backslach">\</span>'est génial !'</span><span class="parentheseCloseThree">)</span>;              
                 <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
@@ -50,9 +50,9 @@
         <h3>function ".html()"</h3>
         <fieldset>
             <legend>function ".html()"</legend>
-            <p>la fonction .html() permet de faire sensiblement la même chose que la fonction .text() avec pour avantage, de pouvoir gérer les balises HTML. A savoir tout de même qu'en jquery, nous devrons saisir le code HTML entre guillemets ce qui implique un problème de coloration syntaxique. Mon conseil étant de se créer un petit fichier perso pour concevoir son code html correctement avec une bonne coloration syntaxique. Ainsi un simple copier coller du code vous évitera quelques erreurs probable.</p>
+            <p>la fonction .html() permet de faire sensiblement la même chose que la fonction .text() avec pour avantage, de pouvoir gérer les balises HTML. A savoir tout de même qu'en jquery, nous devrons saisir le code HTML entre guillemets ce qui implique un problème de coloration syntaxique. Mon conseil étant de se créer un petit fichier perso pour concevoir son code html correctement avec une bonne coloration syntaxique. Ainsi un simple copier-coller du code vous évitera quelques erreurs probables.</p>
             <h4>Exemple</h4>
-            <p>Pour cette exemple, nous allons reprendre exactement la même chose que dans notre fonction .text() tout en l'adaptant en .html()</p>
+            <p>Pour cet exemple, nous allons reprendre exactement la même chose que dans notre fonction .text() tout en l'adaptant en .html()</p>
             <div class="functionHtml">
                 <p id="pFunctionHtml">"Survolez-moi !!"</p>
             </div>
@@ -68,7 +68,7 @@
                 <span class="parentheseOpenOne">$(<span class="guillemets">".functionHtml"</span>)</span><span class="evenement">.hover</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
                     <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionHtml"</span>)</span><span class="evenement">.html</span><span class="parentheseCloseThree">(</span><span class="guillemets">'&lt;b&gt;Je suis un texte en gras. &lt;/b&gt;.'</span><span class="parentheseCloseThree">)</span>;
                 <span class="accolade">}</span>, <span class="function">function()</span><span class="accolade">{</span>
-                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionHtml"</span>)</span><span class="evenement">.html</span><span class="parentheseCloseThree">(</span><span class="guillemets">'&lt;em&gt;Maintenant, je suis un texte en italic. &lt;/em&gt;.'</span><span class="parentheseCloseThree">)</span>;              
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"#pFunctionHtml"</span>)</span><span class="evenement">.html</span><span class="parentheseCloseThree">(</span><span class="guillemets">'&lt;em&gt;Maintenant, je suis un texte en italique. &lt;/em&gt;.'</span><span class="parentheseCloseThree">)</span>;              
                 <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
@@ -76,9 +76,9 @@
         <h3>function ".val()"</h3>
         <fieldset>
             <legend>function ".val()"</legend>
-            <p>La fonction .val() permet elle d'afficher à l'écran la valeur d'un élément spécifique. Ainsi par exemple nous pouvons retrouver une fonction simple qui permettrai d'afficher à l'écran le contenu qui aurait été saisis par un utilisateur lambda. </p>
+            <p>La fonction .val() permet d'afficher à l'écran la valeur d'un élément spécifique. Ainsi, par exemple, nous pouvons retrouver une fonction simple qui permettrait d'afficher à l'écran le contenu qui aurait été saisi par un utilisateur lambda. </p>
             <h4>Exemple</h4>
-            <p>Dans notre cas, pour cette exemple, nous allons prendre un bouton et une fois qu'on cliquera sur ce bouton on affichera dans un paragraphe son contenu.</p>
+            <p>Dans notre cas, pour cet exemple, nous allons prendre un bouton et une fois qu'on cliquera sur ce bouton on affichera dans un paragraphe son contenu.</p>
             <div class="functionVal">
                 <input type="text" placeholder="Walt Disney préféré ?" id="inputVal">
                 <button type="button" id="btnVal">Capturer l'information</button>
@@ -105,7 +105,7 @@
         <h3>function ".attr()" & ".removeAttr()"</h3>
         <fieldset>
             <legend>function ".attr()"</legend>
-            <p>La fonction .attr() permet elle d'ajouter un attribut HTML quelconque à un élément. Par exemple pour les images, nous pouvons ajouter la source (src) une information sur l'image avec (alt), également nous pouvons ajouter du style avec (style)... etc.. Comme vous pouvez l'imaginez, la liste est longue...</p>
+            <p>La fonction .attr() permet d'ajouter un attribut HTML quelconque à un élément. Par exemple, pour les images, nous pouvons ajouter la source (src), une information sur l'image avec (alt), nous pouvons également ajouter du style avec (style)... etc.. Comme vous pouvez l'imaginer, la liste est longue...</p>
             <h4>code html</h4>
             <pre>
 
@@ -133,7 +133,7 @@
         <h3>function ".prepend()"</h3>
         <fieldset>
             <legend>function ".prepend()"</legend>
-            <p>LA fonction .prepend() permet de faire l'inverse de la fonctione .append(). En effet avec .append() nous avons ajouté un paragraphe à la suite. Bah ici, avec prepend(), c'est au début qu'on ajoutera notre paragraphe.</p>
+            <p>LA fonction .prepend() permet de faire l'inverse de la fonction .append(). En effet, avec .append(), nous avons ajouté un paragraphe à la suite. Bah ici, avec prepend(), c'est au début qu'on ajoutera notre paragraphe.</p>
             <h4>code html</h4>
             <pre>
 
@@ -175,24 +175,24 @@
         <h3>function ".remove()"</h3>
         <fieldset>
             <legend>function ".remove()"</legend>
-            <p>La fonction .remove() permet elle de supprimer l'intégralité d'un élément. Quand je dis supprimer, c'est l'éffacer complètement de notre code html sans laisser une quelconque trace.</p>
-            <p>Imaginons un exemple simple. Un input de type texte qui serait généré automatiquement dans une div via un simple bouton. On ajouterai un autre bouton permettant de supprimer ce qui aura été généré.</p>
+            <p>La fonction .remove() permet quant à elle de supprimer l'intégralité d'un élément. Quand je dis supprimer, c'est l'effacer complètement de notre code html sans laisser une quelconque trace.</p>
+            <p>Imaginons un exemple simple. Un input de type texte qui serait généré automatiquement dans une div via un simple bouton. On ajouterait un autre bouton permettant de supprimer ce qui aura été généré.</p>
             <div class="contentRemove">
                 <label for="inputAddTextRemove">Votre Pseudo :</label><br />
                 <input type="text" placeholder="Exemple : Dupont" id="inputAddTextRemove">
                 <button type="button" id="btnAddInput">Afficher le pseudo saisis</button> - <button type="button" id="btnRemove">Supprimer le pseudo enregistré</button>
                 <hr>
-                <q>Ci-dessous se trouve le pseudo pour le moment invisible à l'oeil nue.</q>
+                <q>Ci-dessous se trouve le pseudo pour le moment invisible à l'oeil nu.</q>
             </div>
             <h4>code html</h4>
             <pre>
                 <span class="baliseHTML">&lt;div <span class="attribut">class=</span><span class="guillemets">"contentRemove"</span>&gt;</span>
                     <span class="baliseHTML">&lt;label <span class="attribut">for=</span><span class="guillemets">"inputAddTextRemove"</span>&gt;</span>Pseudo :<span class="baliseHTML">&lt;/label&gt;</span>
                     <span class="baliseHTML">&lt;input <span class="attribut">type=</span><span class="guillemets">"text"</span> <span class="attribut">placeholder=</span><span class="guillemets">"Exemple : Dupont"</span> <span class="attribut">id=</span><span class="guillemets">"inputAddTextRemove"</span>&gt;</span><br />
-                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnAddInput"</span>&gt;</span>Afficher le pseudo saisis<span class="baliseHTML">&gt;/button&gt;</span> - 
+                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnAddInput"</span>&gt;</span>Afficher le pseudo saisi<span class="baliseHTML">&gt;/button&gt;</span> - 
                     <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"btnRemove"</span>&gt;</span>Supprimer le pseudo enregistré<span class="baliseHTML">&lt;/button&gt;</span><br />
                     <span class="baliseHTML">&lt;hr&gt;</span>
-                    <span class="baliseHTML">&lt;q&gt;</span>Ci-dessous se trouve le pseudo pour le moment invisible à l'oeil nue.<span class="baliseHTML">&lt;/q&gt;</span>
+                    <span class="baliseHTML">&lt;q&gt;</span>Ci-dessous se trouve le pseudo pour le moment invisible à l'oeil nu.<span class="baliseHTML">&lt;/q&gt;</span>
                     <span class="commentaire">&lt;-- Ici il n'y a rien pour le moment, mais tout sera généré en jquery grâce au bouton --&gt;</span>
                 <span class="baliseHTML">&lt;/div&gt;</span>
             </pre>
@@ -219,13 +219,13 @@
             <legend>function ".empty()"</legend>
             <p>La fonction .empty() permet de vider le contenu d'un élément sans supprimer la base de l'élément.</p>
             <h4>Exemple :</h4>
-            <p>Imaginons un exemple avec la function .remove(). Donc, nous aurions : Un champ texte qui permet à l'utilisateur de saisir n'importe quoi. Un bouton permettant de valider ce contenu et de l'afficher dans notre paragraphe. Enfin, sous ce paragraphe, on y ajoute un bouton permettant de vider le contenu du paragraphe.</p>
+            <p>Imaginons un exemple avec la fonction .remove(). Donc, nous aurions : Un champ texte qui permet à l'utilisateur de saisir n'importe quoi. Un bouton permettant de valider ce contenu et de l'afficher dans notre paragraphe. Enfin, sous ce paragraphe, on y ajoute un bouton permettant de vider le contenu du paragraphe.</p>
             <div class="testEmpty">
                 <label for="inputAddText">Rentrez n'importe quoi ici :</label><br />
                 <textarea rows="5" cols="100" id="inputAddText" placeholder="Saisir un texte ici..."></textarea><br />
                 <button type="button" id="emptyAddText">Valider le contenu</button> - <button type="button" id="emptyText">Effacer le contenu qui a été saisis</button>
                 <hr>
-                <q>Ci-dessous se trouve le paragraphe pour le moment invisible à l'oeil nue.</q>
+                <q>Ci-dessous se trouve le paragraphe pour le moment invisible à l'oeil nu.</q>
                 <p id="contentTextarea"></p>
                 <hr>
             </div>
@@ -235,9 +235,9 @@
                     <span class="baliseHTML">&lt;label <span class="attribut">for=</span><span class="guillemets">"inputAddText"</span>&gt;</span>Rentrez n'importe quoi ici :<span class="baliseHTML">&lt;/label&gt;</span>
                     <span class="baliseHTML">&lt;textarea <span class="attribut">rows=</span><span class="guillemets">"5"</span> <span class="attribut">cols=</span><span class="guillemets">"100"</span> <span class="attribut">id=</span><span class="guillemets">"inputAddText"</span> placeholder=</span><span class="guillemets">"Saisir un texte ici..."</span><span class="baliseHTML">&gt;&lt;/textarea&gt;</span><br />
                     <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"emptyAddText"</span>&gt;</span>Valider le contenu<span class="baliseHTML">&lt;/button&gt;</span> - 
-                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"emptyText"</span>&gt;</span>Effacer le contenu qui a été saisis<span class="baliseHTML">&lt;/button&gt;</span><br />
+                    <span class="baliseHTML">&lt;button <span class="attribut">type=</span><span class="guillemets">"button"</span> <span class="attribut">id=</span><span class="guillemets">"emptyText"</span>&gt;</span>Effacer le contenu qui a été saisi<span class="baliseHTML">&lt;/button&gt;</span><br />
                     <span class="baliseHTML">&lt;hr&gt;</span>
-                    <span class="baliseHTML">&lt;q&gt;</span>Ci-dessous se trouve le paragraphe pour le moment invisible à l'oeil nue.<span class="baliseHTML">&lt;/q&gt;</span>
+                    <span class="baliseHTML">&lt;q&gt;</span>Ci-dessous se trouve le paragraphe pour le moment invisible à l'oeil nu.<span class="baliseHTML">&lt;/q&gt;</span>
                     <span class="baliseHTML">&lt;p <span class="attribut">id=</span><span class="guillemets">"contentTextarea"</span>&gt;</span><span class="commentaire">&lt;-- Ici se trouvera ce que l'utilisateur aura saisis. --&gt;</span><span class="baliseHTML">&lt;/p&gt;</span>
                     <span class="baliseHTML">&lt;hr&gt;</span>
                 <span class="baliseHTML">&lt;/div&gt;</span>
@@ -288,14 +288,14 @@
                 $(".functionText").hover(function(){
                     $("#pFunctionTxt").text('"Salut les amis".');
                 }, function(){
-                    $("#pFunctionTxt").text('Alors vous avez vue, jQuery C\'est génial !');
+                    $("#pFunctionTxt").text('Alors vous avez vu, jQuery C\'est génial !');
                 });
 
                 // Exemple .html()
                 $(".functionHtml").hover(function(){
                     $("#pFunctionHtml").html('<b>Je suis un texte en gras. </b>.');
                 }, function(){
-                    $("#pFunctionHtml").html('<em>Maintenant, je suis un texte en italic. </em>.');              
+                    $("#pFunctionHtml").html('<em>Maintenant, je suis un texte en italique. </em>.');              
                 });
 
                 // Exemple .val()
