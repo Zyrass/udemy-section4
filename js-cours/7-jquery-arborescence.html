@@ -63,21 +63,51 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnParent"&gt;Start Fonction .parent()&lt;/button&gt; - 
+                        &lt;button type="button" id="btnDelParent"&gt;Annulation de la fonction .parent()&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainParent"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>
-                // Exemple .parent()
-                $("#btnParent").click(function(){
-                    $(".mainParent p").parent().css({
-                        "border" : "red solid 3px"
-                    });
-                });
-                $("#btnDelParent").click(function(){
-                    $(".mainParent p").parent().css({
-                        "border" : "none"
-                    });
-                });
+                <span class="commentaire">// Exemple .parent()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnParent"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainParent p"</span>)</span><span class="evenement">.parent</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"red solid 3px"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelParent"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainParent p"</span>)</span><span class="evenement">.parent</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"none"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -118,36 +148,66 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnParents"&gt;Start Fonction .parents()&lt;/button&gt; - 
+                        &lt;button type="button" id="btnDelParents"&gt;Annulation de la fonction .parents()&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainParents"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>
-                // Exemple .parents()
-                $("#btnParents").click(function(){
-                    $(".mainParents p").parents().css({
-                        "border" : "red solid 3px"
-                    });
-                });
-                $("#btnDelParents").click(function(){
-                    $(".mainParents p").parents().css({
-                        "border" : "none"
-                    });
-                    // Ci-dessous le style original du fieldset
-                    $("fieldset.fieldsetParents").css({ 
-                        "display" : "block",
-                        "-webkit-margin-start" : "2px",
-                        "-webkit-margin-end" : "2px",
-                        "-webkit-padding-before" : "0.35em",
-                        "-webkit-padding-start" : "0.75em",
-                        "-webkit-padding-end" : "0.75em",
-                        "-webkit-padding-after" : "0.625em",
-                        "min-width" : "-webkit-min-content",
-                        "border-width" : "2px",
-                        "border-style" : "groove",
-                        "border-color" : "threedface",
-                        "border-image" : "initial"
-                    });
-                });
+                <span class="commentaire">// Exemple .parents()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnParents"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainParents p"</span>)</span><span class="evenement">.parents</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"red solid 3px"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelParents"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainParents p"</span>)</span><span class="evenement">.parents</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"none"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                    <span class="commentaire">// Ci-dessous le style original du fieldset</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">"fieldset.fieldsetParents"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"display"</span> : <span class="guillemets">"block"</span>,
+                        <span class="guillemets">"-webkit-margin-start"</span> : <span class="guillemets">"2px"</span>,
+                        <span class="guillemets">"-webkit-margin-end"</span> : <span class="guillemets">"2px"</span>,
+                        <span class="guillemets">"-webkit-padding-before"</span> : <span class="guillemets">"0.35em"</span>,
+                        <span class="guillemets">"-webkit-padding-start"</span> : <span class="guillemets">"0.75em"</span>,
+                        <span class="guillemets">"-webkit-padding-end"</span> : <span class="guillemets">"0.75em"</span>,
+                        <span class="guillemets">"-webkit-padding-after"</span> : <span class="guillemets">"0.625em"</span>,
+                        <span class="guillemets">"min-width"</span> : <span class="guillemets">"-webkit-min-content"</span>,
+                        <span class="guillemets">"border-width" </span>: <span class="guillemets">"2px"</span>,
+                        <span class="guillemets">"border-style" </span>: <span class="guillemets">"groove"</span>,
+                        <span class="guillemets">"border-color"</span> : <span class="guillemets">"threedface"</span>,
+                        <span class="guillemets">"border-image"</span> : <span class="guillemets">"initial"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
 
             </pre>
         </fieldset>
@@ -189,21 +249,51 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnChildren"&gt;Start Fonction .children()&lt;/button&gt; -
+                        &lt;button type="button" id="btnDelChildren"&gt;Annulation de la fonction .children()&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainChildren"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>
-                // Exemple children()
-                $("#btnChildren").click(function(){
-                    $(".mainChildren").children().css({
-                        "border" : "red solid 3px"
-                    })
-                });
-                $("#btnDelChildren").click(function(){
-                    $(".mainChildren").children().css({
-                        "border" : "none"
-                    })
-                });
+                <span class="commentaire">// Exemple children()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnChildren"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainChildren"</span>)</span><span class="evenement">.children</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"red solid 3px"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelChildren"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainChildren"</span>)</span><span class="evenement">.children</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"none"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -244,23 +334,56 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;                    
+                        &lt;button type="button" id="btnFind"&gt;Start Fonction .find()&lt;/button&gt; -
+                        &lt;button type="button" id="btnDelFind"&gt;Annulation de la fonction .find()&lt;/button&gt;                   
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainFind"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne askFind"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo askFind"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo askFind"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree askFind"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree askFind"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour askFind"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour askFind"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>
-                // Exemple .find()
-                $("#btnFind").click(function(){
-                    $(".mainFind").find(".askFind").css({
-                        "border" : "red solid 3px"
-                    })
-                });
-                $("#btnDelFind").click(function(){
-                    $(`.pDivOne:nth-child(2), .pDivTwo:nth-child(1), .pDivTwo:nth-child(2),
-                    .pDivThree:nth-child(2), .pDivThree:nth-child(3), .pDivFour:nth-child(1),
-                    .pDivFour:nth-child(3)`).addClass("askFind").css({
-                        "border" : "3px solid black"
-                    });
-                });
+                <span class="commentaire">// Exemple .find()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnFind"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainFind"</span>)</span><span class="evenement">.find</span><span class="parentheseOpenThree">(<span class="arguments">".askFind"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"red solid 3px"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelFind"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">`
+                      .pDivOne:nth-child(2),
+                      .pDivTwo:nth-child(1), .pDivTwo:nth-child(2),
+                      .pDivThree:nth-child(2), .pDivThree:nth-child(3),
+                      .pDivFour:nth-child(1), .pDivFour:nth-child(3)
+                    `</span>)</span><span class="evenement">.addClass</span><span class="parentheseOpenThree">(<span class="arguments">".askFind"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                            <span class="guillemets">"border"</span> : <span class="guillemets">"3px solid black"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -301,21 +424,51 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnSiblingsEx1"&gt;Start fonction .siblings()&lt;/button&gt;
+                        &lt;button type="button" id="btnDelSiblingsEx1"&gt;Annulation de la fonction .siblings()&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainSiblingsEx1"&gt;main
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>
-                // Exemple[1] .siblings()
-                $("#btnSiblingsEx1").click(function(){
-                    $(".divOne").siblings().css({
-                        "border" : "red solid 3px"
-                    })
-                });
-                $("#btnDelSiblingsEx1").click(function(){
-                    $(".divTwo, .divThree, .divFour").css({
-                        "border" : "none"
-                    })
-                });
+                <span class="commentaire">// Exemple[1] .siblings()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnSiblingsEx1"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".divOne"</span>)</span><span class="evenement">.siblings</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"red solid 3px"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelSiblingsEx1"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".divTwo, .divThree, .divFour"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"none"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
             <h4>Exemple 2 sur la fonction .siblings()</h4>
             <p>Enfin pour notre deuxièmes exemple, nous allons sélectionner le premier paragraphe de la div contenant la classe divTwo. Nous allons lui demander de sélectionner tous ces frères directe.</p>
@@ -350,21 +503,51 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnSiblingsEx2"&gt;Start Fonction .siblings()&lt;/button&gt; -
+                        &lt;button type="button" id="btnDelSiblingsEx2"&gt;Annulation de la fonction .siblings()&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;                        
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainSiblingsEx2"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>                
-                // Exemple[2] .siblings()
-                $("#btnSiblingsEx2").click(function(){
-                    $(".pDivTwo:first-child").siblings().css({
-                        "border" : "red solid 3px"
-                    })
-                });
-                $("#btnDelSiblingsEx2").click(function(){
-                    $(".pDivTwo:nth-child(2), .pDivTwo:nth-child(3)").css({
-                        "border" : "3px solid black"
-                    })
-                });
+                <span class="commentaire">// Exemple[2] .siblings()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnSiblingsEx2"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".pDivTwo:first-child"</span>)</span><span class="evenement">.siblings</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"red solid 3px"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelSiblingsEx2"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".pDivTwo:nth-child(2), .pDivTwo:nth-child(3)"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"3px solid black"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -405,21 +588,51 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnNext"&gt;Start Fonction .next()&lt;/button&gt; -
+                        &lt;button type="button" id="btnDelNext"&gt;Annulation de la fonction .next()&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainNext"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>
-                // Exemple .next()
-                $("#btnNext").click(function(){
-                    $(".mainNext .divThree").next().css({
-                        "border" : "red solid 3px"
-                    })
-                });
-                $("#btnDelNext").click(function(){
-                    $(".mainNext .divFour").css({
-                        "border" : "none"
-                    })
-                });
+                <span class="commentaire">// Exemple .next()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnNext"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainNext .divThree"</span>)</span><span class="evenement">.next</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"red solid 3px" </span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelNext"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainNext .divFour"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"none"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -460,21 +673,51 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnFirst"&gt;Start Fonction .first()&lt;/button&gt; -
+                        &lt;button type="button" id="btnDelFirst"&gt;Annulation de la fonction .first()&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainFirst"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>
-                // Exemple .first()
-                $("#btnFirst").click(function(){
-                    $(".mainFirst p").first().css({
-                        "border" : "red solid 3px"
-                    })
-                });
-                $("#btnDelFirst").click(function(){
-                    $(".mainFirst p").first().css({
-                        "border" : "3px solid black"
-                    })
-                });
+                <span class="commentaire">// Exemple .first()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnFirst"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainFirst p"</span>)</span><span class="evenement">.first</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"red solid 3px"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelFirst"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainFirst p"</span>)</span><span class="evenement">.first</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"3px solid black"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -515,21 +758,51 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnLast"&gt;Start Fonction .last()&lt;/button&gt; -
+                        &lt;button type="button" id="btnDelLast"&gt;Annulation de la fonction .last()&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainLast"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>
-                // Exemple .last()
-                $("#btnLast").click(function(){
-                    $(".mainLast p").last().css({
-                        "border" : "red solid 3px"
-                    })
-                });
-                $("#btnDelLast").click(function(){
-                    $(".mainLast p").last().css({
-                        "border" : "3px solid black"
-                    })
-                });
+                <span class="commentaire">// Exemple .last() </span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnLast"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainLast p"</span>)</span><span class="evenement">.last</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"red solid 3px"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelLast"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainLast p"</span>)</span><span class="evenement">.last</span><span class="parentheseOpenThree">()</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"3px solid black"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -570,21 +843,51 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnEq"&gt;Start Fonction .eq()&lt;/button&gt; - 
+                        &lt;button type="button" id="btnDelEq"&gt;Annulation de la fonction .eq()&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainEq"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>
-                // Exemple .eq()
-                $("#btnEq").click(function(){
-                    $(".mainEq div").eq(2).css({
-                        "border" : "3px solid red"
-                    })
-                });
-                $("#btnDelEq").click(function(){
-                    $(".mainEq div").eq(2).css({
-                        "border" : "none"
-                    })
-                });
+                <span class="commentaire">// Exemple .eq()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnEq"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainEq div"</span>)</span><span class="evenement">.eq</span><span class="parentheseOpenThree">(<span class="arguments">2</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"3px solid red"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelEq"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainEq div"</span>)</span><span class="evenement">.eq</span><span class="parentheseOpenThree">(<span class="arguments">2</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"none"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -625,29 +928,62 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnFilterOne"&gt;.filter() divOne&lt;/button&gt; -
+                        &lt;button type="button" id="btnFilterTwo"&gt;.filter() divTwo&lt;/button&gt; -
+                        &lt;button type="button" id="btnFilterThree"&gt;.filter() divThree&lt;/button&gt; -
+                        &lt;button type="button" id="btnFilterFour"&gt;.filter() divFour&lt;/button&gt; -
+                        &lt;button type="button" id="btnAllFilter"&gt;.filter() All&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainFilter"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>                
-                // Exemple .filter()
-                $("#btnFilterOne").click(function(){
-                    $(".mainFilter .divOne").slideToggle("slow");
-                });
-                $("#btnFilterTwo").click(function(){
-                    $(".mainFilter .divTwo").slideToggle("slow");
-                });
-                $("#btnFilterThree").click(function(){
-                    $(".mainFilter .divThree").slideToggle("slow");
-                });
-                $("#btnFilterFour").click(function(){
-                    $(".mainFilter .divFour").slideToggle("slow");
-                });
-                $("#btnAllFilter").click(function(){
-                    $(`.mainFilter .divOne,
+                <span class="commentaire">// Exemple .filter()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnFilterOne"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainFilter .divOne"</span>)</span><span class="evenement">.slideToggle</span><span class="parentheseOpenThree">(<span class="arguments">"slow"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnFilterTwo"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainFilter .divTwo"</span>)</span><span class="evenement">.slideToggle</span><span class="parentheseOpenThree">(<span class="arguments">"slow"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnFilterThree"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainFilter .divThree"</span>)</span><span class="evenement">.slideToggle</span><span class="parentheseOpenThree">(<span class="arguments">"slow"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnFilterFour"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainFilter .divFour"</span>)</span><span class="evenement">.slideToggle</span><span class="parentheseOpenThree">(<span class="arguments">"slow"</span>)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnAllFilter"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">`.mainFilter .divOne,
                        .mainFilter .divTwo,
                        .mainFilter .divThree,
-                       .mainFilter .divFour`).slideToggle();
-                });
+                       .mainFilter .divFour`</span>)</span><span class="evenement">.slideToggle</span><span class="parentheseOpenThree">()</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
@@ -688,21 +1024,51 @@
             </div> <!-- fin div.contentArbo-->
             <h4>Code html</h4>
             <pre>
-            
+                &lt;div class="contentArbo"&gt;
+                    &lt;div class="btn"&gt;
+                        &lt;button type="button" id="btnNot"&gt;Start Fonction .not()&lt;/button&gt; -
+                        &lt;button type="button" id="btnDelNot"&gt;Annulation de la fonction .not()&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="contentExo"&gt;
+                        <span class="commentaire">&lt;!-- La div ci-dessous se nomme ainsi pour éviter un conflit avec les autres exemples --&gt;</span>
+                        &lt;div class="mainNot"&gt;main 
+                            &lt;div class="divOne"&gt;divOne
+                                &lt;p class="pDivOne"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivOne"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divTwo"&gt;divTwo
+                                &lt;p class="pDivTwo"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivTwo"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divThree"&gt;divThree
+                                &lt;p class="pDivThree"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivThree"&gt;Paragraphe 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="divFour"&gt;divFour
+                                &lt;p class="pDivFour"&gt;Paragraphe 1&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 2&lt;/p&gt;
+                                &lt;p class="pDivFour"&gt;Paragraphe 3<span class="baliseHTML">&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentExo--&gt;</span>
+                <span class="baliseHTML">&lt;/div&gt;</span> <span class="commentaire">&lt;!-- fin div.contentArbo--&gt;</span>
             </pre>
             <h4>Code jquery</h4>
             <pre>
-                // Exemple .not()
-                $("#btnNot").click(function(){
-                    $(".mainNot div").not(".divTwo").css({
-                        "border" : "red solid 3px"
-                    });
-                });
-                $("#btnDelNot").click(function(){
-                    $(".mainNot div").not(".divTwo").css({
-                        "border" : "none"
-                    });
-                });
+                <span class="commentaire">// Exemple .not()</span>
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnNot"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainNot div"</span>)</span><span class="evenement">.not</span><span class="parentheseOpenThree">(<span class="arguments">".divTwo"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"red solid 3px"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
+                <span class="parentheseOpenOne">$(<span class="guillemets">"#btnDelNot"</span>)</span><span class="evenement">.click</span><span class="parentheseOpenTwo">(</span><span class="function">function()</span><span class="accolade">{</span>
+                    <span class="parentheseOpenOne">$(<span class="guillemets">".mainNot div"</span>)</span><span class="evenement">.not</span><span class="parentheseOpenThree">(<span class="arguments">".divTwo"</span>)</span><span class="evenement">.css</span><span class="parentheseOpenThree">(</span><span class="accolade">{</span>
+                        <span class="guillemets">"border"</span> : <span class="guillemets">"none"</span>
+                    <span class="accolade">}</span><span class="parentheseCloseThree">)</span>;
+                <span class="accolade">}</span><span class="parentheseCloseTwo">)</span>;
             </pre>
         </fieldset>
 
