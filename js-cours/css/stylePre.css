@@ -1,5 +1,5 @@
 body {
-    width: 900px;
+    width: 960px;
     margin: 0 auto;
 }
 
@@ -105,18 +105,42 @@ div#divAnimate {
     background-color: #0000ff;
     margin: 25px auto;
 }
-div.btn {
+div.btn, div.contentExo {
     margin-bottom: 5px;
-    background-color: #ccc;
+    background-color: #ddd;
     padding: 15px;
 }
-div.fonctionAppend, div.fonctionPrepend, div.fonctionBefore, div.fonctionAfter {
+div.contentExo .mainParent div.divOne, div.contentExo .mainParent div.divTwo, div.contentExo .mainParent div.divThree, div.contentExo .mainParent div.divFour,
+div.contentExo .mainParents div.divOne, div.contentExo .mainParents div.divTwo, div.contentExo .mainParents div.divThree, div.contentExo .mainParents div.divFour,
+div.contentExo .mainChildren div.divOne, div.contentExo .mainChildren div.divTwo, div.contentExo .mainChildren div.divThree, div.contentExo .mainChildren div.divFour,
+div.contentExo .mainFind div.divOne, div.contentExo .mainFind div.divTwo, div.contentExo .mainFind div.divThree, div.contentExo .mainFind div.divFour,
+div.contentExo .mainSiblingsEx1 div.divOne, div.contentExo .mainSiblingsEx1 div.divTwo, div.contentExo .mainSiblingsEx1 div.divThree, div.contentExo .mainSiblingsEx1 div.divFour,
+div.contentExo .mainSiblingsEx2 div.divOne, div.contentExo .mainSiblingsEx2 div.divTwo, div.contentExo .mainSiblingsEx2 div.divThree, div.contentExo .mainSiblingsEx2 div.divFour,
+div.contentExo .mainNext div.divOne, div.contentExo .mainNext div.divTwo, div.contentExo .mainNext div.divThree, div.contentExo .mainNext div.divFour,
+div.contentExo .mainFirst div.divOne, div.contentExo .mainFirst div.divTwo, div.contentExo .mainFirst div.divThree, div.contentExo .mainFirst div.divFour,
+div.contentExo .mainLast div.divOne, div.contentExo .mainLast div.divTwo, div.contentExo .mainLast div.divThree, div.contentExo .mainLast div.divFour,
+div.contentExo .mainEq div.divOne, div.contentExo .mainEq div.divTwo, div.contentExo .mainEq div.divThree, div.contentExo .mainEq div.divFour,
+div.contentExo .mainFilter div.divOne, div.contentExo .mainFilter div.divTwo, div.contentExo .mainFilter div.divThree, div.contentExo .mainFilter div.divFour,
+div.contentExo .mainNot div.divOne, div.contentExo .mainNot div.divTwo, div.contentExo .mainNot div.divThree, div.contentExo .mainNot div.divFour {
+    margin: 5px;
+    padding: 20px;
+    background-color: #aaa;
+}
+div.fonctionAppend, div.fonctionPrepend, div.fonctionBefore, div.fonctionAfter, div.contentArbo {
     background-color: #ccc;
     padding: 25px;
 }
 div.fonctionAppend p, div.fonctionPrepend p, div.fonctionBefore p, div.fonctionAfter p {
     background-color: pink;
     border: 2px solid black;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 5px 0;
+}
+div.contentArbo p {
+    background-color: dodgerblue;
+    border: 3px solid black;
     height: 40px;
     line-height: 40px;
     text-align: center;
