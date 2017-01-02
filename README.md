@@ -1,6 +1,6 @@
 <h1>Multitude de cours sur plusieurs langages</h1>
 ----------
-** A savoir que la mise en page est pour le moment d'une simplicité, elle sera mise en page via bootstrap 4 dans un futur plus ou moins proche **
+A savoir que la mise en page est pour le moment d'une simplicité, elle sera mise en page via bootstrap 4 dans un futur plus ou moins proche
 
 <h2>Remerciement</h2>
 ----------
@@ -29,7 +29,7 @@ Image 6 :<br />
 
 <h2>A venir prochainement</h2>
 ----------
-<p>PAr la suite, je compte ajouter les mêmes cours pour les langages suivant :</p>
+<p>Par la suite, je compte ajouter les mêmes cours pour les langages suivant :</p>
 - HTML 5
 - CSS 3
 - JAVASCRPT
